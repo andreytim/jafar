@@ -17,3 +17,6 @@ Main goals:
 This is only a dreamy sunny plan and currently I am working on the first and the fourth bullets from the list above: 
 * **prim** - primitive collections submodule
 * **bm** - submodule of benchmarking the whole evil I used to produce
+
+In conclusion, all this thing is just for **fun**!
+Cheers. :)
