@@ -19,4 +19,5 @@ This is only a dreamy sunny plan and currently I am working on the first and the
 * **bm** - submodule of benchmarking the whole evil I used to produce
 
 In conclusion, all this thing is just for **fun**!
-Cheers. :)
+
+Cheers!
