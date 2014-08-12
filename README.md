@@ -11,9 +11,9 @@ Main goals:
 * to provide optimized and easy-to-use implementations of collections
 * to help myself and others with studying algorithms
 * to provide solutions for popular problems
-* to provide benchmarks and visually compare different algorithms 
+* to provide benchmarks and compare different algorithms through them
 * to provide easy, brief, fast and usable implementations for popular algorithms
 
-This is only a plan and currently I am working on the first and the fourth bullets from the list above: 
+This is only a dreamy sunny plan and currently I am working on the first and the fourth bullets from the list above: 
 * **prim** - primitive collections submodule
 * **bm** - submodule of benchmarking the whole evil I used to produce
