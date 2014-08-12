@@ -1,0 +1,21 @@
+# IDE files
+.classpath
+.settings
+.project
+.idea
+*.iml
+
+# deployment 
+.gradle
+artifacts
+hs_err_pid*
+target
+out
+
+# tmp and vim swap files
+*.pyc
+*.tmp
+*.swp
+
+# C tags
+tags

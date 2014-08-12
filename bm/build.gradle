@@ -1,0 +1,29 @@
+repositories {
+    flatDir {
+        dirs 'lib'
+    }
+}
+
+test {
+    jvmArgs "-javaagent:lib/SizeOf.jar"
+}
+
+buildscript {
+    repositories {
+        jcenter()
+    }
+    dependencies {
+        classpath "me.champeau.gradle:jmh-gradle-plugin:0.1.2"
+    }
+}
+
+apply plugin: "me.champeau.gradle.jmh"
+
+dependencies {
+    compile 'org.openjdk.jmh:jmh-core:0.9.5'
+    compile 'org.openjdk.jmh:jmh-generator-annprocess:0.9.5'
+    compile project(':prim')
+    jmh 'org.openjdk.jmh:jmh-core:0.9.5'
+    jmh 'org.openjdk.jmh:jmh-generator-annprocess:0.9.5'
+    testCompile name: 'SizeOf'
+}

@@ -1,0 +1,33 @@
+subprojects {
+
+    apply plugin: 'java'
+
+    sourceCompatibility = 1.7
+    targetCompatibility = 1.7
+
+    group = 'org.shpolsky.jafar'
+    version = '0.0.1'
+
+    repositories {
+        mavenCentral()
+    }
+
+    dependencies {
+        testCompile group: 'junit', name: 'junit', version: '4.11'
+    }
+
+    test {
+        testLogging {
+            afterTest { desc, result ->
+                println "-- Test ${desc.name} [${desc.className}]: ${result.resultType}"
+            }
+            afterSuite { desc, result ->
+                if (!desc.parent) {
+                    println "-- Results: ${result.resultType} (${result.testCount} tests, " +
+                            "${result.successfulTestCount} successes, ${result.failedTestCount} failures, " +
+                            "${result.skippedTestCount} skipped)"
+                }
+            }
+        }
+    }
+}

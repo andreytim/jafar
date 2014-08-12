@@ -1,0 +1,7 @@
+jar {
+    baseName 'jafar-prim'
+    classifier 'fulljar'
+    manifest {
+        attributes 'Implementation-Title': 'jafar-prim', 'Implementation-Version': version
+    }
+}
