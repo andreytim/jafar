@@ -1,7 +1,7 @@
 JAFAR
 =====
 
-**There's nothing really useful here so far. So if you're looking for a solution for the some problem then feel free to just pass by and come back in a couple of months.**
+**Important note:** There's nothing really useful here so far. So if you're looking for the solution or things like that then feel free to just pass by. And come back in a couple of months.
 
 The name is an acronym from Just Another Framework of Algorithmic Reminiscences.
 
