@@ -5,6 +5,8 @@ The name is an acronym from Just Another Framework of Algorithmic Reminiscences.
 
 I could put a lot of nice words here but basically this project is just the consolidation of all algorithmic stuff I supposed to do in a single well organized place.
 
+There's nothing really useful here so far. So if you're looking for solution for some problem then feel free to just pass by and come back in a couple of months.
+
 In general, I used to code in Java so all this adventure will hopefully stay within JVM.
 
 Main goals:
