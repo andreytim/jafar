@@ -15,5 +15,5 @@ Main goals:
 * to provide easy, brief, fast and usable implementations for popular algorithms
 
 This is only a plan and currently I am working on the first and the fourth bullets from the list above: 
-* **prim** (primitive collections) 
-* **bm** (benchmarking)
+* **prim** - primitive collections submodule
+* **bm** - submodule of benchmarking the whole evil I used to produce
