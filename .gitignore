@@ -10,6 +10,7 @@
 artifacts
 hs_err_pid*
 target
+build
 out
 
 # tmp and vim swap files
