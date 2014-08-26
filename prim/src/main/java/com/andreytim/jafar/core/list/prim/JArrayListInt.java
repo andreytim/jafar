@@ -60,8 +60,7 @@ public class JArrayListInt extends JAbstractList<Integer> implements RandomAcces
 
     @Override
     public boolean add(int e) {
-        ensureSize(size + 1);
-        modCount++;
+        data = grow(data, size + 1, size);
         data[size++] = e;
         return true;
     }
@@ -99,15 +98,24 @@ public class JArrayListInt extends JAbstractList<Integer> implements RandomAcces
     }
 
     private void ensureSize(int newSize) {
-        if (newSize == data.length) {
-            int[] newArray = new int[data.length + (data.length >> 1)];
+        if (newSize > data.length) {
+            final int[] newArray = new int[data.length << 1];
             System.arraycopy(data, 0, newArray, 0, size);
             data = newArray;
         } else if (newSize < data.length >> 2) {
-            int[] newArray = new int[data.length >> 1];
+            final int[] newArray = new int[data.length >> 1];
             System.arraycopy(data, 0, newArray, 0, size);
             data = newArray;
         }
+    }
+
+    public int[] grow(int[] array, int length, int preserve) {
+        if (length > array.length) {
+            int newArray[] = new int[Math.min(array.length << 1, ARRAY_LIST_MAX_SIZE)];
+            System.arraycopy(array, 0, newArray, 0, preserve);
+            return newArray;
+        }
+        return array;
     }
 
     @Override
@@ -119,7 +127,6 @@ public class JArrayListInt extends JAbstractList<Integer> implements RandomAcces
                 data[i++] = e;
             }
             size += c.size();
-            modCount++;
             return true;
         }
         return false;
@@ -136,7 +143,6 @@ public class JArrayListInt extends JAbstractList<Integer> implements RandomAcces
                 data[index + i++] = e;
             }
             size += c.size();
-            modCount++;
             return true;
         }
         return false;
@@ -153,7 +159,6 @@ public class JArrayListInt extends JAbstractList<Integer> implements RandomAcces
         if (size - r > 0) {
             ensureSize(r);
             size = r;
-            modCount++;
             return true;
         }
         return false;
@@ -161,7 +166,6 @@ public class JArrayListInt extends JAbstractList<Integer> implements RandomAcces
 
     @Override
     public void clear() {
-        modCount++;
         data = new int[DEFAULT_LENGTH];
         size = 0;
     }
@@ -177,7 +181,6 @@ public class JArrayListInt extends JAbstractList<Integer> implements RandomAcces
         rangeCheck(index);
         int tmp = data[index];
         data[index] = element.intValue();
-        modCount++;
         return Integer.valueOf(tmp);
     }
 
@@ -185,7 +188,6 @@ public class JArrayListInt extends JAbstractList<Integer> implements RandomAcces
     public void add(int index, Integer element) {
         rangeCheck(index);
         ensureSize(size + 1);
-        modCount++;
         System.arraycopy(data, index, data, index + 1, size - index);
         data[index] = element.intValue();
     }
@@ -198,7 +200,6 @@ public class JArrayListInt extends JAbstractList<Integer> implements RandomAcces
         if (size > index + 1) {
             System.arraycopy(data, index + 1, data, index, size - index - 1);
         }
-        modCount++;
         size--;
         return Integer.valueOf(tmp);
     }
@@ -258,7 +259,6 @@ public class JArrayListInt extends JAbstractList<Integer> implements RandomAcces
     private class Itr implements Iterator<Integer> {
         int cursor;
         int lastRet = -1;
-        int expectedModCount = modCount;
 
         public boolean hasNext() {
             return cursor != size;
@@ -283,20 +283,15 @@ public class JArrayListInt extends JAbstractList<Integer> implements RandomAcces
                 JArrayListInt.this.remove(lastRet);
                 cursor = lastRet;
                 lastRet = -1;
-                expectedModCount = modCount;
             } catch (IndexOutOfBoundsException ex) {
                 throw new ConcurrentModificationException();
             }
         }
 
         final void checkForComodification() {
-            if (modCount != expectedModCount)
-                throw new ConcurrentModificationException();
+            // TODO!!
         }
     }
-
-    private int lastModCount;
-    private int[] lastCopy;
 
     @Override
     public int[] ints() {

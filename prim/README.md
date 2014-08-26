@@ -2,8 +2,10 @@ JAFAR - Primitive Collections
 =====
 
 Here is just another attempt to make an easy to use library of primitive collections in Java.
+Currently implemented collections consist of:
 
-There's only an implementation of dynamic array so far - JArrayList.
+* dynamic array - JArrayList<T> - released
+* map 
 
 The main point of all this adventure is to stay within the same interface with the Core Java Collections
 even in the sense of Generics, which is actually the main feature.

@@ -13,24 +13,24 @@ public class JArrayList<E> extends AbstractList<E>
 
     private static final long serialVersionUID = -7777976475771634860L;
 
-    private boolean inited = false;
+    private boolean notInited = true;
     private JList<E> primitiveList;
 
     public JArrayList() {}
 
     @Override
     public int size() {
-        return inited ? primitiveList.size() : 0;
+        return notInited ? 0 : primitiveList.size();
     }
 
     @Override
     public boolean isEmpty() {
-        return inited && primitiveList.isEmpty();
+        return notInited || primitiveList.isEmpty();
     }
 
     @Override
     public boolean contains(Object e) {
-        return inited && primitiveList.contains(e);
+        return notInited || primitiveList.contains(e);
     }
 
     @Override
@@ -65,12 +65,12 @@ public class JArrayList<E> extends AbstractList<E>
 
     @Override
     public boolean remove(Object o) {
-        return inited && primitiveList.remove(o);
+        return notInited || primitiveList.remove(o);
     }
 
     @Override
     public void clear() {
-        if (inited) {
+        if (!notInited) {
             primitiveList.clear();
         }
     }
@@ -117,12 +117,12 @@ public class JArrayList<E> extends AbstractList<E>
 
     @Override
     public ListIterator<E> listIterator() {
-        return inited ? primitiveList.listIterator() : super.listIterator();
+        return notInited ? super.listIterator() : primitiveList.listIterator();
     }
 
     @Override
     public Iterator<E> iterator() {
-        return inited ? primitiveList.iterator() : super.iterator();
+        return notInited ? super.iterator() : primitiveList.iterator();
     }
 
     @Override
@@ -133,197 +133,197 @@ public class JArrayList<E> extends AbstractList<E>
 
     @Override
     public int indexOf(Object e) {
-        return inited ? primitiveList.indexOf(e) : -1;
+        return notInited ? -1 : primitiveList.indexOf(e);
     }
 
     @Override
     public int lastIndexOf(Object e) {
-        return inited ? primitiveList.lastIndexOf(e) : -1;
+        return notInited ? -1 : primitiveList.lastIndexOf(e);
     }
 
     @Override
     public Object[] toArray() {
-        return inited ? primitiveList.toArray() : new Object[]{};
+        return notInited ? new Object[]{} : primitiveList.toArray();
     }
 
     @Override
     public <T> T[] toArray(T[] arr) {
-        return inited ? primitiveList.toArray(arr) : (T[]) new Object[]{};
+        return notInited ? (T[]) new Object[]{} : primitiveList.toArray(arr);
     }
 
     @Override
     public String toString() {
-        return inited ? primitiveList.toString() : "[]";
+        return notInited ? "[]" : primitiveList.toString();
     }
 
     // primitive methods implementations
 
     @Override
     public boolean contains(byte e) {
-        return inited && primitiveList.contains(e);
+        return notInited || primitiveList.contains(e);
     }
 
     @Override
     public boolean contains(short e) {
-        return inited && primitiveList.contains(e);
+        return notInited || primitiveList.contains(e);
     }
 
     @Override
     public boolean contains(int e) {
-        return inited && primitiveList.contains(e);
+        return notInited || primitiveList.contains(e);
     }
 
     @Override
     public boolean contains(long e) {
-        return inited && primitiveList.contains(e);
+        return notInited || primitiveList.contains(e);
     }
 
     @Override
     public boolean contains(float e) {
-        return inited && primitiveList.contains(e);
+        return notInited || primitiveList.contains(e);
     }
 
     @Override
     public boolean contains(double e) {
-        return inited && primitiveList.contains(e);
+        return notInited || primitiveList.contains(e);
     }
 
     @Override
     public boolean contains(char e) {
-        return inited && primitiveList.contains(e);
+        return notInited || primitiveList.contains(e);
     }
 
     @Override
     public boolean contains(boolean e) {
-        return inited && primitiveList.contains(e);
+        return notInited || primitiveList.contains(e);
     }
 
     @Override
     public boolean add(byte e) {
-        initCheck(byte.class);
+        if (notInited) init(byte.class);
         return primitiveList.add(e);
     }
 
     @Override
     public boolean add(char e) {
-        initCheck(char.class);
+        if (notInited) init(char.class);
         return primitiveList.add(e);
     }
 
     @Override
     public boolean add(short e) {
-        initCheck(short.class);
+        if (notInited) init(short.class);
         return primitiveList.add(e);
     }
 
     @Override
     public boolean add(int e) {
-        initCheck(int.class);
+        if (notInited) init(int.class);
         return primitiveList.add(e);
     }
 
     @Override
     public boolean add(long e) {
-        initCheck(long.class);
+        if (notInited) init(long.class);
         return primitiveList.add(e);
     }
 
     @Override
     public boolean add(float e) {
-        initCheck(float.class);
+        if (notInited) init(float.class);
         return primitiveList.add(e);
     }
 
     @Override
     public boolean add(double e) {
-        initCheck(double.class);
+        if (notInited) init(double.class);
         return primitiveList.add(e);
     }
 
     @Override
     public boolean add(boolean e) {
-        initCheck(boolean.class);
+        if (notInited) init(boolean.class);
         return primitiveList.add(e);
     }
 
     @Override
     public int indexOf(byte e) {
-        return inited ? primitiveList.indexOf(e) : -1;
+        return notInited ? -1 : primitiveList.indexOf(e);
     }
 
     @Override
     public int indexOf(char e) {
-        return inited ? primitiveList.indexOf(e) : -1;
+        return notInited ? -1 : primitiveList.indexOf(e);
     }
 
     @Override
     public int indexOf(short e) {
-        return inited ? primitiveList.indexOf(e) : -1;
+        return notInited ? -1 : primitiveList.indexOf(e);
     }
 
     @Override
     public int indexOf(int e) {
-        return inited ? primitiveList.indexOf(e) : -1;
+        return notInited ? -1 : primitiveList.indexOf(e);
     }
 
     @Override
     public int indexOf(long e) {
-        return inited ? primitiveList.indexOf(e) : -1;
+        return notInited ? -1 : primitiveList.indexOf(e);
     }
 
     @Override
     public int indexOf(float e) {
-        return inited ? primitiveList.indexOf(e) : -1;
+        return notInited ? -1 : primitiveList.indexOf(e);
     }
 
     @Override
     public int indexOf(double e) {
-        return inited ? primitiveList.indexOf(e) : -1;
+        return notInited ? -1 : primitiveList.indexOf(e);
     }
 
     @Override
     public int indexOf(boolean e) {
-        return inited ? primitiveList.indexOf(e) : -1;
+        return notInited ? -1 : primitiveList.indexOf(e);
     }
 
     @Override
     public int lastIndexOf(byte e) {
-        return inited ? primitiveList.lastIndexOf(e) : -1;
+        return notInited ? -1 : primitiveList.lastIndexOf(e);
     }
 
     @Override
     public int lastIndexOf(char e) {
-        return inited ? primitiveList.lastIndexOf(e) : -1;
+        return notInited ? -1 : primitiveList.lastIndexOf(e);
     }
 
     @Override
     public int lastIndexOf(short e) {
-        return inited ? primitiveList.lastIndexOf(e) : -1;
+        return notInited ? -1 : primitiveList.lastIndexOf(e);
     }
 
     @Override
     public int lastIndexOf(int e) {
-        return inited ? primitiveList.lastIndexOf(e) : -1;
+        return notInited ? -1 : primitiveList.lastIndexOf(e);
     }
 
     @Override
     public int lastIndexOf(long e) {
-        return inited ? primitiveList.lastIndexOf(e) : -1;
+        return notInited ? -1 : primitiveList.lastIndexOf(e);
     }
 
     @Override
     public int lastIndexOf(float e) {
-        return inited ? primitiveList.lastIndexOf(e) : -1;
+        return notInited ? -1 : primitiveList.lastIndexOf(e);
     }
 
     @Override
     public int lastIndexOf(double e) {
-        return inited ? primitiveList.lastIndexOf(e) : -1;
+        return notInited ? -1 : primitiveList.lastIndexOf(e);
     }
 
     @Override
     public int lastIndexOf(boolean e) {
-        return inited ? primitiveList.lastIndexOf(e) : -1;
+        return notInited ? -1 : primitiveList.lastIndexOf(e);
     }
 
     @Override
@@ -376,60 +376,64 @@ public class JArrayList<E> extends AbstractList<E>
 
     @Override
     public byte[] bytes() {
-        return inited ? primitiveList.bytes() : new byte[]{};
+        return notInited ? new byte[]{} : primitiveList.bytes();
     }
 
     @Override
     public char[] chars() {
-        return inited ? primitiveList.chars() : new char[]{};
+        return notInited ? new char[]{} : primitiveList.chars();
     }
 
     @Override
     public short[] shorts() {
-        return inited ? primitiveList.shorts() : new short[]{};
+        return notInited ? new short[]{} : primitiveList.shorts();
     }
 
     @Override
     public int[] ints() {
-        return inited ? primitiveList.ints() : new int[]{};
+        return notInited ? new int[]{} : primitiveList.ints();
     }
 
     @Override
     public long[] longs() {
-        return inited ? primitiveList.longs() : new long[]{};
+        return notInited ? new long[]{} : primitiveList.longs();
     }
 
     @Override
     public float[] floats() {
-        return inited ? primitiveList.floats() : new float[]{};
+        return notInited ? new float[]{} : primitiveList.floats();
     }
 
     @Override
     public double[] doubles() {
-        return inited ? primitiveList.doubles() : new double[]{};
+        return notInited ? new double[]{} : primitiveList.doubles();
     }
 
     @Override
     public boolean[] booleans() {
-        return inited ? primitiveList.booleans() : new boolean[]{};
+        return notInited ? new boolean[]{} : primitiveList.booleans();
     }
 
     // private util methods
 
-    @SuppressWarnings("unchecked")
     private void initCheck(Class<?> clazz) {
-        if (!inited) {
-            // unchecked -  we suppose that we always find the proper instance of primitive JList
-            primitiveList = PrimTypeUtils.getTypedPrimInstance(clazz, JArrayList.class);
-            if (primitiveList == null) {
-                throw new IllegalArgumentException("Unsupported type for primitive collection! Type: " + clazz);
-            }
-            inited = true;
+        if (notInited) {
+            init(clazz);
         }
     }
 
+    @SuppressWarnings("unchecked")
+    private void init(Class<?> clazz) {
+        // unchecked -  we suppose that we always find the proper instance of primitive JList
+        primitiveList = PrimTypeUtils.getTypedPrimInstance(clazz, JArrayList.class);
+        if (primitiveList == null) {
+            throw new IllegalArgumentException("Unsupported type for primitive collection! Type: " + clazz);
+        }
+        notInited = false;
+    }
+
     private void rangeCheck(int index) {
-        if (!inited) {
+        if (notInited) {
             throw new IndexOutOfBoundsException(outOfBoundsMsg(index));
         }
     }

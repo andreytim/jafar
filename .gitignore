@@ -20,3 +20,6 @@ out
 
 # C tags
 tags
+
+# other crap
+.DS_Store
