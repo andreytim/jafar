@@ -51,28 +51,10 @@ public class JArrayListInt extends JAbstractList<Integer> implements RandomAcces
     }
 
     @Override
-    public boolean add(Integer e) {
-        if (e == null) {
-            return false;
-        }
-        return add(e.intValue());
-    }
-
-    @Override
     public boolean add(int e) {
         data = grow(data, size + 1, size);
         data[size++] = e;
         return true;
-    }
-
-    @Override
-    public boolean add(short e) {
-        return add((int)e);
-    }
-
-    @Override
-    public boolean add(byte e) {
-        return add((int)e);
     }
 
     @Override
@@ -87,8 +69,6 @@ public class JArrayListInt extends JAbstractList<Integer> implements RandomAcces
                     if (size > i-1) {
                         System.arraycopy(data, i + 1, data, i, size - i - 1);
                     }
-                    ensureSize(size-1);
-                    modCount++;
                     size--;
                     return true;
                 }
@@ -97,31 +77,10 @@ public class JArrayListInt extends JAbstractList<Integer> implements RandomAcces
         return false;
     }
 
-    private void ensureSize(int newSize) {
-        if (newSize > data.length) {
-            final int[] newArray = new int[data.length << 1];
-            System.arraycopy(data, 0, newArray, 0, size);
-            data = newArray;
-        } else if (newSize < data.length >> 2) {
-            final int[] newArray = new int[data.length >> 1];
-            System.arraycopy(data, 0, newArray, 0, size);
-            data = newArray;
-        }
-    }
-
-    public int[] grow(int[] array, int length, int preserve) {
-        if (length > array.length) {
-            int newArray[] = new int[Math.min(array.length << 1, ARRAY_LIST_MAX_SIZE)];
-            System.arraycopy(array, 0, newArray, 0, preserve);
-            return newArray;
-        }
-        return array;
-    }
-
     @Override
     public boolean addAll(Collection<? extends Integer> c) {
         if (c.size() > 0) {
-            ensureSize(size + c.size());
+            data = grow(data, size + c.size(), size);
             int i = size;
             for (int e : c) {
                 data[i++] = e;
@@ -136,7 +95,7 @@ public class JArrayListInt extends JAbstractList<Integer> implements RandomAcces
     public boolean addAll(int index, Collection<? extends Integer> c) {
         rangeCheck(index);
         if (c.size() > 0) {
-            ensureSize(size + c.size());
+            data = grow(data, size + c.size(), size);
             System.arraycopy(data, index, data, index + c.size(), size - index);
             int i = 0;
             for (int e : c) {
@@ -157,11 +116,56 @@ public class JArrayListInt extends JAbstractList<Integer> implements RandomAcces
             }
         }
         if (size - r > 0) {
-            ensureSize(r);
             size = r;
             return true;
         }
         return false;
+    }
+
+    @Override
+    public void add(int index, Integer element) {
+        rangeCheck(index);
+        data = grow(data, size + 1, size);
+        System.arraycopy(data, index, data, index + 1, size - index);
+        data[index] = element.intValue();
+    }
+
+    @Override
+    public Integer remove(int index) {
+        rangeCheck(index);
+        int tmp = data[index];
+        if (size > index + 1) {
+            System.arraycopy(data, index + 1, data, index, size - index - 1);
+        }
+        size--;
+        return Integer.valueOf(tmp);
+    }
+
+    private int[] grow(int[] array, int length, int preserve) {
+        if (length > array.length) {
+            int[] newArray = new int[Math.min(growSize(array.length), ARRAY_LIST_MAX_SIZE)];
+            System.arraycopy(array, 0, newArray, 0, preserve);
+            return newArray;
+        }
+        return array;
+    }
+
+    @Override
+    public boolean add(Integer e) {
+        if (e == null) {
+            return false;
+        }
+        return add(e.intValue());
+    }
+
+    @Override
+    public boolean add(short e) {
+        return add((int)e);
+    }
+
+    @Override
+    public boolean add(byte e) {
+        return add((int)e);
     }
 
     @Override
@@ -181,26 +185,6 @@ public class JArrayListInt extends JAbstractList<Integer> implements RandomAcces
         rangeCheck(index);
         int tmp = data[index];
         data[index] = element.intValue();
-        return Integer.valueOf(tmp);
-    }
-
-    @Override
-    public void add(int index, Integer element) {
-        rangeCheck(index);
-        ensureSize(size + 1);
-        System.arraycopy(data, index, data, index + 1, size - index);
-        data[index] = element.intValue();
-    }
-
-    @Override
-    public Integer remove(int index) {
-        rangeCheck(index);
-        int tmp = data[index];
-        ensureSize(size - 1);
-        if (size > index + 1) {
-            System.arraycopy(data, index + 1, data, index, size - index - 1);
-        }
-        size--;
         return Integer.valueOf(tmp);
     }
 
@@ -255,7 +239,6 @@ public class JArrayListInt extends JAbstractList<Integer> implements RandomAcces
         return new Itr();
     }
 
-    // quite resembling the one from ArrayList
     private class Itr implements Iterator<Integer> {
         int cursor;
         int lastRet = -1;
@@ -265,7 +248,6 @@ public class JArrayListInt extends JAbstractList<Integer> implements RandomAcces
         }
 
         public Integer next() {
-            checkForComodification();
             int i = cursor;
             if (i >= size)
                 throw new NoSuchElementException();
@@ -278,7 +260,6 @@ public class JArrayListInt extends JAbstractList<Integer> implements RandomAcces
         public void remove() {
             if (lastRet < 0)
                 throw new IllegalStateException();
-            checkForComodification();
             try {
                 JArrayListInt.this.remove(lastRet);
                 cursor = lastRet;
@@ -286,10 +267,6 @@ public class JArrayListInt extends JAbstractList<Integer> implements RandomAcces
             } catch (IndexOutOfBoundsException ex) {
                 throw new ConcurrentModificationException();
             }
-        }
-
-        final void checkForComodification() {
-            // TODO!!
         }
     }
 

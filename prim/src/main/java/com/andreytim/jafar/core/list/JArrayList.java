@@ -14,6 +14,7 @@ public class JArrayList<E> extends AbstractList<E>
     private static final long serialVersionUID = -7777976475771634860L;
 
     private boolean notInited = true;
+    private boolean inited = false;
     private JList<E> primitiveList;
 
     public JArrayList() {}
@@ -30,7 +31,7 @@ public class JArrayList<E> extends AbstractList<E>
 
     @Override
     public boolean contains(Object e) {
-        return notInited || primitiveList.contains(e);
+        return inited && primitiveList.contains(e);
     }
 
     @Override
@@ -65,12 +66,12 @@ public class JArrayList<E> extends AbstractList<E>
 
     @Override
     public boolean remove(Object o) {
-        return notInited || primitiveList.remove(o);
+        return inited && primitiveList.remove(o);
     }
 
     @Override
     public void clear() {
-        if (!notInited) {
+        if (inited) {
             primitiveList.clear();
         }
     }
@@ -160,42 +161,42 @@ public class JArrayList<E> extends AbstractList<E>
 
     @Override
     public boolean contains(byte e) {
-        return notInited || primitiveList.contains(e);
+        return inited && primitiveList.contains(e);
     }
 
     @Override
     public boolean contains(short e) {
-        return notInited || primitiveList.contains(e);
+        return inited && primitiveList.contains(e);
     }
 
     @Override
     public boolean contains(int e) {
-        return notInited || primitiveList.contains(e);
+        return inited && primitiveList.contains(e);
     }
 
     @Override
     public boolean contains(long e) {
-        return notInited || primitiveList.contains(e);
+        return inited && primitiveList.contains(e);
     }
 
     @Override
     public boolean contains(float e) {
-        return notInited || primitiveList.contains(e);
+        return inited && primitiveList.contains(e);
     }
 
     @Override
     public boolean contains(double e) {
-        return notInited || primitiveList.contains(e);
+        return inited && primitiveList.contains(e);
     }
 
     @Override
     public boolean contains(char e) {
-        return notInited || primitiveList.contains(e);
+        return inited && primitiveList.contains(e);
     }
 
     @Override
     public boolean contains(boolean e) {
-        return notInited || primitiveList.contains(e);
+        return inited && primitiveList.contains(e);
     }
 
     @Override
@@ -430,6 +431,7 @@ public class JArrayList<E> extends AbstractList<E>
             throw new IllegalArgumentException("Unsupported type for primitive collection! Type: " + clazz);
         }
         notInited = false;
+        inited = true;
     }
 
     private void rangeCheck(int index) {

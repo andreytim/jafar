@@ -56,8 +56,7 @@ public class JArrayListByte extends JAbstractList<Byte> implements RandomAccess,
 
     @Override
     public boolean add(byte e) {
-        ensureSize(size + 1);
-        modCount++;
+        data = grow(data, size + 1, size);
         data[size++] = e;
         return true;
     }
@@ -68,14 +67,12 @@ public class JArrayListByte extends JAbstractList<Byte> implements RandomAccess,
             return false;
         }
         if (o instanceof Byte) {
-            int byteVal = ((Byte) o).byteValue();
+            byte byteVal = ((Byte) o).byteValue();
             for (int i = 0; i < size; i++) {
                 if (data[i] == byteVal) {
                     if (size > i-1) {
                         System.arraycopy(data, i + 1, data, i, size - i - 1);
                     }
-                    ensureSize(size-1);
-                    modCount++;
                     size--;
                     return true;
                 }
@@ -84,28 +81,15 @@ public class JArrayListByte extends JAbstractList<Byte> implements RandomAccess,
         return false;
     }
 
-    private void ensureSize(int newSize) {
-        if (newSize == data.length) {
-            byte[] newArray = new byte[data.length + (data.length >> 1)];
-            System.arraycopy(data, 0, newArray, 0, size);
-            data = newArray;
-        } else if (newSize < data.length >> 2) {
-            byte[] newArray = new byte[data.length >> 1];
-            System.arraycopy(data, 0, newArray, 0, size);
-            data = newArray;
-        }
-    }
-
     @Override
     public boolean addAll(Collection<? extends Byte> c) {
         if (c.size() > 0) {
-            ensureSize(size + c.size());
+            data = grow(data, size + c.size(), size);
             int i = size;
             for (byte e : c) {
                 data[i++] = e;
             }
             size += c.size();
-            modCount++;
             return true;
         }
         return false;
@@ -115,14 +99,13 @@ public class JArrayListByte extends JAbstractList<Byte> implements RandomAccess,
     public boolean addAll(int index, Collection<? extends Byte> c) {
         rangeCheck(index);
         if (c.size() > 0) {
-            ensureSize(size + c.size());
+            data = grow(data, size + c.size(), size);
             System.arraycopy(data, index, data, index + c.size(), size - index);
             int i = 0;
             for (byte e : c) {
                 data[index + i++] = e;
             }
             size += c.size();
-            modCount++;
             return true;
         }
         return false;
@@ -137,17 +120,42 @@ public class JArrayListByte extends JAbstractList<Byte> implements RandomAccess,
             }
         }
         if (size - r > 0) {
-            ensureSize(r);
             size = r;
-            modCount++;
             return true;
         }
         return false;
     }
 
     @Override
+    public void add(int index, Byte element) {
+        rangeCheck(index);
+        data = grow(data, size + 1, size);
+        System.arraycopy(data, index, data, index + 1, size - index);
+        data[index] = element.byteValue();
+    }
+
+    @Override
+    public Byte remove(int index) {
+        rangeCheck(index);
+        byte tmp = data[index];
+        if (size > index + 1) {
+            System.arraycopy(data, index + 1, data, index, size - index - 1);
+        }
+        size--;
+        return Byte.valueOf(tmp);
+    }
+
+    private byte[] grow(byte[] array, int length, int preserve) {
+        if (length > array.length) {
+            byte[] newArray = new byte[Math.min(array.length << 1, ARRAY_LIST_MAX_SIZE)];
+            System.arraycopy(array, 0, newArray, 0, preserve);
+            return newArray;
+        }
+        return array;
+    }
+
+    @Override
     public void clear() {
-        modCount++;
         data = new byte[DEFAULT_LENGTH];
         size = 0;
     }
@@ -163,29 +171,6 @@ public class JArrayListByte extends JAbstractList<Byte> implements RandomAccess,
         rangeCheck(index);
         byte tmp = data[index];
         data[index] = element.byteValue();
-        modCount++;
-        return Byte.valueOf(tmp);
-    }
-
-    @Override
-    public void add(int index, Byte element) {
-        rangeCheck(index);
-        ensureSize(size + 1);
-        modCount++;
-        System.arraycopy(data, index, data, index + 1, size - index);
-        data[index] = element.byteValue();
-    }
-
-    @Override
-    public Byte remove(int index) {
-        rangeCheck(index);
-        byte tmp = data[index];
-        ensureSize(size - 1);
-        if (size > index + 1) {
-            System.arraycopy(data, index + 1, data, index, size - index - 1);
-        }
-        modCount++;
-        size--;
         return Byte.valueOf(tmp);
     }
 
@@ -232,18 +217,15 @@ public class JArrayListByte extends JAbstractList<Byte> implements RandomAccess,
         return new Itr();
     }
 
-    // quite resembling the one from ArrayList
     private class Itr implements Iterator<Byte> {
         int cursor;
         int lastRet = -1;
-        int expectedModCount = modCount;
 
         public boolean hasNext() {
             return cursor != size;
         }
 
         public Byte next() {
-            checkForComodification();
             int i = cursor;
             if (i >= size)
                 throw new NoSuchElementException();
@@ -256,20 +238,13 @@ public class JArrayListByte extends JAbstractList<Byte> implements RandomAccess,
         public void remove() {
             if (lastRet < 0)
                 throw new IllegalStateException();
-            checkForComodification();
             try {
                 JArrayListByte.this.remove(lastRet);
                 cursor = lastRet;
                 lastRet = -1;
-                expectedModCount = modCount;
             } catch (IndexOutOfBoundsException ex) {
                 throw new ConcurrentModificationException();
             }
-        }
-
-        final void checkForComodification() {
-            if (modCount != expectedModCount)
-                throw new ConcurrentModificationException();
         }
     }
 

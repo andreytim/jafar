@@ -53,19 +53,111 @@ public class JArrayListLong extends JAbstractList<Long> implements RandomAccess,
     }
 
     @Override
+    public boolean add(long e) {
+        data = grow(data, size + 1, size);
+        data[size++] = e;
+        return true;
+    }
+
+    @Override
+    public boolean remove(Object o) {
+        if (o == null) {
+            return false;
+        }
+        if (o instanceof Long) {
+            long longVal = ((Long) o).longValue();
+            for (int i = 0; i < size; i++) {
+                if (data[i] == longVal) {
+                    if (size > i-1) {
+                        System.arraycopy(data, i + 1, data, i, size - i - 1);
+                    }
+                    size--;
+                    return true;
+                }
+            }
+        }
+        return false;
+    }
+
+    @Override
+    public boolean addAll(Collection<? extends Long> c) {
+        if (c.size() > 0) {
+            data = grow(data, size + c.size(), size);
+            int i = size;
+            for (long e : c) {
+                data[i++] = e;
+            }
+            size += c.size();
+            return true;
+        }
+        return false;
+    }
+
+    @Override
+    public boolean addAll(int index, Collection<? extends Long> c) {
+        rangeCheck(index);
+        if (c.size() > 0) {
+            data = grow(data, size + c.size(), size);
+            System.arraycopy(data, index, data, index + c.size(), size - index);
+            int i = 0;
+            for (long e : c) {
+                data[index + i++] = e;
+            }
+            size += c.size();
+            return true;
+        }
+        return false;
+    }
+
+    @Override
+    public boolean retainAll(Collection<?> c) {
+        int r = 0;
+        for (int i = 0; i < size; i++) {
+            if (c.contains(data[i])) {
+                data[r++] = data[i];
+            }
+        }
+        if (size - r > 0) {
+            size = r;
+            return true;
+        }
+        return false;
+    }
+
+    @Override
+    public void add(int index, Long element) {
+        rangeCheck(index);
+        data = grow(data, size + 1, size);
+        System.arraycopy(data, index, data, index + 1, size - index);
+        data[index] = element.longValue();
+    }
+
+    @Override
+    public Long remove(int index) {
+        rangeCheck(index);
+        long tmp = data[index];
+        if (size > index + 1) {
+            System.arraycopy(data, index + 1, data, index, size - index - 1);
+        }
+        size--;
+        return Long.valueOf(tmp);
+    }
+
+    private long[] grow(long[] array, int length, int preserve) {
+        if (length > array.length) {
+            long[] newArray = new long[Math.min(growSize(array.length), ARRAY_LIST_MAX_SIZE)];
+            System.arraycopy(array, 0, newArray, 0, preserve);
+            return newArray;
+        }
+        return array;
+    }
+
+    @Override
     public boolean add(Long e) {
         if (e == null) {
             return false;
         }
         return add(e.longValue());
-    }
-
-    @Override
-    public boolean add(long e) {
-        ensureSize(size + 1);
-        modCount++;
-        data[size++] = e;
-        return true;
     }
 
     @Override
@@ -84,91 +176,7 @@ public class JArrayListLong extends JAbstractList<Long> implements RandomAccess,
     }
 
     @Override
-    public boolean remove(Object o) {
-        if (o == null) {
-            return false;
-        }
-        if (o instanceof Long) {
-            long longVal = ((Long) o).longValue();
-            for (int i = 0; i < size; i++) {
-                if (data[i] == longVal) {
-                    if (size > i-1) {
-                        System.arraycopy(data, i + 1, data, i, size - i - 1);
-                    }
-                    ensureSize(size-1);
-                    modCount++;
-                    size--;
-                    return true;
-                }
-            }
-        }
-        return false;
-    }
-
-    private void ensureSize(int newSize) {
-        if (newSize == data.length) {
-            long[] newArray = new long[data.length + (data.length >> 1)];
-            System.arraycopy(data, 0, newArray, 0, size);
-            data = newArray;
-        } else if (newSize < data.length >> 2) {
-            long[] newArray = new long[data.length >> 1];
-            System.arraycopy(data, 0, newArray, 0, size);
-            data = newArray;
-        }
-    }
-
-    @Override
-    public boolean addAll(Collection<? extends Long> c) {
-        if (c.size() > 0) {
-            ensureSize(size + c.size());
-            int i = size;
-            for (long e : c) {
-                data[i++] = e;
-            }
-            size += c.size();
-            modCount++;
-            return true;
-        }
-        return false;
-    }
-
-    @Override
-    public boolean addAll(int index, Collection<? extends Long> c) {
-        rangeCheck(index);
-        if (c.size() > 0) {
-            ensureSize(size + c.size());
-            System.arraycopy(data, index, data, index + c.size(), size - index);
-            int i = 0;
-            for (long e : c) {
-                data[index + i++] = e;
-            }
-            size += c.size();
-            modCount++;
-            return true;
-        }
-        return false;
-    }
-
-    @Override
-    public boolean retainAll(Collection<?> c) {
-        int r = 0;
-        for (int i = 0; i < size; i++) {
-            if (c.contains(data[i])) {
-                data[r++] = data[i];
-            }
-        }
-        if (size - r > 0) {
-            ensureSize(r);
-            size = r;
-            modCount++;
-            return true;
-        }
-        return false;
-    }
-
-    @Override
     public void clear() {
-        modCount++;
         data = new long[DEFAULT_LENGTH];
         size = 0;
     }
@@ -184,29 +192,6 @@ public class JArrayListLong extends JAbstractList<Long> implements RandomAccess,
         rangeCheck(index);
         long tmp = data[index];
         data[index] = element.longValue();
-        modCount++;
-        return Long.valueOf(tmp);
-    }
-
-    @Override
-    public void add(int index, Long element) {
-        rangeCheck(index);
-        ensureSize(size + 1);
-        modCount++;
-        System.arraycopy(data, index, data, index + 1, size - index);
-        data[index] = element.longValue();
-    }
-
-    @Override
-    public Long remove(int index) {
-        rangeCheck(index);
-        long tmp = data[index];
-        ensureSize(size - 1);
-        if (size > index + 1) {
-            System.arraycopy(data, index + 1, data, index, size - index - 1);
-        }
-        modCount++;
-        size--;
         return Long.valueOf(tmp);
     }
 
@@ -265,18 +250,15 @@ public class JArrayListLong extends JAbstractList<Long> implements RandomAccess,
         return new Itr();
     }
 
-    // quite resembling the one from ArrayList
     private class Itr implements Iterator<Long> {
         int cursor;
         int lastRet = -1;
-        int expectedModCount = modCount;
 
         public boolean hasNext() {
             return cursor != size;
         }
 
         public Long next() {
-            checkForComodification();
             int i = cursor;
             if (i >= size)
                 throw new NoSuchElementException();
@@ -289,20 +271,13 @@ public class JArrayListLong extends JAbstractList<Long> implements RandomAccess,
         public void remove() {
             if (lastRet < 0)
                 throw new IllegalStateException();
-            checkForComodification();
             try {
                 JArrayListLong.this.remove(lastRet);
                 cursor = lastRet;
                 lastRet = -1;
-                expectedModCount = modCount;
             } catch (IndexOutOfBoundsException ex) {
                 throw new ConcurrentModificationException();
             }
-        }
-
-        final void checkForComodification() {
-            if (modCount != expectedModCount)
-                throw new ConcurrentModificationException();
         }
     }
 

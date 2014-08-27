@@ -13,7 +13,7 @@ import java.util.concurrent.TimeUnit;
 
 /**
  * Launch command:
- * > java -jar <path>/bm-<version>-jmh.jar -v extra -i 10 -wi 5 -f 1 -prof gc ".*Loop_BM.*"
+ * > java -jar <path>/bm-<version>-jmh.jar -v extra -i 10 -wi 5 -f 1 -prof gc ".*Int_Loop_BM.*"
  *
  * Created by shpolsky on 09.08.14.
  */
@@ -25,22 +25,22 @@ public class JArrayList_Int_Loop_BM {
     private static final int SIZE = 1000000;
 
     private static final int[] INT_ARR = new int[SIZE];
-    private static final List<Integer> INT_AL = new ArrayList<Integer>();
-    private static final List<Integer> INT_JAL = new JArrayList<Integer>();
-    private static final JList<Integer> INT_JJAL = new JArrayList<Integer>();
+    private static final List<Integer> INT_AL = new ArrayList<>();
+    private static final List<Integer> INT_JAL = new JArrayList<>();
+    private static final JList<Integer> INT_JJAL = new JArrayList<>();
     private static final IntArrayList INT_CAL = new IntArrayList();
     private static final it.unimi.dsi.fastutil.ints.IntArrayList INT_FUAL =
             new it.unimi.dsi.fastutil.ints.IntArrayList();
     private static final TIntArrayList INT_TAL = new TIntArrayList();
 
     static {
-        fill(INT_ARR);
-        fill(INT_AL, SIZE);
-        fill(INT_JAL, SIZE);
-        fill(INT_JJAL, SIZE);
-        fill(INT_CAL, SIZE);
-        fill(INT_FUAL, SIZE);
-        fill(INT_TAL, SIZE);
+        BmListUtils.fill(INT_ARR);
+        BmListUtils.fill(INT_AL, SIZE);
+        BmListUtils.fill(INT_JAL, SIZE);
+        BmListUtils.fill(INT_JJAL, SIZE);
+        BmListUtils.fill(INT_CAL, SIZE);
+        BmListUtils.fill(INT_FUAL, SIZE);
+        BmListUtils.fill(INT_TAL, SIZE);
     }
 
     private volatile int dummy;
@@ -48,7 +48,7 @@ public class JArrayList_Int_Loop_BM {
     @Benchmark
     @BenchmarkMode(Mode.AverageTime)
     @OutputTimeUnit(TimeUnit.MICROSECONDS)
-    public void intArrForeachLoop() {
+    public void javaArrayForeachLoop() {
         dummy = 0;
         for (int i : INT_ARR) {
             dummy += i;
@@ -58,7 +58,7 @@ public class JArrayList_Int_Loop_BM {
     @Benchmark
     @BenchmarkMode(Mode.AverageTime)
     @OutputTimeUnit(TimeUnit.MICROSECONDS)
-    public void intArrayListForeachLoop() {
+    public void javaArrayListForeachLoop() {
         dummy = 0;
         for (int i : INT_AL) {
             dummy += i;
@@ -68,7 +68,7 @@ public class JArrayList_Int_Loop_BM {
     @Benchmark
     @BenchmarkMode(Mode.AverageTime)
     @OutputTimeUnit(TimeUnit.MICROSECONDS)
-    public void intJArrayListForeachLoop() {
+    public void jArrayListForeachLoop() {
         dummy = 0;
         for (int i : INT_JAL) {
             dummy += i;
@@ -78,7 +78,7 @@ public class JArrayList_Int_Loop_BM {
     @Benchmark
     @BenchmarkMode(Mode.AverageTime)
     @OutputTimeUnit(TimeUnit.MICROSECONDS)
-    public void intJJArrayListForeachLoop() {
+    public void jjArrayListForeachLoop() {
         dummy = 0;
         for (int i : INT_JJAL) {
             dummy += i;
@@ -88,7 +88,7 @@ public class JArrayList_Int_Loop_BM {
     @Benchmark
     @BenchmarkMode(Mode.AverageTime)
     @OutputTimeUnit(TimeUnit.MICROSECONDS)
-    public void intJJArrayListIdxForLoop() {
+    public void jjArrayListIdxForLoop() {
         dummy = 0;
         for (int i = 0; i < INT_JJAL.size(); i++) {
             dummy += INT_JJAL.getInt(i);
@@ -98,7 +98,7 @@ public class JArrayList_Int_Loop_BM {
     @Benchmark
     @BenchmarkMode(Mode.AverageTime)
     @OutputTimeUnit(TimeUnit.MICROSECONDS)
-    public void intColtArrayListIdxForLoop() {
+    public void coltArrayListIdxForLoop() {
         dummy = 0;
         for (int i = 0; i < INT_CAL.size(); i++) {
             dummy += INT_CAL.get(i);
@@ -108,7 +108,7 @@ public class JArrayList_Int_Loop_BM {
     @Benchmark
     @BenchmarkMode(Mode.AverageTime)
     @OutputTimeUnit(TimeUnit.MICROSECONDS)
-    public void intFastutilArrayListIdxForLoop() {
+    public void fastutilArrayListIdxForLoop() {
         dummy = 0;
         for (int i = 0; i < INT_FUAL.size(); i++) {
             dummy += INT_FUAL.getInt(i);
@@ -118,40 +118,20 @@ public class JArrayList_Int_Loop_BM {
     @Benchmark
     @BenchmarkMode(Mode.AverageTime)
     @OutputTimeUnit(TimeUnit.MICROSECONDS)
-    public void intTroveArrayListIdxForLoop() {
+    public void fastutilArrayListForeachLoop() {
+        dummy = 0;
+        for (int i : INT_FUAL) {
+            dummy += i;
+        }
+    }
+
+    @Benchmark
+    @BenchmarkMode(Mode.AverageTime)
+    @OutputTimeUnit(TimeUnit.MICROSECONDS)
+    public void troveArrayListIdxForLoop() {
         dummy = 0;
         for (int i = 0; i < INT_TAL.size(); i++) {
             dummy += INT_TAL.get(i);
-        }
-    }
-
-    private static void fill(List<Integer> list, int size) {
-        for (int i = 0; i < size; i++) {
-            list.add(RAND.nextInt());
-        }
-    }
-
-    private static void fill(IntArrayList list, int size) {
-        for (int i = 0; i < size; i++) {
-            list.add(RAND.nextInt());
-        }
-    }
-
-    private static void fill(TIntArrayList list, int size) {
-        for (int i = 0; i < size; i++) {
-            list.add(RAND.nextInt());
-        }
-    }
-
-    private static void fill(it.unimi.dsi.fastutil.ints.IntArrayList list, int size) {
-        for (int i = 0; i < size; i++) {
-            list.add(RAND.nextInt());
-        }
-    }
-
-    private static void fill(int[] arr) {
-        for (int i = 0; i < arr.length; i++) {
-            arr[i] = RAND.nextInt();
         }
     }
 }

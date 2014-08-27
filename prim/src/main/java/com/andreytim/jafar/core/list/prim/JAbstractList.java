@@ -322,4 +322,8 @@ public abstract class JAbstractList<E> extends AbstractList<E> implements JList<
     protected String outOfBoundsMsg(int index) {
         return String.format("Index: %d, Size: %d", index, size);
     }
+
+    protected int growSize(int size) {
+        return size << 1;
+    }
 }
