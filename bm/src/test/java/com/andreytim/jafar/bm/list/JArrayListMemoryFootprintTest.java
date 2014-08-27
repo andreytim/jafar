@@ -18,7 +18,7 @@ import java.util.List;
 /**
  * Created by shpolsky on 19.07.14.
  */
-public class JArrayListMemory {
+public class JArrayListMemoryFootprintTest {
 
     private static final int SIZE = 1000000;
 

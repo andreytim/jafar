@@ -19,10 +19,10 @@ import java.util.concurrent.TimeUnit;
  */
 @SuppressWarnings("unused")
 @State(Scope.Thread)
-public class JArrayList_Int_RemoveByIdx_BM {
+public class ArrayList_Int_RemoveByIdx_BM {
 
     private static final Random RAND = new Random();
-    private static final int SIZE = 1000000;
+    private static final int SIZE = 1_000_000;
     private static final int REMOVALS_NUMBER = 100;
 
     private final List<Integer> INT_AL = new ArrayList<>();
@@ -32,20 +32,14 @@ public class JArrayList_Int_RemoveByIdx_BM {
     private final it.unimi.dsi.fastutil.ints.IntArrayList INT_FUAL =  new it.unimi.dsi.fastutil.ints.IntArrayList();
     private final TIntArrayList INT_TAL = new TIntArrayList();
 
-    @Setup(Level.Iteration)
+    @Setup(Level.Invocation)
     public void fill() {
-        INT_AL.clear();
-        BmListUtils.fill(INT_AL, SIZE);
-        INT_JAL.clear();
-        BmListUtils.fill(INT_JAL, SIZE);
-        INT_JJAL.clear();
-        BmListUtils.fill(INT_JJAL, SIZE);
-        INT_CAL.clear();
-        BmListUtils.fill(INT_CAL, SIZE);
-        INT_FUAL.clear();
-        BmListUtils.fill(INT_FUAL, SIZE);
-        INT_TAL.clear();
-        BmListUtils.fill(INT_TAL, SIZE);
+        IntListUtils.refill(INT_AL, SIZE);
+        IntListUtils.refill(INT_JAL, SIZE);
+        IntListUtils.refill(INT_JJAL, SIZE);
+        IntListUtils.refill(INT_CAL, SIZE);
+        IntListUtils.refill(INT_FUAL, SIZE);
+        IntListUtils.refill(INT_TAL, SIZE);
     }
 
     @Benchmark

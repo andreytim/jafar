@@ -2,13 +2,13 @@ package com.andreytim.jafar.bm.list;
 
 import cern.colt.list.IntArrayList;
 import com.andreytim.jafar.core.list.JArrayList;
+import com.andreytim.jafar.core.list.prim.JArrayListInt;
 import com.andreytim.jafar.core.list.prim.JList;
 import gnu.trove.list.array.TIntArrayList;
 import org.openjdk.jmh.annotations.*;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Random;
 import java.util.concurrent.TimeUnit;
 
 /**
@@ -19,40 +19,29 @@ import java.util.concurrent.TimeUnit;
  */
 @SuppressWarnings("unused")
 @State(Scope.Thread)
-public class JArrayList_Int_Loop_BM {
+public class ArrayList_Int_Loop_BM {
 
-    private static final Random RAND = new Random();
-    private static final int SIZE = 1000000;
+    private static final int SIZE = 1_000_000;
 
-    private static final int[] INT_ARR = new int[SIZE];
-    private static final List<Integer> INT_AL = new ArrayList<>();
-    private static final List<Integer> INT_JAL = new JArrayList<>();
-    private static final JList<Integer> INT_JJAL = new JArrayList<>();
-    private static final IntArrayList INT_CAL = new IntArrayList();
-    private static final it.unimi.dsi.fastutil.ints.IntArrayList INT_FUAL =
-            new it.unimi.dsi.fastutil.ints.IntArrayList();
-    private static final TIntArrayList INT_TAL = new TIntArrayList();
-
-    static {
-        BmListUtils.fill(INT_ARR);
-        BmListUtils.fill(INT_AL, SIZE);
-        BmListUtils.fill(INT_JAL, SIZE);
-        BmListUtils.fill(INT_JJAL, SIZE);
-        BmListUtils.fill(INT_CAL, SIZE);
-        BmListUtils.fill(INT_FUAL, SIZE);
-        BmListUtils.fill(INT_TAL, SIZE);
-    }
+    private List<Integer> INT_AL = new ArrayList<>();
+    private List<Integer> INT_JAL = new JArrayList<>();
+    private JList<Integer> INT_JJAL = new JArrayList<>();
+    private JList<Integer> INT_JJIAL = new JArrayListInt();
+    private IntArrayList INT_CAL = new IntArrayList();
+    private it.unimi.dsi.fastutil.ints.IntArrayList INT_FUAL = new it.unimi.dsi.fastutil.ints.IntArrayList();
+    private TIntArrayList INT_TAL = new TIntArrayList();
 
     private volatile int dummy;
 
-    @Benchmark
-    @BenchmarkMode(Mode.AverageTime)
-    @OutputTimeUnit(TimeUnit.MICROSECONDS)
-    public void javaArrayForeachLoop() {
-        dummy = 0;
-        for (int i : INT_ARR) {
-            dummy += i;
-        }
+    @Setup(Level.Iteration)
+    public void fill() {
+        IntListUtils.refill(INT_AL, SIZE);
+        IntListUtils.refill(INT_JAL, SIZE);
+        IntListUtils.refill(INT_JJAL, SIZE);
+        IntListUtils.refill(INT_JJIAL, SIZE);
+        IntListUtils.refill(INT_CAL, SIZE);
+        IntListUtils.refill(INT_FUAL, SIZE);
+        IntListUtils.refill(INT_TAL, SIZE);
     }
 
     @Benchmark

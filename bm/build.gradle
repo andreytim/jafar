@@ -23,6 +23,7 @@ dependencies {
     compile 'org.openjdk.jmh:jmh-core:0.9.5'
     compile 'org.openjdk.jmh:jmh-generator-annprocess:0.9.5'
     compile project(':prim')
+    compile project(':algo')
     compile 'colt:colt:1.2.0'
     compile 'net.sf.trove4j:trove4j:3.0.3'
     compile 'it.unimi.dsi:fastutil:6.5.15'

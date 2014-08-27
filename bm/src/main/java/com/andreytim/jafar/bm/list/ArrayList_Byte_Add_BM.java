@@ -20,10 +20,10 @@ import java.util.concurrent.TimeUnit;
  */
 @SuppressWarnings("unused")
 @State(Scope.Thread)
-public class JArrayList_Byte_Add_BM {
+public class ArrayList_Byte_Add_BM {
 
     private static final Random RAND = new Random();
-    private static final int SIZE = 1000000;
+    private static final int SIZE = 1_000_000;
     private static final byte[] PREGENERATED_RANDS = new byte[SIZE];
     static {
         for (int i = 0; i < SIZE; i++) {
