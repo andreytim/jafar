@@ -1,11 +1,9 @@
 package com.andreytim.jafar.core.list;
 
-import com.andreytim.jafar.core.list.JArrayList;
-import com.andreytim.jafar.core.list.Lists;
-import org.junit.Assert;
-import org.junit.Test;
 import com.andreytim.jafar.core.list.prim.JList;
 import com.andreytim.jafar.core.prim.PrimType;
+import org.junit.Assert;
+import org.junit.Test;
 
 import java.util.Arrays;
 import java.util.EnumSet;
@@ -14,7 +12,7 @@ import java.util.List;
 /**
  * Created by shpolsky on 15.07.14.
  */
-public class JListsTest {
+public class JArrayListTest {
 
     private static final EnumSet<PrimType> typesToCheck = EnumSet.of(
             PrimType.BYTE, PrimType.SHORT, PrimType.INT, PrimType.LONG,

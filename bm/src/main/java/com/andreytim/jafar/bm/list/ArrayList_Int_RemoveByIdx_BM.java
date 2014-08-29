@@ -1,7 +1,9 @@
 package com.andreytim.jafar.bm.list;
 
 import cern.colt.list.IntArrayList;
+import com.andreytim.jafar.core.list.ExtLists;
 import com.andreytim.jafar.core.list.JArrayList;
+import com.andreytim.jafar.core.list.Lists;
 import com.andreytim.jafar.core.list.prim.JList;
 import gnu.trove.list.array.TIntArrayList;
 import org.openjdk.jmh.annotations.*;
@@ -34,12 +36,12 @@ public class ArrayList_Int_RemoveByIdx_BM {
 
     @Setup(Level.Invocation)
     public void fill() {
-        IntListUtils.refill(INT_AL, SIZE);
-        IntListUtils.refill(INT_JAL, SIZE);
-        IntListUtils.refill(INT_JJAL, SIZE);
-        IntListUtils.refill(INT_CAL, SIZE);
-        IntListUtils.refill(INT_FUAL, SIZE);
-        IntListUtils.refill(INT_TAL, SIZE);
+        Lists.refill(INT_AL, SIZE);
+        Lists.refill(INT_JAL, SIZE);
+        Lists.refill(INT_JJAL, SIZE);
+        ExtLists.refill(INT_CAL, SIZE);
+        ExtLists.refill(INT_FUAL, SIZE);
+        ExtLists.refill(INT_TAL, SIZE);
     }
 
     @Benchmark
