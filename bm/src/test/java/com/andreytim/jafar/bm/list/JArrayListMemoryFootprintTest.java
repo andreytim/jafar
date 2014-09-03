@@ -14,7 +14,7 @@ import java.util.List;
  */
 public class JArrayListMemoryFootprintTest {
 
-    private static final int SIZE = 1000000;
+    private static final int SIZE = 1_000_000;
 
     @Test
     public void testMemoryFootprints() {

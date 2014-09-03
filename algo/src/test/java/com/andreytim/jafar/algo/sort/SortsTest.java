@@ -23,13 +23,18 @@ public class SortsTest {
     }
 
     @Test
-    public void testInsertionSort() {
-        testSortingAlgorithm(new InsertionSort());
+    public void testInsertionSwapSort() {
+        testSortingAlgorithm(new InsertionSort(InsertionSort.Mode.SWAPS));
     }
 
     @Test
-    public void testInsertionSwapInPlaceSort() {
-        testSortingAlgorithm(new InsertionSwapInPlaceSort());
+    public void testInsertionShiftSort() {
+        testSortingAlgorithm(new InsertionSort(InsertionSort.Mode.SHIFTS));
+    }
+
+    @Test
+    public void testShellSort() {
+        testSortingAlgorithm(new ShellSort());
     }
 
     private void testSortingAlgorithm(AbstractSort sort) {

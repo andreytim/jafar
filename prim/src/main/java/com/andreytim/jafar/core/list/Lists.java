@@ -1,5 +1,6 @@
 package com.andreytim.jafar.core.list;
 
+import com.andreytim.jafar.core.list.prim.JArrayListBoolean;
 import com.andreytim.jafar.core.list.prim.JList;
 import com.andreytim.jafar.core.prim.PrimType;
 

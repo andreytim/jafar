@@ -4,23 +4,42 @@ import java.io.Serializable;
 import java.util.*;
 
 /**
- * You don't want this! Use BitSet instead.
- * TODO: make it bitwise
  * Created by shpolsky on 15.07.14.
  */
 public class JArrayListBoolean extends JAbstractList<Boolean> implements RandomAccess, Serializable {
 
     private static final long serialVersionUID = -8975253306985770066L;
 
-    private boolean[] data = new boolean[DEFAULT_LENGTH];
+    private byte[] data = new byte[DEFAULT_LENGTH / 8];
 
     public JArrayListBoolean() {}
 
     protected JArrayListBoolean(boolean[] data) {
-        this.data = data;
+        for (boolean b : data) {
+            add(b);
+        }
         this.size = data.length;
     }
 
+    private void setBit(boolean bit, int idx) {
+        int byteIdx = idx / 8;
+        byte bitIdx = (byte) (idx % 8);
+        if (bit) {
+            data[byteIdx] |= 1 << bitIdx;
+        } else {
+            data[byteIdx] &= ~(1 << bitIdx);
+        }
+    }
+
+    private boolean getBit(int idx) {
+        int byteIdx = idx / 8;
+        byte bitIdx = (byte) (idx % 8);
+        return ((data[byteIdx] >> bitIdx) & 1) == 1;
+    }
+
+    private boolean checkBit(int idx, boolean val) {
+        return getBit(idx) == val;
+    }
 
     @Override
     public Class<?> getPrimType() {
@@ -41,7 +60,7 @@ public class JArrayListBoolean extends JAbstractList<Boolean> implements RandomA
     @Override
     public boolean contains(boolean e) {
         for (int i = 0; i < size; i++) {
-            if (e == data[i]) {
+            if (checkBit(i, e)) {
                 return true;
             }
         }
@@ -58,9 +77,8 @@ public class JArrayListBoolean extends JAbstractList<Boolean> implements RandomA
 
     @Override
     public boolean add(boolean e) {
-        ensureSize(size + 1);
-        modCount++;
-        data[size++] = e;
+        data = grow(data, size + 1, size);
+        setBit(e, size++);
         return true;
     }
 
@@ -72,12 +90,10 @@ public class JArrayListBoolean extends JAbstractList<Boolean> implements RandomA
         if (o instanceof Boolean) {
             boolean booleanVal = ((Boolean) o).booleanValue();
             for (int i = 0; i < size; i++) {
-                if (data[i] == booleanVal) {
+                if (checkBit(i, booleanVal)) {
                     if (size > i-1) {
                         System.arraycopy(data, i + 1, data, i, size - i - 1);
                     }
-                    ensureSize(size-1);
-                    modCount++;
                     size--;
                     return true;
                 }
@@ -86,28 +102,15 @@ public class JArrayListBoolean extends JAbstractList<Boolean> implements RandomA
         return false;
     }
 
-    private void ensureSize(int newSize) {
-        if (newSize == data.length) {
-            boolean[] newArray = new boolean[data.length + (data.length >> 1)];
-            System.arraycopy(data, 0, newArray, 0, size);
-            data = newArray;
-        } else if (newSize < data.length >> 2) {
-            boolean[] newArray = new boolean[data.length >> 1];
-            System.arraycopy(data, 0, newArray, 0, size);
-            data = newArray;
-        }
-    }
-
     @Override
     public boolean addAll(Collection<? extends Boolean> c) {
         if (c.size() > 0) {
-            ensureSize(size + c.size());
+            data = grow(data, size + c.size(), size);
             int i = size;
             for (boolean e : c) {
-                data[i++] = e;
+                setBit(e, i++);
             }
             size += c.size();
-            modCount++;
             return true;
         }
         return false;
@@ -117,14 +120,13 @@ public class JArrayListBoolean extends JAbstractList<Boolean> implements RandomA
     public boolean addAll(int index, Collection<? extends Boolean> c) {
         rangeCheck(index);
         if (c.size() > 0) {
-            ensureSize(size + c.size());
+            data = grow(data, size + c.size(), size);
             System.arraycopy(data, index, data, index + c.size(), size - index);
             int i = 0;
             for (boolean e : c) {
-                data[index + i++] = e;
+                setBit(e, index + i++);
             }
             size += c.size();
-            modCount++;
             return true;
         }
         return false;
@@ -139,55 +141,57 @@ public class JArrayListBoolean extends JAbstractList<Boolean> implements RandomA
             }
         }
         if (size - r > 0) {
-            ensureSize(r);
             size = r;
-            modCount++;
             return true;
         }
         return false;
     }
 
     @Override
+    public void add(int index, Boolean element) {
+        rangeCheck(index);
+        data = grow(data, size + 1, size);
+        System.arraycopy(data, index, data, index + 1, size - index);
+        setBit(element.booleanValue(), index);
+    }
+
+    @Override
+    public Boolean remove(int index) {
+        rangeCheck(index);
+        boolean tmp = getBit(index);
+        if (size > index + 1) {
+            System.arraycopy(data, index + 1, data, index, size - index - 1);
+        }
+        size--;
+        return Boolean.valueOf(tmp);
+    }
+
+    private byte[] grow(byte[] array, int length, int preserve) {
+        if (length / 8 + 1 > array.length) {
+            byte[] newArray = new byte[Math.min(growSize(array.length), ARRAY_LIST_MAX_SIZE)];
+            System.arraycopy(array, 0, newArray, 0, preserve / 8);
+            return newArray;
+        }
+        return array;
+    }
+
+    @Override
     public void clear() {
-        modCount++;
-        data = new boolean[DEFAULT_LENGTH];
+        data = new byte[DEFAULT_LENGTH / 8];
         size = 0;
     }
 
     @Override
     public Boolean get(int index) {
         rangeCheck(index);
-        return data[index];
+        return getBit(index);
     }
 
     @Override
     public Boolean set(int index, Boolean element) {
         rangeCheck(index);
-        boolean tmp = data[index];
-        data[index] = element.booleanValue();
-        modCount++;
-        return Boolean.valueOf(tmp);
-    }
-
-    @Override
-    public void add(int index, Boolean element) {
-        rangeCheck(index);
-        ensureSize(size + 1);
-        modCount++;
-        System.arraycopy(data, index, data, index + 1, size - index);
-        data[index] = element.booleanValue();
-    }
-
-    @Override
-    public Boolean remove(int index) {
-        rangeCheck(index);
-        boolean tmp = data[index];
-        ensureSize(size - 1);
-        if (size > index + 1) {
-            System.arraycopy(data, index + 1, data, index, size - index - 1);
-        }
-        modCount++;
-        size--;
+        boolean tmp = getBit(index);
+        setBit(element.booleanValue(), index);
         return Boolean.valueOf(tmp);
     }
 
@@ -203,7 +207,7 @@ public class JArrayListBoolean extends JAbstractList<Boolean> implements RandomA
             return -1;
         }
         for (int i = 0; i < size; i++) {
-            if (data[i] == tmp) {
+            if (checkBit(i, tmp)) {
                 return i;
             }
         }
@@ -222,7 +226,7 @@ public class JArrayListBoolean extends JAbstractList<Boolean> implements RandomA
             return -1;
         }
         for (int i = size - 1; i > -1; i--) {
-            if (data[i] == tmp) {
+            if (checkBit(i, tmp)) {
                 return i;
             }
         }
@@ -234,63 +238,57 @@ public class JArrayListBoolean extends JAbstractList<Boolean> implements RandomA
         return new Itr();
     }
 
-    // quite resembling the one from ArrayList
     private class Itr implements Iterator<Boolean> {
         int cursor;
         int lastRet = -1;
-        int expectedModCount = modCount;
 
         public boolean hasNext() {
             return cursor != size;
         }
 
         public Boolean next() {
-            checkForComodification();
             int i = cursor;
             if (i >= size)
                 throw new NoSuchElementException();
             if (i >= data.length)
                 throw new ConcurrentModificationException();
             cursor = i + 1;
-            return data[lastRet = i];
+            return getBit(lastRet = i);
         }
 
         public void remove() {
             if (lastRet < 0)
                 throw new IllegalStateException();
-            checkForComodification();
             try {
                 JArrayListBoolean.this.remove(lastRet);
                 cursor = lastRet;
                 lastRet = -1;
-                expectedModCount = modCount;
             } catch (IndexOutOfBoundsException ex) {
                 throw new ConcurrentModificationException();
             }
-        }
-
-        final void checkForComodification() {
-            if (modCount != expectedModCount)
-                throw new ConcurrentModificationException();
         }
     }
 
     @Override
     public boolean[] booleans() {
-        return Arrays.copyOf(data, size);
+        boolean[] res = new boolean[size];
+        for (int i = 0; i < size; i++) {
+            res[i] = getBit(i);
+        }
+        return res;
     }
 
     @Override
     public boolean getBoolean(int idx) {
         rangeCheck(idx);
-        return data[idx];
+        return getBit(idx);
     }
 
     @Override
     public Object[] toArray() {
         Object[] result = new Object[size];
         for (int i = 0; i < size; i++) {
-            result[i] = Boolean.valueOf(data[i]);
+            result[i] = Boolean.valueOf(getBit(i));
         }
         return result;
     }
@@ -299,7 +297,11 @@ public class JArrayListBoolean extends JAbstractList<Boolean> implements RandomA
     public List<Boolean> subList(int fromIndex, int toIndex) {
         rangeCheck(fromIndex);
         rangeCheck(toIndex);
-        return new JArrayListBoolean(Arrays.copyOfRange(data, fromIndex, toIndex));
+        List<Boolean> res = new JArrayListBoolean();
+        for (int i = fromIndex; i < toIndex; i++) {
+            res.add(getBit(i));
+        }
+        return res;
     }
 
     @Override

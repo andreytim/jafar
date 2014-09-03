@@ -19,7 +19,6 @@ public class JArrayListDouble extends JAbstractList<Double> implements RandomAcc
         this.size = data.length;
     }
 
-
     @Override
     public Class<?> getPrimType() {
         return double.class;
@@ -55,11 +54,9 @@ public class JArrayListDouble extends JAbstractList<Double> implements RandomAcc
         }
         return add(e.doubleValue());
     }
-
     @Override
     public boolean add(double e) {
-        ensureSize(size + 1);
-        modCount++;
+        data = grow(data, size + 1, size);
         data[size++] = e;
         return true;
     }
@@ -76,8 +73,6 @@ public class JArrayListDouble extends JAbstractList<Double> implements RandomAcc
                     if (size > i-1) {
                         System.arraycopy(data, i + 1, data, i, size - i - 1);
                     }
-                    ensureSize(size-1);
-                    modCount++;
                     size--;
                     return true;
                 }
@@ -86,28 +81,15 @@ public class JArrayListDouble extends JAbstractList<Double> implements RandomAcc
         return false;
     }
 
-    private void ensureSize(int newSize) {
-        if (newSize == data.length) {
-            double[] newArray = new double[data.length + (data.length >> 1)];
-            System.arraycopy(data, 0, newArray, 0, size);
-            data = newArray;
-        } else if (newSize < data.length >> 2) {
-            double[] newArray = new double[data.length >> 1];
-            System.arraycopy(data, 0, newArray, 0, size);
-            data = newArray;
-        }
-    }
-
     @Override
     public boolean addAll(Collection<? extends Double> c) {
         if (c.size() > 0) {
-            ensureSize(size + c.size());
+            data = grow(data, size + c.size(), size);
             int i = size;
             for (double e : c) {
                 data[i++] = e;
             }
             size += c.size();
-            modCount++;
             return true;
         }
         return false;
@@ -117,14 +99,13 @@ public class JArrayListDouble extends JAbstractList<Double> implements RandomAcc
     public boolean addAll(int index, Collection<? extends Double> c) {
         rangeCheck(index);
         if (c.size() > 0) {
-            ensureSize(size + c.size());
+            data = grow(data, size + c.size(), size);
             System.arraycopy(data, index, data, index + c.size(), size - index);
             int i = 0;
             for (double e : c) {
                 data[index + i++] = e;
             }
             size += c.size();
-            modCount++;
             return true;
         }
         return false;
@@ -139,17 +120,42 @@ public class JArrayListDouble extends JAbstractList<Double> implements RandomAcc
             }
         }
         if (size - r > 0) {
-            ensureSize(r);
             size = r;
-            modCount++;
             return true;
         }
         return false;
     }
 
     @Override
+    public void add(int index, Double element) {
+        rangeCheck(index);
+        data = grow(data, size + 1, size);
+        System.arraycopy(data, index, data, index + 1, size - index);
+        data[index] = element.doubleValue();
+    }
+
+    @Override
+    public Double remove(int index) {
+        rangeCheck(index);
+        double tmp = data[index];
+        if (size > index + 1) {
+            System.arraycopy(data, index + 1, data, index, size - index - 1);
+        }
+        size--;
+        return Double.valueOf(tmp);
+    }
+
+    private double[] grow(double[] array, int length, int preserve) {
+        if (length > array.length) {
+            double[] newArray = new double[Math.min(growSize(array.length), ARRAY_LIST_MAX_SIZE)];
+            System.arraycopy(array, 0, newArray, 0, preserve);
+            return newArray;
+        }
+        return array;
+    }
+
+    @Override
     public void clear() {
-        modCount++;
         data = new double[DEFAULT_LENGTH];
         size = 0;
     }
@@ -165,29 +171,6 @@ public class JArrayListDouble extends JAbstractList<Double> implements RandomAcc
         rangeCheck(index);
         double tmp = data[index];
         data[index] = element.doubleValue();
-        modCount++;
-        return Double.valueOf(tmp);
-    }
-
-    @Override
-    public void add(int index, Double element) {
-        rangeCheck(index);
-        ensureSize(size + 1);
-        modCount++;
-        System.arraycopy(data, index, data, index + 1, size - index);
-        data[index] = element.doubleValue();
-    }
-
-    @Override
-    public Double remove(int index) {
-        rangeCheck(index);
-        double tmp = data[index];
-        ensureSize(size - 1);
-        if (size > index + 1) {
-            System.arraycopy(data, index + 1, data, index, size - index - 1);
-        }
-        modCount++;
-        size--;
         return Double.valueOf(tmp);
     }
 
@@ -238,18 +221,15 @@ public class JArrayListDouble extends JAbstractList<Double> implements RandomAcc
         return new Itr();
     }
 
-    // quite resembling the one from ArrayList
     private class Itr implements Iterator<Double> {
         int cursor;
         int lastRet = -1;
-        int expectedModCount = modCount;
 
         public boolean hasNext() {
             return cursor != size;
         }
 
         public Double next() {
-            checkForComodification();
             int i = cursor;
             if (i >= size)
                 throw new NoSuchElementException();
@@ -262,20 +242,13 @@ public class JArrayListDouble extends JAbstractList<Double> implements RandomAcc
         public void remove() {
             if (lastRet < 0)
                 throw new IllegalStateException();
-            checkForComodification();
             try {
                 JArrayListDouble.this.remove(lastRet);
                 cursor = lastRet;
                 lastRet = -1;
-                expectedModCount = modCount;
             } catch (IndexOutOfBoundsException ex) {
                 throw new ConcurrentModificationException();
             }
-        }
-
-        final void checkForComodification() {
-            if (modCount != expectedModCount)
-                throw new ConcurrentModificationException();
         }
     }
 

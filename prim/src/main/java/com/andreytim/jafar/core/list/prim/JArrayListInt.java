@@ -19,7 +19,6 @@ public class JArrayListInt extends JAbstractList<Integer> implements RandomAcces
         this.size = data.length;
     }
 
-
     @Override
     public Class<?> getPrimType() {
         return int.class;
