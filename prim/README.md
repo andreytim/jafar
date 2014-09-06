@@ -14,7 +14,7 @@ I always try to compare the performance (memory and speed) of Jafar implementati
 * [trove](http://trove.starlight-systems.com/)
 * [colt](http://acs.lbl.gov/ACSSoftware/colt/)
 
-During my experiments I try to take maximum from all libraries above.
+During my experiments I try to sqweeze the maximum from all three above.
 All comparisons are implemented in [bm](https://github.com/andreytim/jafar/tree/master/bm) module through [jmh](http://openjdk.java.net/projects/code-tools/jmh/) benchmarks and will be visualized soon.
 
 Sweet tidbit to traditional ArrayList's primitive implementations in Jafar is **JArrayList of Booleans**,
