@@ -14,14 +14,12 @@ I always compare my implementations in the sense of memory and speed with the gr
 During my experiments I try to take maximum from all libraries above.
 All comparisons are implemented in **bm** module and will be visualized soon.
 
-Sweet tidbit of traditional ArrayList's primitive implementation in Jafar is JArrayList<Boolean>,
-which is implemented in bitwise manner and is eight times more effective in memory footprint than in
+Sweet tidbit of traditional ArrayList's primitive implementation in Jafar is 'JArrayList<Boolean>,
+which is implemented in bitwise manner and is eight times more effective in the sense of memory than the same in
 libraries above.
+Implementations for other types are quite competitive with corresponding ones from other libraries.
 
-##Intro
-
-The main point of all this adventure is to stay within the same interface with the Core Java Collections
-even in the sense of Generics, which is actually the main feature.
+But the main point and cool part of all this adventure is opportunity to be within the same interface with the Core Java Collections even in the sense of Generics, which is actually the main feature.
 
 Let me explain exactly what I mean here.
 We assume below that you've already got the Jafar library in the dependencies of your project.
