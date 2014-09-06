@@ -47,7 +47,7 @@ public class InsertionSort extends AbstractSort {
 
     /**
      * Implementation with tiny optimization - getting rid of redundant swaps
-     * through temporary local variable.
+     * through shifting and temporary local variable.
      *
      * @param list
      * @param <T>

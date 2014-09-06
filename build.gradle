@@ -8,7 +8,7 @@ subprojects {
     targetCompatibility = 1.7
 
     group = 'com.andreytim.jafar'
-    version = '0.0.3'
+    version = '0.0.4'
 
     repositories {
         mavenCentral()
