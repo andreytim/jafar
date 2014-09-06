@@ -25,7 +25,7 @@ Implementations of JArrayList for other types are quite competitive with corresp
 The main point and cool part of all this adventure is an opportunity to stay within the same interface with Core Java Collections even in the sense of Generics, which is actually the main feature.
 
 Let me explain exactly what I mean here.
-We assume below that you've already got the Jafar library in the dependencies of your project.
+We assume below that you already have the Jafar library included to the dependencies of your project.
 
 ##Usage & Features
 
