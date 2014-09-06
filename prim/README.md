@@ -5,7 +5,7 @@ This library is just another attempt to make an easy to use primitive collection
 So far, currently implemented collections consist of only dynamic arrays for all primitive types - JArrayList.
 Recently I've started to work on Maps.
 
-[Maven Central](https://search.maven.org/#search|ga|1|a%3A%22jafar-prim%22)
+Artifacts: [Maven Central](https://search.maven.org/#search|ga|1|a%3A%22jafar-prim%22)
 
 ##Intro
 
