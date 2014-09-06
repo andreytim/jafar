@@ -9,7 +9,7 @@ Artifacts: [Maven Central](https://search.maven.org/#search|ga|1|a%3A%22jafar-pr
 
 ##Intro
 
-I always compare my implementations in the sense of memory and speed with the great existing libraries:
+I always try to compare the performance (memory and speed) of Jafar implementations with the great existing libraries:
 * [fastutil](http://fastutil.di.unimi.it/)
 * [trove](http://trove.starlight-systems.com/)
 * [colt](http://acs.lbl.gov/ACSSoftware/colt/)
