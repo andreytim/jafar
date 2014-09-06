@@ -15,7 +15,7 @@ I always compare my implementations in the sense of memory and speed with the gr
 * [colt](http://acs.lbl.gov/ACSSoftware/colt/)
 
 During my experiments I try to take maximum from all libraries above.
-All comparisons are implemented in [https://github.com/andreytim/jafar/tree/master/bm](bm) module through [http://openjdk.java.net/projects/code-tools/jmh/](jmh) benchmarks and will be visualized soon.
+All comparisons are implemented in [bm](https://github.com/andreytim/jafar/tree/master/bm) module through [jmh](http://openjdk.java.net/projects/code-tools/jmh/) benchmarks and will be visualized soon.
 
 Sweet tidbit to traditional ArrayList's primitive implementations in Jafar is **JArrayList of Booleans**,
 which is implemented in bitwise manner and is **eight times more effective in the sense of memory** than the same from the
