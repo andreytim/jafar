@@ -1,33 +1,16 @@
 package com.andreytim.jafar.core.list;
 
 import com.andreytim.jafar.core.list.prim.JList;
-import com.andreytim.jafar.core.prim.PrimType;
 import org.junit.Assert;
 import org.junit.Test;
 
 import java.util.Arrays;
-import java.util.EnumSet;
 import java.util.List;
 
 /**
  * Created by shpolsky on 15.07.14.
  */
-public class JArrayListTest {
-
-    private static final EnumSet<PrimType> typesToCheck = EnumSet.of(
-            PrimType.BYTE, PrimType.SHORT, PrimType.INT, PrimType.LONG,
-            PrimType.FLOAT, PrimType.DOUBLE, PrimType.CHAR, PrimType.BOOLEAN);
-    private static final boolean ENABLE_OUTPUT = true;
-
-    @Test
-    public void testCreation() {
-        print("Create array lists of these types " + typesToCheck + ": ");
-        for (PrimType pt : typesToCheck) {
-            Lists.createJArrayList(pt);
-            Lists.createJJArrayList(pt);
-        }
-        ok();
-    }
+public class JArrayListIntAbstractTest extends JAbstractTest {
 
     @Test
     public void testAddAndContains() {
@@ -55,7 +38,7 @@ public class JArrayListTest {
         print("Add 1,2,3,4,5 to JArrayList<Integer>.\n");
         l1.add(1); l1.add(2); l1.add(3); l1.add(4); l1.add(5);
         print("Check if everything is within it: ");
-        Assert.assertTrue(l1.contains(1) || l1.contains(2) || l1.contains(3) || l1.contains(4) || l1.contains(5));
+        Assert.assertTrue(l1.contains(1) && l1.contains(2) && l1.contains(3) && l1.contains(4) && l1.contains(5));
         Assert.assertEquals(l1.size(), 5);
         ok();
         print("Remove 1,2 from the list.\n");
@@ -184,24 +167,5 @@ public class JArrayListTest {
         List<Integer> list = new JArrayList<Integer>();
         list.addAll(Arrays.asList(1, 2, 3));
         list.get(4);
-    }
-
-    private void checkStructure(int[] expected, List<Integer> actual) {
-        Assert.assertEquals(expected.length, actual.size());
-        for (int i = 0; i < expected.length; i++) {
-            Assert.assertEquals(expected[i], actual.get(i).intValue());
-        }
-    }
-
-    private void print(String msg) {
-        if (ENABLE_OUTPUT) {
-            System.out.print(msg);
-        }
-    }
-
-    private void ok() {
-        if (ENABLE_OUTPUT) {
-            System.out.print("OK\n");
-        }
     }
 }

@@ -1,5 +1,6 @@
 package com.andreytim.jafar.core.list;
 
+import com.andreytim.jafar.core.list.prim.JAbstractList;
 import com.andreytim.jafar.core.prim.PrimTypeUtils;
 import com.andreytim.jafar.core.list.prim.JList;
 
@@ -13,11 +14,21 @@ public class JArrayList<E> extends AbstractList<E>
 
     private static final long serialVersionUID = -7777976475771634860L;
 
+    /** Initial capacity for lazy initialization of internal primitive list. */
+    private final int capacity;
+
     private boolean notInited = true;
     private boolean inited = false;
+
     private JList<E> primitiveList;
 
-    public JArrayList() {}
+    public JArrayList() {
+        this(JAbstractList.DEFAULT_LENGTH);
+    }
+
+    public JArrayList(int capacity) {
+        this.capacity = capacity;
+    }
 
     @Override
     public int size() {
@@ -426,7 +437,7 @@ public class JArrayList<E> extends AbstractList<E>
     @SuppressWarnings("unchecked")
     private void init(Class<?> clazz) {
         // unchecked -  we suppose that we always find the proper instance of primitive JList
-        primitiveList = PrimTypeUtils.getTypedPrimInstance(clazz, JArrayList.class);
+        primitiveList = PrimTypeUtils.getTypedPrimInstance(clazz, JArrayList.class, capacity);
         if (primitiveList == null) {
             throw new IllegalArgumentException("Unsupported type for primitive collection! Type: " + clazz);
         }

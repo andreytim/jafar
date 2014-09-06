@@ -14,6 +14,10 @@ public class JArrayListFloat extends JAbstractList<Float> implements RandomAcces
 
     public JArrayListFloat() {}
 
+    public JArrayListFloat(int capacity) {
+        data = new float[capacity];
+    }
+
     protected JArrayListFloat(float[] data) {
         this.data = data;
         this.size = data.length;

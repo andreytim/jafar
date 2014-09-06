@@ -14,6 +14,10 @@ public class JArrayListDouble extends JAbstractList<Double> implements RandomAcc
 
     public JArrayListDouble() {}
 
+    public JArrayListDouble(int capacity) {
+        data = new double[capacity];
+    }
+
     protected JArrayListDouble(double[] data) {
         this.data = data;
         this.size = data.length;

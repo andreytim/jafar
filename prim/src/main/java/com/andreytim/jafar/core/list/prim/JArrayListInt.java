@@ -14,6 +14,10 @@ public class JArrayListInt extends JAbstractList<Integer> implements RandomAcces
 
     public JArrayListInt() {}
 
+    public JArrayListInt(int capacity) {
+        data = new int[capacity];
+    }
+
     protected JArrayListInt(int[] data) {
         this.data = data;
         this.size = data.length;

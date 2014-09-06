@@ -14,11 +14,14 @@ public class JArrayListByte extends JAbstractList<Byte> implements RandomAccess,
 
     public JArrayListByte() {}
 
+    public JArrayListByte(int capacity) {
+        data = new byte[capacity];
+    }
+
     protected JArrayListByte(byte[] data) {
         this.data = data;
         this.size = data.length;
     }
-
 
     @Override
     public Class<?> getPrimType() {

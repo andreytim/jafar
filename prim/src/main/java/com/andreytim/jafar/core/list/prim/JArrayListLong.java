@@ -14,11 +14,14 @@ public class JArrayListLong extends JAbstractList<Long> implements RandomAccess,
 
     public JArrayListLong() {}
 
+    public JArrayListLong(int capacity) {
+        data = new long[capacity];
+    }
+
     protected JArrayListLong(long[] data) {
         this.data = data;
         this.size = data.length;
     }
-
 
     @Override
     public Class<?> getPrimType() {

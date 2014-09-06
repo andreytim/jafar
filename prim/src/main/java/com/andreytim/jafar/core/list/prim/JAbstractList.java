@@ -9,8 +9,8 @@ import java.util.*;
  */
 public abstract class JAbstractList<E> extends AbstractList<E> implements JList<E>, PrimTyped {
 
-    protected static final int ARRAY_LIST_MAX_SIZE = Integer.MAX_VALUE >> 1;
-    protected static final int DEFAULT_LENGTH = 16;
+    public static final int ARRAY_LIST_MAX_SIZE = Integer.MAX_VALUE >> 1;
+    public static final int DEFAULT_LENGTH = 10;
 
     private static final String WRONG_TYPE_MSG =
             "Maybe you worked with elements of another type before? Current is \"%s\".";
@@ -324,6 +324,6 @@ public abstract class JAbstractList<E> extends AbstractList<E> implements JList<
     }
 
     protected int growSize(int size) {
-        return size << 1;
+        return size + (size >> 1) + 1;
     }
 }

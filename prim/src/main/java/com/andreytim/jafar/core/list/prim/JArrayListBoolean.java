@@ -4,15 +4,23 @@ import java.io.Serializable;
 import java.util.*;
 
 /**
- * Created by shpolsky on 15.07.14.
+ * Specifically implemented bitwise boolean ArrayList.
+ * It needs eight times less memory than any other primitive implementations
+ * but has tiny performance overhead for slightly more operations during addition
+ *
+ * Created by shpolsky on 06.09.14.
  */
 public class JArrayListBoolean extends JAbstractList<Boolean> implements RandomAccess, Serializable {
 
     private static final long serialVersionUID = -8975253306985770066L;
 
-    private byte[] data = new byte[DEFAULT_LENGTH / 8];
+    private byte[] data = new byte[DEFAULT_LENGTH / 8 + 1];
 
     public JArrayListBoolean() {}
+
+    public JArrayListBoolean(int capacity) {
+        data = new byte[capacity / 8 + 1];
+    }
 
     protected JArrayListBoolean(boolean[] data) {
         for (boolean b : data) {
@@ -89,14 +97,20 @@ public class JArrayListBoolean extends JAbstractList<Boolean> implements RandomA
         }
         if (o instanceof Boolean) {
             boolean booleanVal = ((Boolean) o).booleanValue();
+            int count = 0;
             for (int i = 0; i < size; i++) {
                 if (checkBit(i, booleanVal)) {
-                    if (size > i-1) {
-                        System.arraycopy(data, i + 1, data, i, size - i - 1);
-                    }
-                    size--;
-                    return true;
+                    count++;
                 }
+            }
+            if (count > 0) {
+                int newSize = size - count;
+                clear();
+                for (int i = 0; i < newSize; i++) {
+                    add(!booleanVal);
+                }
+                size = newSize;
+                return true;
             }
         }
         return false;
@@ -121,12 +135,14 @@ public class JArrayListBoolean extends JAbstractList<Boolean> implements RandomA
         rangeCheck(index);
         if (c.size() > 0) {
             data = grow(data, size + c.size(), size);
-            System.arraycopy(data, index, data, index + c.size(), size - index);
+            size += c.size();
+            for (int i = size - 1; i >= index + c.size(); i--) {
+                setBit(getBit(i - c.size()), i);
+            }
             int i = 0;
             for (boolean e : c) {
                 setBit(e, index + i++);
             }
-            size += c.size();
             return true;
         }
         return false;
@@ -136,8 +152,8 @@ public class JArrayListBoolean extends JAbstractList<Boolean> implements RandomA
     public boolean retainAll(Collection<?> c) {
         int r = 0;
         for (int i = 0; i < size; i++) {
-            if (c.contains(data[i])) {
-                data[r++] = data[i];
+            if (c.contains(getBit(i))) {
+                setBit(getBit(i), r++);
             }
         }
         if (size - r > 0) {
@@ -151,7 +167,10 @@ public class JArrayListBoolean extends JAbstractList<Boolean> implements RandomA
     public void add(int index, Boolean element) {
         rangeCheck(index);
         data = grow(data, size + 1, size);
-        System.arraycopy(data, index, data, index + 1, size - index);
+        for (int i = size; i > index; i--) {
+            setBit(getBit(i-1), i);
+        }
+        size++;
         setBit(element.booleanValue(), index);
     }
 
@@ -159,8 +178,8 @@ public class JArrayListBoolean extends JAbstractList<Boolean> implements RandomA
     public Boolean remove(int index) {
         rangeCheck(index);
         boolean tmp = getBit(index);
-        if (size > index + 1) {
-            System.arraycopy(data, index + 1, data, index, size - index - 1);
+        for (int i = index; i < size - 1; i++) {
+            setBit(getBit(i+1), i);
         }
         size--;
         return Boolean.valueOf(tmp);
@@ -177,7 +196,7 @@ public class JArrayListBoolean extends JAbstractList<Boolean> implements RandomA
 
     @Override
     public void clear() {
-        data = new byte[DEFAULT_LENGTH / 8];
+        data = new byte[DEFAULT_LENGTH / 8 + 1];
         size = 0;
     }
 

@@ -14,6 +14,10 @@ public class JArrayListChar extends JAbstractList<Character> implements RandomAc
 
     public JArrayListChar() {}
 
+    public JArrayListChar(int capacity) {
+        data = new char[capacity];
+    }
+
     protected JArrayListChar(char[] data) {
         this.data = data;
         this.size = data.length;

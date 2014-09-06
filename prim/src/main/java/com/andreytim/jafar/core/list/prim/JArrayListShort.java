@@ -14,11 +14,14 @@ public class JArrayListShort extends JAbstractList<Short> implements RandomAcces
 
     public JArrayListShort() {}
 
+    public JArrayListShort(int capacity) {
+        data = new short[capacity];
+    }
+
     protected JArrayListShort(short[] data) {
         this.data = data;
         this.size = data.length;
     }
-
 
     @Override
     public Class<?> getPrimType() {
