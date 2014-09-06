@@ -2,11 +2,12 @@ JAFAR - Primitive Collections
 =====
 
 This library is just another attempt to make an easy to use primitive collections in Java.
-Currently implemented collections consist of only dynamic arrays for all primitive types - JArrayList<T>.
+So far, currently implemented collections consist of only dynamic arrays for all primitive types - JArrayList.
+Recently I've started to work on Maps.
 
 [Maven Central](https://search.maven.org/#search|ga|1|a%3A%22jafar-prim%22)
 
-#Intro
+##Intro
 
 I always compare my implementations in the sense of memory and speed with the great existing libraries:
 * [fastutil](http://fastutil.di.unimi.it/)
@@ -14,19 +15,19 @@ I always compare my implementations in the sense of memory and speed with the gr
 * [colt](http://acs.lbl.gov/ACSSoftware/colt/)
 
 During my experiments I try to take maximum from all libraries above.
-All comparisons are implemented in **bm** module and will be visualized soon.
+All comparisons are implemented in [https://github.com/andreytim/jafar/tree/master/bm](bm) module through [http://openjdk.java.net/projects/code-tools/jmh/](jmh) benchmarks and will be visualized soon.
 
 Sweet tidbit to traditional ArrayList's primitive implementations in Jafar is **JArrayList of Booleans**,
-which is implemented in bitwise manner and is **eight times more effective in the sense of memory** than the same in
+which is implemented in bitwise manner and is **eight times more effective in the sense of memory** than the same from the
 libraries above.
-Implementations for other types are quite competitive with corresponding ones from other libraries.
+Implementations of JArrayList for other types are quite competitive with corresponding ones from other libraries.
 
-But the main point and cool part of all this adventure is opportunity to stay within the same interface with Core Java Collections even in the sense of Generics, which is actually the main feature.
+The main point and cool part of all this adventure is an opportunity to stay within the same interface with Core Java Collections even in the sense of Generics, which is actually the main feature.
 
 Let me explain exactly what I mean here.
 We assume below that you've already got the Jafar library in the dependencies of your project.
 
-#Usage & Features
+##Usage & Features
 
 For example you have such code:
 
@@ -35,19 +36,16 @@ For example you have such code:
 List<Integer> list = new ArrayList<Integer>();
 ```
 
-Just add one letter to the beginning of your class definition:
+Just add one letter **J** to the beginning of the constructor call:
 
 ```java
 // Jafar primitive ArrayList of ints
 List<Integer> list = new JArrayList<Integer>();
 ```
 
-Here you get basically the same code but eating 4-5 times less memory because it's primitive array inside.
-If you consider only the footprint than you may be cool just with this tiny change.
+Here you get basically the same code but eating several times less memory because now it's primitive array inside and not an array of Objects. If you consider only the footprint than you may be cool just with this tiny change.
 
-If the performance is also an issue and you're suffering from a really huge array
-(which is highly probable considering your concern about footprint)
-than you can do a little bit more here:
+If the performance is also an issue and you're suffering from a really huge array (which is highly probable considering your concern about footprint) than you can do a little bit more here:
 
 ```java
 JList<Integer> list = new JArrayList<Integer>();
@@ -63,9 +61,7 @@ for (int i : collection) {
 }
 ```
 
-then by adding J prefix to the List interface you automatically switch above code
-to overrided primitive typed method add(int e) of JList interface
-and gain all profit from getting rid of horrible boxing/unboxing redundancies.
+then by adding J prefix to the List interface you automatically switch above code to overrided primitive typed method add(int e) of JList interface and gain all profit from getting rid of horrible boxing/unboxing redundancies.
 
 Second, if you have somewhere in your code something like this:
 
@@ -93,7 +89,7 @@ for (int i = 0; i < list.size(); i++) {
 }
 ```
 
-Unfortunately, I can't come up with an idea of simplifying foreach loop so far.
+Unfortunately, I couldn't come up with an idea of simplifying foreach loop so far.
 Only something like functional forEach() method which looks even more cumbersome than above option even in Java 8.
 It could be different variants of conversion to array and iterating through it.
 Actually, i've added such capability to JList:
