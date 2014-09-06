@@ -6,6 +6,8 @@ Currently implemented collections consist of only dynamic arrays for all primiti
 
 [Maven Central](https://search.maven.org/#search|ga|1|a%3A%22jafar-prim%22)
 
+#Intro
+
 I always compare my implementations in the sense of memory and speed with the great existing libraries:
 * [fastutil](http://fastutil.di.unimi.it/)
 * [trove](http://trove.starlight-systems.com/)
@@ -14,15 +16,17 @@ I always compare my implementations in the sense of memory and speed with the gr
 During my experiments I try to take maximum from all libraries above.
 All comparisons are implemented in **bm** module and will be visualized soon.
 
-Sweet tidbit of traditional ArrayList's primitive implementation in Jafar is `JArrayList<Boolean>,
-which is implemented in bitwise manner and is eight times more effective in the sense of memory than the same in
+Sweet tidbit to traditional ArrayList's primitive implementations in Jafar is **JArrayList of Booleans**,
+which is implemented in bitwise manner and is **eight times more effective in the sense of memory** than the same in
 libraries above.
 Implementations for other types are quite competitive with corresponding ones from other libraries.
 
-But the main point and cool part of all this adventure is opportunity to be within the same interface with the Core Java Collections even in the sense of Generics, which is actually the main feature.
+But the main point and cool part of all this adventure is opportunity to stay within the same interface with Core Java Collections even in the sense of Generics, which is actually the main feature.
 
 Let me explain exactly what I mean here.
 We assume below that you've already got the Jafar library in the dependencies of your project.
+
+#Usage & Features
 
 For example you have such code:
 
