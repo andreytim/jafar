@@ -20,6 +20,6 @@ That's only a dreamy sunny plan and currently I am working on the three modules:
 * **bm** - submodule of benchmarking the whole evil I used to produce
 * **algo** - submodule of various algorithms
 
-In conclusion, all this thing is just for **fun**!
+In conclusion, the whole thing is just for **fun**!
 
 Cheers!
