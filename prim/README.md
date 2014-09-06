@@ -14,7 +14,7 @@ I always compare my implementations in the sense of memory and speed with the gr
 During my experiments I try to take maximum from all libraries above.
 All comparisons are implemented in **bm** module and will be visualized soon.
 
-Sweet tidbit of traditional ArrayList's primitive implementation in Jafar is 'JArrayList<Boolean>,
+Sweet tidbit of traditional ArrayList's primitive implementation in Jafar is `JArrayList<Boolean>,
 which is implemented in bitwise manner and is eight times more effective in the sense of memory than the same in
 libraries above.
 Implementations for other types are quite competitive with corresponding ones from other libraries.
