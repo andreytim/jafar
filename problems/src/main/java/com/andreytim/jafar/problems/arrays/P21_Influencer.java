@@ -1,9 +1,16 @@
 package com.andreytim.jafar.problems.arrays;
 
 /**
+ * Consider an X x Y array of 1's and 0s. The X axis represents "influences" meaning that X influences Y.
+ * So, for example, if $array[3,7] is 1 that means that 3 influences 7.
+ * An "influencer" is someone who influences every other person, but is not influenced by any other member.
+ * Given such an array, write a function to determine whether or not an "influencer" exists in the array.
+ *
+ * Solution: just find the diagonal zero cell which is intersection of column of zeros and row of 1 ones.
+ *
  * Created by shpolsky on 27.10.14.
  */
-public class PArr1_Influencer {
+public class P21_Influencer {
 
     public static final byte[][] TEST_ARR = new byte[][] {
             new byte[]{ 0, 1, 1, 0, 1, 1, 1 },
