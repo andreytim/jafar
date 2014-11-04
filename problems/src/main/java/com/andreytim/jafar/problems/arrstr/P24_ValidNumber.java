@@ -1,4 +1,4 @@
-package com.andreytim.jafar.problems.strings;
+package com.andreytim.jafar.problems.arrstr;
 
 import java.util.regex.Pattern;
 
@@ -20,7 +20,7 @@ import java.util.regex.Pattern;
  *
  * Created by shpolsky on 21.10.14.
  */
-public class PStr1_ValidNumber {
+public class P24_ValidNumber {
 
     private static final Pattern NUM_FORMAT =
             Pattern.compile("\\s*[-+]?(\\d+\\.?|\\d*\\.\\d+)(e[-+]?\\d+)?\\s*");

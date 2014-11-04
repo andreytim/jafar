@@ -1,4 +1,4 @@
-package com.andreytim.jafar.problems.arrays;
+package com.andreytim.jafar.problems.arrstr;
 
 import java.util.Arrays;
 

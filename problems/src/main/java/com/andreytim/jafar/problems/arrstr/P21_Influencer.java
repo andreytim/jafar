@@ -1,4 +1,4 @@
-package com.andreytim.jafar.problems.arrays;
+package com.andreytim.jafar.problems.arrstr;
 
 /**
  * Consider an X x Y array of 1's and 0s. The X axis represents "influences" meaning that X influences Y.
