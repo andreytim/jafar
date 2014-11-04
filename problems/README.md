@@ -10,5 +10,5 @@ Problems
 ####2. Arrays, Matrices and Strings
 
 **2.1** Influencer problem. (LinkedIn) **[ [Java](https://github.com/andreytim/jafar/blob/master/problems/src/main/java/com/andreytim/jafar/problems/arrays/P21_Influencer.java) ]**  
-**2.2** Dutch-flag array partitioning. (Aziz, P6.1) **[ [Java](https://github.com/andreytim/jafar/blob/master/problems/src/main/java/com/andreytim/jafar/problems/arrays/P22_DutchFlagPartitioning.java) ]  
+**2.2** Dutch-flag array partitioning. (Aziz, P6.1) **[ [Java](https://github.com/andreytim/jafar/blob/master/problems/src/main/java/com/andreytim/jafar/problems/arrays/P22_DutchFlagPartitioning.java) ]**  
 **2.3** 
