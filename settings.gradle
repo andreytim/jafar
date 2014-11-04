@@ -1,3 +1,2 @@
 rootProject.name = 'jafar'
-include ':prim',':bm',':algo'
-
+include ':prim',':bm',':algo',':problems'

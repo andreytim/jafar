@@ -1,0 +1,10 @@
+apply plugin: 'maven-publish'
+
+dependencies {}
+
+jar {
+    baseName 'jafar-problems'
+    manifest {
+        attributes 'Implementation-Title': 'jafar-problems', 'Implementation-Version': version
+    }
+}
