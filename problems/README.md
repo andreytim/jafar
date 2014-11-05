@@ -16,4 +16,4 @@ Problems
 
 ####3. Linked Lists
 
-**3.1** **Merge two sorted** singly linked lists. (Aziz, P7.1) **[ [Java]() ]**
+**3.1** **Merge two sorted** singly linked lists. (Aziz, P7.1) **[ [Java](https://github.com/andreytim/jafar/blob/master/problems/src/main/java/com/andreytim/jafar/problems/linkedlist/P31_MergeTwoSorted.java) ]**
