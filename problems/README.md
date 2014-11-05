@@ -21,3 +21,4 @@ Problems
 ####4. Stacks and Queues
 
 **4.1** **Stack with max** operation. (Aziz, P8.1) **[ [Java](https://github.com/andreytim/jafar/blob/master/problems/src/main/java/com/andreytim/jafar/problems/stackqueue/P41_StackWithMax.java) ]**  
+**4.2** **Level-order printing** of a binary tree. (Aziz, P8.9) **[ [Java](https://github.com/andreytim/jafar/blob/master/problems/src/main/java/com/andreytim/jafar/problems/stackqueue/P42_LevelOrderPrint.java) ]**  
