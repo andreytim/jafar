@@ -3,8 +3,8 @@ Problems
 
 ####1. Primitives, Bits, Numeric
 
-**1.1** Implement **power function** efficiently. **[ [Java](https://github.com/andreytim/jafar/blob/master/problems/src/main/java/com/andreytim/jafar/problems/numeric/P11_FastPower.java) ]**  
-**1.2** Implement **square root** function. **[ [Java](https://github.com/andreytim/jafar/blob/master/problems/src/main/java/com/andreytim/jafar/problems/numeric/P12_Sqrt.java) ]**  
+**1.1** Implement **power function** efficiently. (Popular) **[ [Java](https://github.com/andreytim/jafar/blob/master/problems/src/main/java/com/andreytim/jafar/problems/numeric/P11_FastPower.java) ]**  
+**1.2** Implement **square root** function. (Popular) **[ [Java](https://github.com/andreytim/jafar/blob/master/problems/src/main/java/com/andreytim/jafar/problems/numeric/P12_Sqrt.java) ]**  
 **1.3** Compute the **parity** of a very large number of nonnegative 64-bit integers. (Aziz, P5.1) **[ [Java](https://github.com/andreytim/jafar/blob/master/problems/src/main/java/com/andreytim/jafar/problems/numeric/P13_Parity.java) ]**  
 
 ####2. Arrays, Matrices and Strings
@@ -16,4 +16,8 @@ Problems
 
 ####3. Linked Lists
 
-**3.1** **Merge two sorted** singly linked lists. (Aziz, P7.1) **[ [Java](https://github.com/andreytim/jafar/blob/master/problems/src/main/java/com/andreytim/jafar/problems/linkedlist/P31_MergeTwoSorted.java) ]**
+**3.1** **Merge two sorted** singly linked lists. (Aziz, P7.1) **[ [Java](https://github.com/andreytim/jafar/blob/master/problems/src/main/java/com/andreytim/jafar/problems/linkedlist/P31_MergeTwoSorted.java) ]**  
+
+####4. Stacks and Queues
+
+**4.1** **Stack with max** operation. (Aziz, P8.1) **[ [Java](https://github.com/andreytim/jafar/blob/master/problems/src/main/java/com/andreytim/jafar/problems/stackqueue/P41_StackWithMax.java) ]**  
