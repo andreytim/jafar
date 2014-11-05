@@ -4,7 +4,7 @@ package com.andreytim.jafar.problems.linkedlist;
  * Merge two sorted singly linked lists.
  * Your code should use 0(1) additional storage - it should reuse the nodes
  * from the lists provided as input.
- * The only field you can change in a node is next
+ * The only field you can change in a node is next.
  *
  * Created by shpolsky on 05.11.14.
  */
@@ -21,7 +21,7 @@ public class P31_MergeTwoSorted {
   }
 
   /**
-   * Simple recursive approach. Great for an interview, in my opinion.
+   * Simple recursive approach.
    *
    * @param head1
    * @param head2
@@ -41,8 +41,7 @@ public class P31_MergeTwoSorted {
   }
 
   /**
-   * Iterative approach. Harder to come up with the error-free version under pressure,
-   * but just in case of being asked.
+   * Iterative approach. Harder to come up with, but more optimal in general.
    *
    * @param head1
    * @param head2
