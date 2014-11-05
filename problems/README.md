@@ -14,4 +14,6 @@ Problems
 **2.3** **Run-length encoding** (RLE) of a string. (Aziz, P6.18) **[ [Java](https://github.com/andreytim/jafar/blob/master/problems/src/main/java/com/andreytim/jafar/problems/arrstr/P23_RleEncoding.java) ]**   
 **2.4** Check if string is a **valid float number**. **[ [Java](https://github.com/andreytim/jafar/blob/master/problems/src/main/java/com/andreytim/jafar/problems/arrstr/P24_ValidNumber.java) ]**
 
-####3. 
+####3. Linked Lists
+
+**3.1** **Merge two sorted** singly linked lists. (Aziz, P7.1) **[ [Java]() ]**
