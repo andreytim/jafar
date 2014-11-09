@@ -3,8 +3,8 @@ Problems
 
 ####1. Primitives, Bits, Numeric
 
-**1.1** Implement **power function** efficiently. (Popular) **[ [Java](https://github.com/andreytim/jafar/blob/master/problems/src/main/java/com/andreytim/jafar/problems/numeric/P11_FastPower.java) ]**  
-**1.2** Implement **square root** function. (Popular) **[ [Java](https://github.com/andreytim/jafar/blob/master/problems/src/main/java/com/andreytim/jafar/problems/numeric/P12_Sqrt.java) ]**  
+**1.1** Implement **power function** efficiently. (Pop) **[ [Java](https://github.com/andreytim/jafar/blob/master/problems/src/main/java/com/andreytim/jafar/problems/numeric/P11_FastPower.java) ]**  
+**1.2** Implement **square root** function. (Pop) **[ [Java](https://github.com/andreytim/jafar/blob/master/problems/src/main/java/com/andreytim/jafar/problems/numeric/P12_Sqrt.java) ]**  
 **1.3** Compute the **parity** of a very large number of nonnegative 64-bit integers. (Aziz, P5.1) **[ [Java](https://github.com/andreytim/jafar/blob/master/problems/src/main/java/com/andreytim/jafar/problems/numeric/P13_Parity.java) ]**  
 
 ####2. Arrays, Matrices and Strings
@@ -27,3 +27,6 @@ Problems
 
 **5.1** Check if a **binary tree is balanced**. (Aziz, P9.1) **[ [Java](https://github.com/andreytim/jafar/blob/master/problems/src/main/java/com/andreytim/jafar/problems/trees/P51_CheckIfBtIsBalanced.java) ]**  
 
+####6. Heaps and Priority Queues
+
+**6.1** **Merge k sorted arrays** (files). (Pop, Aziz, P10.1) **[ [Java](https://github.com/andreytim/jafar/blob/master/problems/src/main/java/com/andreytim/jafar/problems/heaps/P61_MergeKSortedArrays.java) ]**  
