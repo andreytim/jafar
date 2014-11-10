@@ -30,3 +30,7 @@ Problems
 ####6. Heaps and Priority Queues
 
 **6.1** **Merge k sorted arrays** (files). (Pop, Aziz, P10.1) **[ [Java](https://github.com/andreytim/jafar/blob/master/problems/src/main/java/com/andreytim/jafar/problems/heaps/P61_MergeKSortedArrays.java) ]**  
+
+####7. Searching
+
+**6.1** Find the **first occurrence of K** in a sorted array. (Aziz, P11.1) **[ [Java](https://github.com/andreytim/jafar/blob/master/problems/src/main/java/com/andreytim/jafar/problems/search/P71_FirstOccurenceInSortedArray.java) ]**  
