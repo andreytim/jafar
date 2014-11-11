@@ -38,5 +38,4 @@ Problems
 ####8. Dynamic Programming
 
 **8.1** **Longest Increasing Sub-sequence**. (Pop) **[ [Java](https://github.com/andreytim/jafar/blob/master/problems/src/main/java/com/andreytim/jafar/problems/dp/P81_LongestIncreasingSubsequence.java) ]**  
-  
-  
+**8.1** **QuickSum**. Single Round Match 197 Round 1 - Division II, Level Three. (TopCoder) **[ [Java](https://github.com/andreytim/jafar/blob/master/problems/src/main/java/com/andreytim/jafar/problems/dp/P82_QuickSums.java) ]**  
