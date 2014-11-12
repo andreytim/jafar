@@ -38,4 +38,9 @@ Problems
 ####8. Dynamic Programming
 
 **8.1** **Longest Increasing Sub-sequence**. (Pop) **[ [Java](https://github.com/andreytim/jafar/blob/master/problems/src/main/java/com/andreytim/jafar/problems/dp/P81_LongestIncreasingSubsequence.java) ]**  
-**8.1** **QuickSums**. Single Round Match 197 Round 1 - Division II, Level Three. (TopCoder) **[ [Java](https://github.com/andreytim/jafar/blob/master/problems/src/main/java/com/andreytim/jafar/problems/dp/P82_QuickSums.java) ]**  
+**8.2** **QuickSums**. Single Round Match 197 Round 1 - Division II, Level Three. (TopCoder) **[ [Java](https://github.com/andreytim/jafar/blob/master/problems/src/main/java/com/andreytim/jafar/problems/dp/P82_QuickSums.java) ]**  
+**8.3** **Number of ways** from top-left to bottom-right on the **2D grid**. (CtCI, 9.2) **[ [Java](https://github.com/andreytim/jafar/blob/master/problems/src/main/java/com/andreytim/jafar/problems/dp/P83_SqrGridNumberOfWays.java) ]**  
+
+####9. Sorting
+
+**9.1** **GUMIAndSongsDiv2**. Single Round Match 588 Round 1 - Division II, Level Two. (TopCoder) **[ [Java](https://github.com/andreytim/jafar/blob/master/problems/src/main/java/com/andreytim/jafar/problems/sorting/P91_GUMIAndSongsDiv2.java) ]**  
