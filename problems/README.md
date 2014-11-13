@@ -12,7 +12,7 @@ Problems
 **2.1** **Influencer** problem. (LinkedIn) **[ [Java](https://github.com/andreytim/jafar/blob/master/problems/src/main/java/com/andreytim/jafar/problems/arrstr/P21_Influencer.java) ]**  
 **2.2** **Dutch-flag** array partitioning. (Aziz, P6.1) **[ [Java](https://github.com/andreytim/jafar/blob/master/problems/src/main/java/com/andreytim/jafar/problems/arrstr/P22_DutchFlagPartitioning.java) ]**  
 **2.3** **Run-length encoding** (RLE) of a string. (Aziz, P6.18) **[ [Java](https://github.com/andreytim/jafar/blob/master/problems/src/main/java/com/andreytim/jafar/problems/arrstr/P23_RleEncoding.java) ]**   
-**2.4** Check if string is a **valid float number**. **[ [Java](https://github.com/andreytim/jafar/blob/master/problems/src/main/java/com/andreytim/jafar/problems/arrstr/P24_ValidNumber.java) ]**
+**2.4** Check if string is a **valid float number**. **[ [Java](https://github.com/andreytim/jafar/blob/master/problems/src/main/java/com/andreytim/jafar/problems/arrstr/P24_ValidNumber.java) ]**  
 **2.5** **WolfDelaymaster**. Single Round Match 593 Round 1 - Division II, Level Two. (TopCoder) **[ [Java](https://github.com/andreytim/jafar/blob/master/problems/src/main/java/com/andreytim/jafar/problems/arrstr/P25_WolfDelaymaster.java) ]**  
 
 ####3. Linked Lists
