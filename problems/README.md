@@ -44,3 +44,4 @@ Problems
 ####9. Sorting
 
 **9.1** **GUMIAndSongsDiv2**. Single Round Match 588 Round 1 - Division II, Level Two. (TopCoder) **[ [Java](https://github.com/andreytim/jafar/blob/master/problems/src/main/java/com/andreytim/jafar/problems/sorting/P91_GUMIAndSongsDiv2.java) ]**  
+**9.2** **FoxAndMp3Easy**. Single Round Match 571 Round 1 - Division II, Level Two. (TopCoder) **[ [Java](https://github.com/andreytim/jafar/blob/master/problems/src/main/java/com/andreytim/jafar/problems/sorting/P92_FoxAndMp3Easy.java) ]**  
