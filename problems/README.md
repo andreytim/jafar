@@ -1,6 +1,10 @@
 Problems
 =====
 
+**Abbreviations:**  
+EoPI = [A. Aziz, T.-H. Lee, A. Prakash - Elements of Programming Interviews](http://www.amazon.com/dp/1479274836/)  
+CtCI = [G. Laakmann McDowell - Cracking the Coding Interview, 5th edition](http://www.amazon.com/Cracking-Coding-Interview-Programming-Questions/dp/098478280X)
+
 ####1. Primitives, Bits, Numeric
 
 **1.1** Implement **power function** efficiently. (Pop) **[ [Java](https://github.com/andreytim/jafar/blob/master/problems/src/main/java/com/andreytim/jafar/problems/numeric/P11_FastPower.java) ]**  
@@ -52,7 +56,3 @@ Problems
 ####10. Hashtables
 
 **10.1** Find a **closest pair of equal entries** in an array of strings. (EoPI, 12.3) **[ [Java](https://github.com/andreytim/jafar/blob/master/problems/src/main/java/com/andreytim/jafar/problems/hashtables/P101_ClosestPairOfStrings.java) ]**  
-  
-  
-* EoPI = [A. Aziz, T.-H. Lee, A. Prakash - Elements of Programming Interviews](http://www.amazon.com/dp/1479274836/)  
-* CtCI = [G. Laakmann McDowell - Cracking the Coding Interview, 5th edition](http://www.amazon.com/Cracking-Coding-Interview-Programming-Questions/dp/098478280X)
