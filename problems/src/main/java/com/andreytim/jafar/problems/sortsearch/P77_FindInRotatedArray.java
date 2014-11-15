@@ -41,8 +41,9 @@ public class P77_FindInRotatedArray {
                     hi = mid - 1;
                 }
             } else {
-                if (arr[hi] != arr[mid]) lo = mid + 1;
-                else {
+                if (arr[hi] != arr[mid]) {
+                    lo = mid + 1;
+                } else {
                     lo++;
                     hi--;
                 }

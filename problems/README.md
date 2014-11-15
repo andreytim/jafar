@@ -46,7 +46,8 @@ CtCI = [G. Laakmann McDowell - Cracking the Coding Interview, 5th edition](http:
 **7.4** **Merge to sorted arrays**, when one has available buffer at the end. (CtCI, 11.1) **[ [Java](https://github.com/andreytim/jafar/blob/master/problems/src/main/java/com/andreytim/jafar/problems/sortsearch/P74_MergeTwoSortedInPlace.java) ]**  
 **7.5** **Sort** an array of strings so that all the **anagrams are next to each other**. (CtCI, 11.2) **[ [Java](https://github.com/andreytim/jafar/blob/master/problems/src/main/java/com/andreytim/jafar/problems/sortsearch/P75_SortAnagrams.java) ]**  
 **7.6** Find the position of a **last zero** in an array like **{0,...,0,1,1,...,1}**. **[ [Java](https://github.com/andreytim/jafar/blob/master/problems/src/main/java/com/andreytim/jafar/problems/sortsearch/P76_LasZeroPosition.java) ]**  
-**7.7** Find an element in a **rotated sorted array**. (CtCI, 11.3) **[ [Java](https://github.com/andreytim/jafar/blob/master/problems/src/main/java/com/andreytim/jafar/problems/sortsearch/P77_FindInRotatedArray.java) ]**
+**7.7** Find an element in a **rotated sorted array**. (CtCI, 11.3) **[ [Java](https://github.com/andreytim/jafar/blob/master/problems/src/main/java/com/andreytim/jafar/problems/sortsearch/P77_FindInRotatedArray.java) ]**  
+**7.8** **AutoLoan**. Single Round Match 258 Round 1 - Division II, Level Two. (TopCoder) **[ [Java](https://github.com/andreytim/jafar/blob/master/problems/src/main/java/com/andreytim/jafar/problems/sortsearch/P78_AutoLoan.java) ]**  
 
 ####8. Dynamic Programming
 
