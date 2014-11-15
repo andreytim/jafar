@@ -18,6 +18,7 @@ CtCI = [G. Laakmann McDowell - Cracking the Coding Interview, 5th edition](http:
 **2.3** **Run-length encoding** (RLE) of a string. (EoPI, P6.18) **[ [Java](https://github.com/andreytim/jafar/blob/master/problems/src/main/java/com/andreytim/jafar/problems/arrstr/P23_RleEncoding.java) ]**   
 **2.4** Check if string is a **valid float number**. **[ [Java](https://github.com/andreytim/jafar/blob/master/problems/src/main/java/com/andreytim/jafar/problems/arrstr/P24_ValidNumber.java) ]**  
 **2.5** **WolfDelaymaster**. Single Round Match 593 Round 1 - Division II, Level Two. (TopCoder) **[ [Java](https://github.com/andreytim/jafar/blob/master/problems/src/main/java/com/andreytim/jafar/problems/arrstr/P25_WolfDelaymaster.java) ]**  
+**2.6** **TemplateMatching**. Single Round Match 417 Round 1 - Division I, Level One. (TopCoder) **[ [Java](https://github.com/andreytim/jafar/blob/master/problems/src/main/java/com/andreytim/jafar/problems/arrstr/P26_TemplateMatching.java) ]**
 
 ####3. Linked Lists
 
