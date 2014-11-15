@@ -1,4 +1,4 @@
-package com.andreytim.jafar.problems.sorting;
+package com.andreytim.jafar.problems.sortsearch;
 
 import java.util.*;
 
@@ -8,7 +8,7 @@ import java.util.*;
  *
  * Created by shpolsky on 14.11.14.
  */
-public class P94_SortAnagrams {
+public class P75_SortAnagrams {
 
     public void sortAnagrams(String[] arr) {
         if (arr.length < 3) return;
@@ -32,7 +32,7 @@ public class P94_SortAnagrams {
 
     public static void test(String[] arr) {
         System.out.println("Unsorted: " + Arrays.toString(arr));
-        new P94_SortAnagrams().sortAnagrams(arr);
+        new P75_SortAnagrams().sortAnagrams(arr);
         System.out.println("Sorted: " + Arrays.toString(arr));
         System.out.println();
     }

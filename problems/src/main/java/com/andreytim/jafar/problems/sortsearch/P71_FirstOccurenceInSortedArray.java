@@ -1,4 +1,4 @@
-package com.andreytim.jafar.problems.search;
+package com.andreytim.jafar.problems.sortsearch;
 
 /**
  *  Design an efficient algorithm that takes a sorted array A and a key k,

@@ -1,4 +1,4 @@
-package com.andreytim.jafar.problems.sorting;
+package com.andreytim.jafar.problems.sortsearch;
 
 import java.util.Arrays;
 import java.util.Collections;
@@ -12,7 +12,7 @@ import java.util.Queue;
  *
  * Created by shpolsky on 13.11.14.
  */
-public class P92_FoxAndMp3Easy {
+public class P73_FoxAndMp3Easy {
 
     private static final int TOP_SIZE = 50;
     private static final String SONG_SUFFIX = ".mp3";
@@ -38,7 +38,7 @@ public class P92_FoxAndMp3Easy {
     }
 
     public static void main(String[] args) {
-        P92_FoxAndMp3Easy instance = new P92_FoxAndMp3Easy();
+        P73_FoxAndMp3Easy instance = new P73_FoxAndMp3Easy();
         instance.test(1);
         instance.test(3);
         instance.test(10);

@@ -1,4 +1,4 @@
-package com.andreytim.jafar.problems.sorting;
+package com.andreytim.jafar.problems.sortsearch;
 
 import java.util.Arrays;
 
@@ -9,7 +9,7 @@ import java.util.Arrays;
  *
  * Created by shpolsky on 13.11.14.
  */
-public class P93_MergeTwoSortedInPlace {
+public class P74_MergeTwoSortedInPlace {
 
     public void merge(int[] A, int[] B, int endA) {
         if (A.length - endA < B.length) return;
@@ -32,7 +32,7 @@ public class P93_MergeTwoSortedInPlace {
     }
 
     public static void main(String[] args) {
-        P93_MergeTwoSortedInPlace instance = new P93_MergeTwoSortedInPlace();
+        P74_MergeTwoSortedInPlace instance = new P74_MergeTwoSortedInPlace();
         instance.test(new int[]{1}, new int[]{2}, 1);
         instance.test(new int[]{1,2,0}, new int[]{5,6}, 2);
         instance.test(new int[]{1,3,5,7,9,0,0,0,0}, new int[]{2,4,6,8}, 5);

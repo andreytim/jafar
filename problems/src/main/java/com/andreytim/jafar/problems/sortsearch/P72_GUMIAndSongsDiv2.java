@@ -1,4 +1,4 @@
-package com.andreytim.jafar.problems.sorting;
+package com.andreytim.jafar.problems.sortsearch;
 
 import java.util.Arrays;
 
@@ -8,7 +8,7 @@ import java.util.Arrays;
  *
  * Created by shpolsky on 13.11.14.
  */
-public class P91_GUMIAndSongsDiv2 {
+public class P72_GUMIAndSongsDiv2 {
 
     public class Song implements Comparable<Song> {
         private int duration;
@@ -55,7 +55,7 @@ public class P91_GUMIAndSongsDiv2 {
     }
 
     public static void main(String[] args) {
-        P91_GUMIAndSongsDiv2 gumi = new P91_GUMIAndSongsDiv2();
+        P72_GUMIAndSongsDiv2 gumi = new P72_GUMIAndSongsDiv2();
         gumi.test(new int[]{100, 200, 300}, new int[]{1, 2, 3}, 0);
         gumi.test(new int[]{1, 2, 3, 4}, new int[]{1, 1, 1, 1}, 100);
         gumi.test(new int[]{10, 10, 10}, new int[]{58, 58, 58}, 30);
