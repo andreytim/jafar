@@ -7,8 +7,8 @@ CtCI = [G. Laakmann McDowell - Cracking the Coding Interview, 5th edition](http:
 
 ####1. Primitives, Bits, Numeric
 
-**1.1** Implement **power function** efficiently. (Pop) **[ [Java](https://github.com/andreytim/jafar/blob/master/problems/src/main/java/com/andreytim/jafar/problems/numeric/P11_FastPower.java) ]**  
-**1.2** Implement **square root** function. (Pop) **[ [Java](https://github.com/andreytim/jafar/blob/master/problems/src/main/java/com/andreytim/jafar/problems/numeric/P12_Sqrt.java) ]**  
+**1.1** Implement **power function** efficiently. **[ [Java](https://github.com/andreytim/jafar/blob/master/problems/src/main/java/com/andreytim/jafar/problems/numeric/P11_FastPower.java) ]**  
+**1.2** Implement **square root** function. **[ [Java](https://github.com/andreytim/jafar/blob/master/problems/src/main/java/com/andreytim/jafar/problems/numeric/P12_Sqrt.java) ]**  
 **1.3** Compute the **parity** of a very large number of nonnegative 64-bit integers. (EoPI, P5.1) **[ [Java](https://github.com/andreytim/jafar/blob/master/problems/src/main/java/com/andreytim/jafar/problems/numeric/P13_Parity.java) ]**  
 
 ####2. Arrays, Matrices and Strings
@@ -19,7 +19,7 @@ CtCI = [G. Laakmann McDowell - Cracking the Coding Interview, 5th edition](http:
 **2.4** Check if string is a **valid float number**. **[ [Java](https://github.com/andreytim/jafar/blob/master/problems/src/main/java/com/andreytim/jafar/problems/arrstr/P24_ValidNumber.java) ]**  
 **2.5** **WolfDelaymaster**. Single Round Match 593 Round 1 - Division II, Level Two. (TopCoder) **[ [Java](https://github.com/andreytim/jafar/blob/master/problems/src/main/java/com/andreytim/jafar/problems/arrstr/P25_WolfDelaymaster.java) ]**  
 **2.6** **TemplateMatching**. Single Round Match 417 Round 1 - Division I, Level One. (TopCoder) **[ [Java](https://github.com/andreytim/jafar/blob/master/problems/src/main/java/com/andreytim/jafar/problems/arrstr/P26_TemplateMatching.java) ]**  
-**2.7** Design a method to find the **frequency** of occurrences of any given **word in a book**. (CtCI, 17.9) **[ [Java](https://github.com/andreytim/jafar/blob/master/problems/src/main/java/com/andreytim/jafar/problems/arrstr/P27_WordsFrequency.java) ]**  
+**2.7** Find the **frequency** of occurrences of any given **word in a book**. (CtCI, 17.9) **[ [Java](https://github.com/andreytim/jafar/blob/master/problems/src/main/java/com/andreytim/jafar/problems/arrstr/P27_WordsFrequency.java) ]**  
 
 ####3. Linked Lists
 
@@ -36,7 +36,7 @@ CtCI = [G. Laakmann McDowell - Cracking the Coding Interview, 5th edition](http:
 
 ####6. Heaps and Priority Queues
 
-**6.1** **Merge k sorted arrays** (files). (Pop, EoPI, P10.1) **[ [Java](https://github.com/andreytim/jafar/blob/master/problems/src/main/java/com/andreytim/jafar/problems/heaps/P61_MergeKSortedArrays.java) ]**  
+**6.1** **Merge k sorted arrays** (files). (EoPI, P10.1) **[ [Java](https://github.com/andreytim/jafar/blob/master/problems/src/main/java/com/andreytim/jafar/problems/heaps/P61_MergeKSortedArrays.java) ]**  
 
 ####7. Searching and Sorting
 
@@ -45,10 +45,12 @@ CtCI = [G. Laakmann McDowell - Cracking the Coding Interview, 5th edition](http:
 **7.3** **FoxAndMp3Easy**. Single Round Match 571 Round 1 - Division II, Level Two. (TopCoder) **[ [Java](https://github.com/andreytim/jafar/blob/master/problems/src/main/java/com/andreytim/jafar/problems/sortsearch/P73_FoxAndMp3Easy.java) ]**  
 **7.4** **Merge to sorted arrays**, when one has available buffer at the end. (CtCI, 11.1) **[ [Java](https://github.com/andreytim/jafar/blob/master/problems/src/main/java/com/andreytim/jafar/problems/sortsearch/P74_MergeTwoSortedInPlace.java) ]**  
 **7.5** **Sort** an array of strings so that all the **anagrams are next to each other**. (CtCI, 11.2) **[ [Java](https://github.com/andreytim/jafar/blob/master/problems/src/main/java/com/andreytim/jafar/problems/sortsearch/P75_SortAnagrams.java) ]**
+**7.6** Find the position of a **last zero** in an array like **{0,...,0,1,1,...,1}**. **[ [Java](https://github.com/andreytim/jafar/blob/master/problems/src/main/java/com/andreytim/jafar/problems/sortsearch/P76_LasZeroPosition.java) ]**  
+**7.7** Find an element in a **rotated sorted array**. (CtCI, 11.3) **[ [Java](https://github.com/andreytim/jafar/blob/master/problems/src/main/java/com/andreytim/jafar/problems/sortsearch/P77_FindInRotatedArray.java) ]**
 
 ####8. Dynamic Programming
 
-**8.1** **Longest Increasing Sub-sequence**. (Pop) **[ [Java](https://github.com/andreytim/jafar/blob/master/problems/src/main/java/com/andreytim/jafar/problems/dp/P81_LongestIncreasingSubsequence.java) ]**  
+**8.1** **Longest Increasing Sub-sequence**. **[ [Java](https://github.com/andreytim/jafar/blob/master/problems/src/main/java/com/andreytim/jafar/problems/dp/P81_LongestIncreasingSubsequence.java) ]**  
 **8.2** **QuickSums**. Single Round Match 197 Round 1 - Division II, Level Three. (TopCoder) **[ [Java](https://github.com/andreytim/jafar/blob/master/problems/src/main/java/com/andreytim/jafar/problems/dp/P82_QuickSums.java) ]**  
 **8.3** **Number of ways** from top-left to bottom-right on the **2D grid**. (CtCI, 9.2) **[ [Java](https://github.com/andreytim/jafar/blob/master/problems/src/main/java/com/andreytim/jafar/problems/dp/P83_SqrGridNumberOfWays.java) ]**    
   
