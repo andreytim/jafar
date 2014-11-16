@@ -10,6 +10,7 @@ CtCI = [G. Laakmann McDowell - Cracking the Coding Interview, 5th edition](http:
 **1.1** Implement **power function** efficiently. **[ [Java](https://github.com/andreytim/jafar/blob/master/problems/src/main/java/com/andreytim/jafar/problems/numeric/P11_FastPower.java) ]**  
 **1.2** Implement **square root** function. **[ [Java](https://github.com/andreytim/jafar/blob/master/problems/src/main/java/com/andreytim/jafar/problems/numeric/P12_Sqrt.java) ]**  
 **1.3** Compute the **parity** of a very large number of nonnegative 64-bit integers. (EoPI, P5.1) **[ [Java](https://github.com/andreytim/jafar/blob/master/problems/src/main/java/com/andreytim/jafar/problems/numeric/P13_Parity.java) ]**  
+**1.4** **Refactoring**. Single Round Match 216 Round 1 - Division I, Level Two. (TopCoder) **[ [Java](https://github.com/andreytim/jafar/blob/master/problems/src/main/java/com/andreytim/jafar/problems/numeric/P14_Refactoring.java) ]**  
 
 ####2. Arrays, Matrices and Strings
 
