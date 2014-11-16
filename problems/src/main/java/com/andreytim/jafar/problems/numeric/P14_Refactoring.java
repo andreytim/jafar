@@ -6,6 +6,7 @@ import java.util.*;
  * Refactoring
  * TopCoder:
  * Single Round Match 216 Round 1 - Division I, Level Two
+ * http://community.topcoder.com/stat?c=problem_statement&pm=2986&rd=5862
  *
  * Created by shpolsky on 16.11.14.
  */
