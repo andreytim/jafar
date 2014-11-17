@@ -11,7 +11,8 @@ CtCI = [G. Laakmann McDowell - Cracking the Coding Interview, 5th edition](http:
 **1.2** Implement **square root** function. **[ [Java](https://github.com/andreytim/jafar/blob/master/problems/src/main/java/com/andreytim/jafar/problems/numeric/P12_Sqrt.java) ]**  
 **1.3** Compute the **parity** of a very large number of nonnegative 64-bit integers. (EoPI, P5.1) **[ [Java](https://github.com/andreytim/jafar/blob/master/problems/src/main/java/com/andreytim/jafar/problems/numeric/P13_Parity.java) ]**  
 **1.4** **Refactoring**. Single Round Match 216 Round 1 - Division I, Level Two. (TopCoder) **[ [Java](https://github.com/andreytim/jafar/blob/master/problems/src/main/java/com/andreytim/jafar/problems/numeric/P14_Refactoring.java) ]**  
-**1.5** **RugSizes**. Single Round Match 304 Round 1 - Division II, Level One. (TopCoder) **[ [Java](https://github.com/andreytim/jafar/blob/master/problems/src/main/java/com/andreytim/jafar/problems/numeric/P15_RugSizes.java) ]**
+**1.5** **RugSizes**. Single Round Match 304 Round 1 - Division II, Level One. (TopCoder) **[ [Java](https://github.com/andreytim/jafar/blob/master/problems/src/main/java/com/andreytim/jafar/problems/numeric/P15_RugSizes.java) ]**  
+**1.6** Find the **kth number** such that its' only prime factors are **3, 5, and 7**. (CtCI, 7.7) **[ [Java](https://github.com/andreytim/jafar/blob/master/problems/src/main/java/com/andreytim/jafar/problems/numeric/P16_MultiplesOf357.java) ]**
 
 ####2. Arrays, Matrices and Strings
 
