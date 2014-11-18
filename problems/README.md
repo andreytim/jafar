@@ -23,10 +23,12 @@ CtCI = [G. Laakmann McDowell - Cracking the Coding Interview, 5th edition](http:
 **2.5** **WolfDelaymaster**. Single Round Match 593 Round 1 - Division II, Level Two. (TopCoder) **[ [Java](https://github.com/andreytim/jafar/blob/master/problems/src/main/java/com/andreytim/jafar/problems/arrstr/P25_WolfDelaymaster.java) ]**  
 **2.6** **TemplateMatching**. Single Round Match 417 Round 1 - Division I, Level One. (TopCoder) **[ [Java](https://github.com/andreytim/jafar/blob/master/problems/src/main/java/com/andreytim/jafar/problems/arrstr/P26_TemplateMatching.java) ]**  
 **2.7** Find the **frequency** of occurrences of any given **word in a book**. (CtCI, 17.9) **[ [Java](https://github.com/andreytim/jafar/blob/master/problems/src/main/java/com/andreytim/jafar/problems/arrstr/P27_WordsFrequency.java) ]**  
+**2.8** Determine if a string has **all unique characters**. (CtCI, 1.1) **[ [Java](https://github.com/andreytim/jafar/blob/master/problems/src/main/java/com/andreytim/jafar/problems/arrstr/P28_StringUniqueChars.java) ]**
 
 ####3. Linked Lists
 
 **3.1** **Merge two sorted** singly linked lists. (EoPI, P7.1) **[ [Java](https://github.com/andreytim/jafar/blob/master/problems/src/main/java/com/andreytim/jafar/problems/linkedlist/P31_MergeTwoSorted.java) ]**  
+**3.2** **Remove duplicates** from an unsorted linked list. (CtCI, 2.1) **[ [Java](https://github.com/andreytim/jafar/blob/master/problems/src/main/java/com/andreytim/jafar/problems/linkedlist/P32_RemoveDuplicates.java) ]**
 
 ####4. Stacks and Queues
 
