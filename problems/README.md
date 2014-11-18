@@ -36,6 +36,7 @@ CtCI = [G. Laakmann McDowell - Cracking the Coding Interview, 5th edition](http:
 ####5. Trees, Tries, Graphs
 
 **5.1** Check if a **binary tree is balanced**. (EoPI, P9.1) **[ [Java](https://github.com/andreytim/jafar/blob/master/problems/src/main/java/com/andreytim/jafar/problems/trees/P51_CheckIfBtIsBalanced.java) ]**  
+**5.2** **PermissionTree**. Single Round Match 218 Round 1 - Division II, Level Three. (TopCoder) **[ [Java](https://github.com/andreytim/jafar/blob/master/problems/src/main/java/com/andreytim/jafar/problems/trees/P52_PermissionTree.java) ]**
 
 ####6. Heaps and Priority Queues
 

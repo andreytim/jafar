@@ -27,6 +27,7 @@ public class P16_MultiplesOf357 {
         return arr[k];
     }
 
+    // The approach described in the book.
     // O(k) time, O(k) memory, but seems like worse in both aspects than the approach above
     // due to pointers and boxed primitives
     public int kth357Queues(int k) {
