@@ -1,11 +1,11 @@
-package com.andreytim.jafar.problems.graphs;
+package com.andreytim.jafar.problems.hashtables;
 
 import java.util.*;
 
 /**
  * Created by shpolsky on 27.10.14.
  */
-public class PGrph1_WordTransform {
+public class P92_WordTransform {
 
     private static final Set<String> DICT = new HashSet<>();
     static {

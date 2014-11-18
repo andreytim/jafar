@@ -14,7 +14,7 @@ import java.util.Map;
  *
  * Created by shpolsky on 14.11.14.
  */
-public class P101_ClosestPairOfStrings {
+public class P91_ClosestPairOfStrings {
 
     public Object[] closestPair(String[] arr) {
         if (arr.length < 2) return null;
@@ -40,7 +40,7 @@ public class P101_ClosestPairOfStrings {
 
     public static void test(String[] arr) {
         System.out.printf("Input: %s; Result: %s\n", Arrays.toString(arr),
-                Arrays.toString(new P101_ClosestPairOfStrings().closestPair(arr)));
+                Arrays.toString(new P91_ClosestPairOfStrings().closestPair(arr)));
     }
 
     public static void main(String[] args) {

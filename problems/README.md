@@ -37,8 +37,9 @@ CtCI = [G. Laakmann McDowell - Cracking the Coding Interview, 5th edition](http:
 
 ####5. Trees, Tries, Graphs
 
-**5.1** Check if a **binary tree is balanced**. (EoPI, P9.1) **[ [Java](https://github.com/andreytim/jafar/blob/master/problems/src/main/java/com/andreytim/jafar/problems/trees/P51_CheckIfBtIsBalanced.java) ]**  
-**5.2** **PermissionTree**. Single Round Match 218 Round 1 - Division II, Level Three. (TopCoder) **[ [Java](https://github.com/andreytim/jafar/blob/master/problems/src/main/java/com/andreytim/jafar/problems/trees/P52_PermissionTree.java) ]**
+**5.1** Check if a **binary tree is balanced**. (EoPI, P9.1) **[ [Java](https://github.com/andreytim/jafar/blob/master/problems/src/main/java/com/andreytim/jafar/problems/treesgraphs/P51_CheckIfBtIsBalanced.java) ]**  
+**5.2** **PermissionTree**. Single Round Match 218 Round 1 - Division II, Level Three. (TopCoder) **[ [Java](https://github.com/andreytim/jafar/blob/master/problems/src/main/java/com/andreytim/jafar/problems/treesgraphs/P52_PermissionTree.java) ]**  
+**5.3** Check existence of the **path on 2D grid** with obstacles. (simple DFS solution, not A-star) **[ [Java](https://github.com/andreytim/jafar/blob/master/problems/src/main/java/com/andreytim/jafar/problems/treesgraphs/P53_CheckPath2DGrid.java) ]**
 
 ####6. Heaps and Priority Queues
 
@@ -61,6 +62,7 @@ CtCI = [G. Laakmann McDowell - Cracking the Coding Interview, 5th edition](http:
 **8.2** **QuickSums**. Single Round Match 197 Round 1 - Division II, Level Three. (TopCoder) **[ [Java](https://github.com/andreytim/jafar/blob/master/problems/src/main/java/com/andreytim/jafar/problems/dp/P82_QuickSums.java) ]**  
 **8.3** **Number of ways** from top-left to bottom-right on the **2D grid**. (CtCI, 9.2) **[ [Java](https://github.com/andreytim/jafar/blob/master/problems/src/main/java/com/andreytim/jafar/problems/dp/P83_SqrGridNumberOfWays.java) ]**    
   
-####10. Hashtables
+####9. Hashtables
 
-**10.1** Find a **closest pair of equal entries** in an array of strings. (EoPI, 12.3) **[ [Java](https://github.com/andreytim/jafar/blob/master/problems/src/main/java/com/andreytim/jafar/problems/hashtables/P101_ClosestPairOfStrings.java) ]**  
+**9.1** Find a **closest pair of equal entries** in an array of strings. (EoPI, 12.3) **[ [Java](https://github.com/andreytim/jafar/blob/master/problems/src/main/java/com/andreytim/jafar/problems/hashtables/P91_ClosestPairOfStrings.java) ]**  
+**9.2** Transform **word to another** through the words from dictionary changing 1 letter. **[ [Java](https://github.com/andreytim/jafar/blob/master/problems/src/main/java/com/andreytim/jafar/problems/hashtables/P92_WordTransform.java) ]**

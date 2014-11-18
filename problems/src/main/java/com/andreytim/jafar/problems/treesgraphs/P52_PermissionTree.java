@@ -1,4 +1,4 @@
-package com.andreytim.jafar.problems.trees;
+package com.andreytim.jafar.problems.treesgraphs;
 
 import java.util.Arrays;
 import java.util.HashSet;

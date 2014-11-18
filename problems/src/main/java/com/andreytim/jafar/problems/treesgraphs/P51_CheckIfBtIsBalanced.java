@@ -1,4 +1,4 @@
-package com.andreytim.jafar.problems.trees;
+package com.andreytim.jafar.problems.treesgraphs;
 
 import java.util.LinkedList;
 import java.util.Queue;
