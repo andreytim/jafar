@@ -27,15 +27,14 @@ public class P54_CentaurCompanyDiv2 {
         return graph;
     }
 
-    public long count(int[] a, int[] b) {
-        Map<Integer, Set<Integer>> graph = initGraph(a, b);
-        Deque<Integer> backDfsOrder = new LinkedList<>();
+    private Iterable<Integer> getBacktrackDfsOrder(Map<Integer, Set<Integer>> graph) {
+        Deque<Integer> order = new LinkedList<>();
         Deque<Integer> dfs = new LinkedList<>();
         Set<Integer> visited = new HashSet<>();
         dfs.push(1); visited.add(1);
         while (!dfs.isEmpty()) {
             Integer curr = dfs.pop();
-            backDfsOrder.push(curr);
+            order.push(curr);
             for (Integer next : graph.get(curr)) {
                 if (!visited.contains(next)) {
                     visited.add(next);
@@ -43,9 +42,14 @@ public class P54_CentaurCompanyDiv2 {
                 }
             }
         }
+        return order;
+    }
+
+    public long count(int[] a, int[] b) {
+        Map<Integer, Set<Integer>> graph = initGraph(a, b);
         long[] numST = new long[graph.size()+1];
         long[] numRootedST = new long[graph.size()+1];
-        for (Integer v : backDfsOrder) {
+        for (Integer v : getBacktrackDfsOrder(graph)) {
             long st = 1;
             long rootedst = 1;
             for (Integer n : graph.get(v)) {
