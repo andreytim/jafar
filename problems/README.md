@@ -57,12 +57,13 @@ CtCI = [G. Laakmann McDowell - Cracking the Coding Interview, 5th edition](http:
 **7.7** Find an element in a **rotated sorted array**. (CtCI, 11.3) **[ [Java](https://github.com/andreytim/jafar/blob/master/problems/src/main/java/com/andreytim/jafar/problems/sortsearch/P77_FindInRotatedArray.java) ]**  
 **7.8** **AutoLoan**. Single Round Match 258 Round 1 - Division II, Level Two. (TopCoder) **[ [Java](https://github.com/andreytim/jafar/blob/master/problems/src/main/java/com/andreytim/jafar/problems/sortsearch/P78_AutoLoan.java) ]**  
 
-####8. Dynamic Programming
+####8. Dynamic Programming and Recursion (Combinatorial search)
 
 **8.1** **Longest Increasing Sub-sequence**. **[ [Java](https://github.com/andreytim/jafar/blob/master/problems/src/main/java/com/andreytim/jafar/problems/dp/P81_LongestIncreasingSubsequence.java) ]**  
 **8.2** **QuickSums**. Single Round Match 197 Round 1 - Division II, Level Three. (TopCoder) **[ [Java](https://github.com/andreytim/jafar/blob/master/problems/src/main/java/com/andreytim/jafar/problems/dp/P82_QuickSums.java) ]**  
 **8.3** **Number of ways** from top-left to bottom-right on the **2D grid**. (CtCI, 9.2) **[ [Java](https://github.com/andreytim/jafar/blob/master/problems/src/main/java/com/andreytim/jafar/problems/dp/P83_SqrGridNumberOfWays.java) ]**  
-**8.4** **Number of ways** to paint an N-posts fence into K colors with no more than 2 similar posts. **[ [Java](https://github.com/andreytim/jafar/blob/master/problems/src/main/java/com/andreytim/jafar/problems/dp/P84_FencePainting.java) ]**    
+**8.4** **Number of ways** to paint an N-posts fence into K colors with no more than 2 similar posts. **[ [Java](https://github.com/andreytim/jafar/blob/master/problems/src/main/java/com/andreytim/jafar/problems/dp/P84_FencePainting.java) ]**  
+**8.5** Print all **valid combinations** of n-pairs of **parentheses**. (CtCI, 9.6) **[ [Java](https://github.com/andreytim/jafar/blob/master/problems/src/main/java/com/andreytim/jafar/problems/dp/P85_ValidParentheses.java) ]**
   
 ####9. Hashtables
 
