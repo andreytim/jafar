@@ -1,6 +1,10 @@
 package com.andreytim.jafar.problems.dp;
 
 /**
+ * TopCoder:
+ * Single Round Match 428 Round 1 - Division I, Level One
+ * http://community.topcoder.com/stat?c=problem_statement&pm=10180
+ *
  * Created by shpolsky on 21.11.14.
  */
 public class P88_TheLuckyString {

@@ -67,6 +67,8 @@ CtCI = [G. Laakmann McDowell - Cracking the Coding Interview, 5th edition](http:
 **8.4** **Number of ways** to paint an N-posts fence into K colors with no more than 2 similar posts. **[ [Java](https://github.com/andreytim/jafar/blob/master/problems/src/main/java/com/andreytim/jafar/problems/dp/P84_FencePainting.java) ]**  
 **8.5** Print all **valid combinations** of n-pairs of **parentheses**. (CtCI, 9.6) **[ [Java](https://github.com/andreytim/jafar/blob/master/problems/src/main/java/com/andreytim/jafar/problems/dp/P85_ValidParentheses.java) ]**  
 **8.6** Number of ways of **representing n cents**. (CtCI, 9.8) **[ [Java](https://github.com/andreytim/jafar/blob/master/problems/src/main/java/com/andreytim/jafar/problems/dp/P86_CoinsRepresentation.java) ]**
+**8.7** **TrafficCongestionDivTwo**. Single Round Match 585 Round 1 - Division II, Level Two. (TopCoder) **[ [Java](https://github.com/andreytim/jafar/blob/master/problems/src/main/java/com/andreytim/jafar/problems/dp/P87_TrafficCongestionDivTwo.java) ]**
+**8.8** **TheLuckyString**. Single Round Match 428 Round 1 - Division I, Level One. (TopCoder) **[ [Java](https://github.com/andreytim/jafar/blob/master/problems/src/main/java/com/andreytim/jafar/problems/dp/P88_TheLuckyString.java) ]**
   
 ####9. Hashtables
 

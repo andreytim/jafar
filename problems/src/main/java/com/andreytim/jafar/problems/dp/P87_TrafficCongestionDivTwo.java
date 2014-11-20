@@ -1,6 +1,10 @@
 package com.andreytim.jafar.problems.dp;
 
 /**
+ * TopCoder:
+ * Single Round Match 585 Round 1 - Division II, Level Two
+ * http://community.topcoder.com/stat?c=problem_statement&pm=12697
+ *
  * Created by shpolsky on 21.11.14.
  */
 public class P87_TrafficCongestionDivTwo {
