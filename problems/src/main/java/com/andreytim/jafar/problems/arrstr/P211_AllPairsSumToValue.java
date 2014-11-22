@@ -3,7 +3,8 @@ package com.andreytim.jafar.problems.arrstr;
 import java.util.*;
 
 /**
- * CtCI,
+ * Find all pairs of integers within an array which sum to a specified value.
+ * CtCI, 17.12
  *
  * Created by shpolsky on 22.11.14.
  */

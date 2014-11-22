@@ -25,7 +25,8 @@ CtCI = [G. Laakmann McDowell - Cracking the Coding Interview, 5th edition](http:
 **2.7** Find the **frequency** of occurrences of any given **word in a book**. (CtCI, 17.9) **[ [Java](https://github.com/andreytim/jafar/blob/master/problems/src/main/java/com/andreytim/jafar/problems/arrstr/P27_WordsFrequency.java) ]**  
 **2.8** Determine if a string has **all unique characters**. (CtCI, 1.1) **[ [Java](https://github.com/andreytim/jafar/blob/master/problems/src/main/java/com/andreytim/jafar/problems/arrstr/P28_StringUniqueChars.java) ]**    
 **2.9** **LittleElephantAndBallsAgain**. Single Round Match 595 Round 1 - Division II, Level One. (TopCoder) **[ [Java](https://github.com/andreytim/jafar/blob/master/problems/src/main/java/com/andreytim/jafar/problems/arrstr/P29_LittleElephantAndBallsAgain.java) ]**  
-**2.10** **TheSwapsDivTwo**. Single Round Match 575 Round 1 - Division II, Level One. (TopCoder) **[ [Java](https://github.com/andreytim/jafar/blob/master/problems/src/main/java/com/andreytim/jafar/problems/arrstr/P210_TheSwapsDivTwo.java) ]**
+**2.10** **TheSwapsDivTwo**. Single Round Match 575 Round 1 - Division II, Level One. (TopCoder) **[ [Java](https://github.com/andreytim/jafar/blob/master/problems/src/main/java/com/andreytim/jafar/problems/arrstr/P210_TheSwapsDivTwo.java) ]**  
+**2.11** All **pairs** of integers within an array which **sum to a specified value**. (CtCI, 17.12) **[ [Java](https://github.com/andreytim/jafar/blob/master/problems/src/main/java/com/andreytim/jafar/problems/arrstr/P211_AllPairsSumToValue.java) ]**
 
 ####3. Linked Lists
 
