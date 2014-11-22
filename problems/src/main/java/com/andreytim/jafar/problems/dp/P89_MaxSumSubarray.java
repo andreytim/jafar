@@ -3,6 +3,9 @@ package com.andreytim.jafar.problems.dp;
 import java.util.Arrays;
 
 /**
+ * Return the sum of the contiguous sequence with the largest sum.
+ * CtCI, 17.8
+ *
  * Created by shpolsky on 22.11.14.
  */
 public class P89_MaxSumSubarray {
