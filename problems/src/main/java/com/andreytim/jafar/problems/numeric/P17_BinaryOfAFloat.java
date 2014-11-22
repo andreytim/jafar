@@ -1,6 +1,11 @@
 package com.andreytim.jafar.problems.numeric;
 
 /**
+ * Given a real number between 0 and 1 (e.g., 0.72) that is passed in as a double,
+ * print the binary representation. If the number cannot be represented accurately
+ * in binary with at most 32 characters, print "ERROR.
+ * CtCI, 5.2
+ *
  * Created by shpolsky on 22.11.14.
  */
 public class P17_BinaryOfAFloat {
