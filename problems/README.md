@@ -27,7 +27,9 @@ CtCI = [G. Laakmann McDowell - Cracking the Coding Interview, 5th edition](http:
 **2.8** Determine if a string has **all unique characters**. (CtCI, 1.1) **[ [Java](https://github.com/andreytim/jafar/blob/master/problems/src/main/java/com/andreytim/jafar/problems/arrstr/P28_StringUniqueChars.java) ]**    
 **2.9** **LittleElephantAndBallsAgain**. Single Round Match 595 Round 1 - Division II, Level One. (TopCoder) **[ [Java](https://github.com/andreytim/jafar/blob/master/problems/src/main/java/com/andreytim/jafar/problems/arrstr/P29_LittleElephantAndBallsAgain.java) ]**  
 **2.10** **TheSwapsDivTwo**. Single Round Match 575 Round 1 - Division II, Level One. (TopCoder) **[ [Java](https://github.com/andreytim/jafar/blob/master/problems/src/main/java/com/andreytim/jafar/problems/arrstr/P210_TheSwapsDivTwo.java) ]**  
-**2.11** All **pairs** of integers within an array which **sum to a specified value**. (CtCI, 17.12) **[ [Java](https://github.com/andreytim/jafar/blob/master/problems/src/main/java/com/andreytim/jafar/problems/arrstr/P211_AllPairsSumToValue.java) ]**
+**2.11** All **pairs** of integers within an array which **sum to a specified value**. (CtCI, 17.12) **[ [Java](https://github.com/andreytim/jafar/blob/master/problems/src/main/java/com/andreytim/jafar/problems/arrstr/P211_AllPairsSumToValue.java) ]**  
+**2.12** **ContestWinner**. Single Round Match 546 Round 1 - Division II, Level One. (TopCoder) **[ [Java](https://github.com/andreytim/jafar/blob/master/problems/src/main/java/com/andreytim/jafar/problems/arrstr/P212_ContestWinner.java) ]**  
+**2.13** **RevealTriangle**. Single Round Match 404 Round 1 - Division I, Level One. (TopCoder) **[ [Java](https://github.com/andreytim/jafar/blob/master/problems/src/main/java/com/andreytim/jafar/problems/arrstr/P213_RevealTriangle.java) ]**
 
 ####3. Linked Lists
 
@@ -61,6 +63,7 @@ CtCI = [G. Laakmann McDowell - Cracking the Coding Interview, 5th edition](http:
 **7.6** Find the position of a **last zero** in an array like **{0,...,0,1,1,...,1}**. **[ [Java](https://github.com/andreytim/jafar/blob/master/problems/src/main/java/com/andreytim/jafar/problems/sortsearch/P76_LastZeroPosition.java) ]**  
 **7.7** Find an element in a **rotated sorted array**. (CtCI, 11.3) **[ [Java](https://github.com/andreytim/jafar/blob/master/problems/src/main/java/com/andreytim/jafar/problems/sortsearch/P77_FindInRotatedArray.java) ]**  
 **7.8** **AutoLoan**. Single Round Match 258 Round 1 - Division II, Level Two. (TopCoder) **[ [Java](https://github.com/andreytim/jafar/blob/master/problems/src/main/java/com/andreytim/jafar/problems/sortsearch/P78_AutoLoan.java) ]**  
+**7.9** **SortingGame**. Single Round Match 397 Round 1 - Division I, Level One. (TopCoder) **[ [Java](https://github.com/andreytim/jafar/blob/master/problems/src/main/java/com/andreytim/jafar/problems/sortsearch/P79_SortingGame.java) ]**
 
 ####8. Dynamic Programming and Recursion (Combinatorial search)
 
