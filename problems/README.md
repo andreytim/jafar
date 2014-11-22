@@ -44,7 +44,8 @@ CtCI = [G. Laakmann McDowell - Cracking the Coding Interview, 5th edition](http:
 **5.1** Check if a **binary tree is balanced**. (EoPI, P9.1) **[ [Java](https://github.com/andreytim/jafar/blob/master/problems/src/main/java/com/andreytim/jafar/problems/treesgraphs/P51_CheckIfBtIsBalanced.java) ]**  
 **5.2** **PermissionTree**. Single Round Match 218 Round 1 - Division II, Level Three. (TopCoder) **[ [Java](https://github.com/andreytim/jafar/blob/master/problems/src/main/java/com/andreytim/jafar/problems/treesgraphs/P52_PermissionTree.java) ]**  
 **5.3** Check existence of the **path on 2D grid** with obstacles. (simple DFS solution, not A-star) **[ [Java](https://github.com/andreytim/jafar/blob/master/problems/src/main/java/com/andreytim/jafar/problems/treesgraphs/P53_CheckPath2DGrid.java) ]**  
-**5.4** **CentaurCompanyDiv2**. Single Round Match 570 Round 1 - Division II, Level Three. (TopCoder) **[ [Java](https://github.com/andreytim/jafar/blob/master/problems/src/main/java/com/andreytim/jafar/problems/treesgraphs/P54_CentaurCompanyDiv2.java) ]**
+**5.4** **CentaurCompanyDiv2**. Single Round Match 570 Round 1 - Division II, Level Three. (TopCoder) **[ [Java](https://github.com/andreytim/jafar/blob/master/problems/src/main/java/com/andreytim/jafar/problems/treesgraphs/P54_CentaurCompanyDiv2.java) ]**  
+**5.5** Build **BS-Tree** with a minimum height **from a sorted array**. (CtCI, 4.3) **[ [Java](https://github.com/andreytim/jafar/blob/master/problems/src/main/java/com/andreytim/jafar/problems/treesgraphs/P55_BuildBsTreeFromSortedArr.java) ]**
 
 ####6. Heaps and Priority Queues
 

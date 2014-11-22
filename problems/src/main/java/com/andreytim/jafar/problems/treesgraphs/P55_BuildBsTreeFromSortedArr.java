@@ -3,6 +3,10 @@ package com.andreytim.jafar.problems.treesgraphs;
 import java.util.*;
 
 /**
+ * Given a sorted (increasing order) array with unique integer elements,
+ * write an algorithm to create a binary search tree with minimal height.
+ * CtCI, 4.3
+ *
  * Created by shpolsky on 22.11.14.
  */
 public class P55_BuildBsTreeFromSortedArr {
@@ -33,6 +37,8 @@ public class P55_BuildBsTreeFromSortedArr {
         }
         return generateBsTree(arr, 0, arr.length-1);
     }
+
+    // utils
 
     public static void printTree(BstNode root) {
         Map<BstNode, Integer> level = new HashMap<>();
