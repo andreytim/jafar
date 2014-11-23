@@ -31,7 +31,8 @@ CtCI = [G. Laakmann McDowell - Cracking the Coding Interview, 5th edition](http:
 **2.12** **ContestWinner**. Single Round Match 546 Round 1 - Division II, Level One. (TopCoder) **[ [Java](https://github.com/andreytim/jafar/blob/master/problems/src/main/java/com/andreytim/jafar/problems/arrstr/P212_ContestWinner.java) ]**  
 **2.13** **RevealTriangle**. Single Round Match 404 Round 1 - Division I, Level One. (TopCoder) **[ [Java](https://github.com/andreytim/jafar/blob/master/problems/src/main/java/com/andreytim/jafar/problems/arrstr/P213_RevealTriangle.java) ]**  
 **2.14** Return the **winner** of **NxN TicTacToe** game board. **[ [Java](https://github.com/andreytim/jafar/blob/master/problems/src/main/java/com/andreytim/jafar/problems/arrstr/P214_TicTacToeWinner.java) ]**  
-**2.15** **Wildcard Matching**. (LeetCode) **[ [Java](https://github.com/andreytim/jafar/blob/master/problems/src/main/java/com/andreytim/jafar/problems/arrstr/P215_WildcardMatching.java) ]**
+**2.15** **Wildcard Matching**. (LeetCode) **[ [Java](https://github.com/andreytim/jafar/blob/master/problems/src/main/java/com/andreytim/jafar/problems/arrstr/P215_WildcardMatching.java) ]**  
+**2.16** **Rotate a square matrix** by 90 degrees in-place. (CtCI, 1.6) **[ [Java](https://github.com/andreytim/jafar/blob/master/problems/src/main/java/com/andreytim/jafar/problems/arrstr/P216_MatrixRotate.java) ]**
 
 ####3. Linked Lists
 
@@ -49,7 +50,8 @@ CtCI = [G. Laakmann McDowell - Cracking the Coding Interview, 5th edition](http:
 **5.2** **PermissionTree**. Single Round Match 218 Round 1 - Division II, Level Three. (TopCoder) **[ [Java](https://github.com/andreytim/jafar/blob/master/problems/src/main/java/com/andreytim/jafar/problems/treesgraphs/P52_PermissionTree.java) ]**  
 **5.3** Check existence of the **path on 2D grid** with obstacles. (simple DFS solution, not A-star) **[ [Java](https://github.com/andreytim/jafar/blob/master/problems/src/main/java/com/andreytim/jafar/problems/treesgraphs/P53_CheckPath2DGrid.java) ]**  
 **5.4** **CentaurCompanyDiv2**. Single Round Match 570 Round 1 - Division II, Level Three. (TopCoder) **[ [Java](https://github.com/andreytim/jafar/blob/master/problems/src/main/java/com/andreytim/jafar/problems/treesgraphs/P54_CentaurCompanyDiv2.java) ]**  
-**5.5** Build **BS-Tree** with a minimum height **from a sorted array**. (CtCI, 4.3) **[ [Java](https://github.com/andreytim/jafar/blob/master/problems/src/main/java/com/andreytim/jafar/problems/treesgraphs/P55_BuildBsTreeFromSortedArr.java) ]**
+**5.5** Build **BS-Tree** with a minimum height **from a sorted array**. (CtCI, 4.3) **[ [Java](https://github.com/andreytim/jafar/blob/master/problems/src/main/java/com/andreytim/jafar/problems/treesgraphs/P55_BuildBsTreeFromSortedArr.java) ]**  
+**5.6** Find the **first common ancestor** of two nodes in a **binary tree**. (CtCI, 4.7) **[ [Java](https://github.com/andreytim/jafar/blob/master/problems/src/main/java/com/andreytim/jafar/problems/treesgraphs/P56_FirstCommonAncestor.java) ]**
 
 ####6. Heaps and Priority Queues
 
