@@ -22,6 +22,8 @@ public class P216_MatrixRotate {
         }
     }
 
+    // utils
+
     public static void printMatrix(int[][] M) {
         if (M.length == 0 || M[0].length == 0) return;
         for (int i = 0; i < M.length; i++) {

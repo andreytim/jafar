@@ -80,7 +80,8 @@ CtCI = [G. Laakmann McDowell - Cracking the Coding Interview, 5th edition](http:
 **8.6** Number of ways of **representing n cents**. (CtCI, 9.8) **[ [Java](https://github.com/andreytim/jafar/blob/master/problems/src/main/java/com/andreytim/jafar/problems/dp/P86_CoinsRepresentation.java) ]**  
 **8.7** **TrafficCongestionDivTwo**. Single Round Match 585 Round 1 - Division II, Level Two. (TopCoder) **[ [Java](https://github.com/andreytim/jafar/blob/master/problems/src/main/java/com/andreytim/jafar/problems/dp/P87_TrafficCongestionDivTwo.java) ]**  
 **8.8** **TheLuckyString**. Single Round Match 428 Round 1 - Division I, Level One. (TopCoder) **[ [Java](https://github.com/andreytim/jafar/blob/master/problems/src/main/java/com/andreytim/jafar/problems/dp/P88_TheLuckyString.java) ]**  
-**8.9** Return the sum of the **contiguous sequence with the largest sum**. (CtCI, 17.8) **[ [Java](https://github.com/andreytim/jafar/blob/master/problems/src/main/java/com/andreytim/jafar/problems/dp/P89_MaxSumSubarray.java) ]**
+**8.9** Return the sum of the **contiguous sequence with the largest sum**. (CtCI, 17.8) **[ [Java](https://github.com/andreytim/jafar/blob/master/problems/src/main/java/com/andreytim/jafar/problems/dp/P89_MaxSumSubarray.java) ]**  
+**8.10** Find the **sub-matrix** of a given matrix with the **largest sum**. (CtCI, 18.12) **[ [Java](https://github.com/andreytim/jafar/blob/master/problems/src/main/java/com/andreytim/jafar/problems/dp/P810_MaxSumSubmatrix.java) ]**
   
 ####9. Hashtables
 
