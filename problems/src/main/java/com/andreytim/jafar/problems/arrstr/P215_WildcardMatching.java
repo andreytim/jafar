@@ -26,6 +26,34 @@ public class P215_WildcardMatching {
         return pi == pa.length;
     }
 
+    // fails last test case due to overflow
+    private boolean recHelper(char[] sa, char[] pa, int si, int pi) {
+        while (pi < pa.length-1 && pa[pi] == '*' && pa[pi+1] == '*') pi++;
+
+        if (pi == pa.length && si == sa.length) return true;
+        if (pi == pa.length && si < sa.length) return false;
+        if (pa[pi] == '*' && pi < pa.length - 1 && si == sa.length) return false;
+
+        if (si < sa.length && (pa[pi] == '?' || pa[pi] == sa[si])) {
+            return recHelper(sa, pa, si + 1, pi + 1);
+        }
+
+        if (pa[pi] == '*') {
+            if (si < sa.length) {
+                return recHelper(sa, pa, si + 1, pi) || recHelper(sa, pa, si, pi + 1);
+            } else {
+                return recHelper(sa, pa, si, pi + 1);
+            }
+        }
+
+        return false;
+    }
+
+    // fails last test case due to overflow
+    public boolean matchesRecursive(String str, String pattern) {
+        return recHelper(str.toCharArray(), pattern.toCharArray(), 0, 0);
+    }
+
     private static void test(String s, String p) {
         System.out.printf("Input: string=%s, pattern=%s; Result: %b\n", s, p,
                 new P215_WildcardMatching().matches(s, p));
