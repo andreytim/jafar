@@ -12,7 +12,7 @@ import java.util.Arrays;
  */
 public class P710_MinSubarrayToSort {
 
-    // O(nlog(n)) solution, check the book for the one that linear but much longer
+    // O(nlog(n)) solution, check the book for the one that linear but longer
     public int[] minSubarrayToSort(int[] arr) {
         if (arr == null || arr.length == 0)
             throw new IllegalArgumentException();
