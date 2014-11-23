@@ -29,7 +29,8 @@ CtCI = [G. Laakmann McDowell - Cracking the Coding Interview, 5th edition](http:
 **2.10** **TheSwapsDivTwo**. Single Round Match 575 Round 1 - Division II, Level One. (TopCoder) **[ [Java](https://github.com/andreytim/jafar/blob/master/problems/src/main/java/com/andreytim/jafar/problems/arrstr/P210_TheSwapsDivTwo.java) ]**  
 **2.11** All **pairs** of integers within an array which **sum to a specified value**. (CtCI, 17.12) **[ [Java](https://github.com/andreytim/jafar/blob/master/problems/src/main/java/com/andreytim/jafar/problems/arrstr/P211_AllPairsSumToValue.java) ]**  
 **2.12** **ContestWinner**. Single Round Match 546 Round 1 - Division II, Level One. (TopCoder) **[ [Java](https://github.com/andreytim/jafar/blob/master/problems/src/main/java/com/andreytim/jafar/problems/arrstr/P212_ContestWinner.java) ]**  
-**2.13** **RevealTriangle**. Single Round Match 404 Round 1 - Division I, Level One. (TopCoder) **[ [Java](https://github.com/andreytim/jafar/blob/master/problems/src/main/java/com/andreytim/jafar/problems/arrstr/P213_RevealTriangle.java) ]**
+**2.13** **RevealTriangle**. Single Round Match 404 Round 1 - Division I, Level One. (TopCoder) **[ [Java](https://github.com/andreytim/jafar/blob/master/problems/src/main/java/com/andreytim/jafar/problems/arrstr/P213_RevealTriangle.java) ]**  
+**2.14** Return the winner of NxN TicTacToe game board. **[ [Java](https://github.com/andreytim/jafar/blob/master/problems/src/main/java/com/andreytim/jafar/problems/arrstr/P214_TicTacToeWinner.java) ]**
 
 ####3. Linked Lists
 
