@@ -67,7 +67,8 @@ CtCI = [G. Laakmann McDowell - Cracking the Coding Interview, 5th edition](http:
 **7.6** Find the position of a **last zero** in an array like **{0,...,0,1,1,...,1}**. **[ [Java](https://github.com/andreytim/jafar/blob/master/problems/src/main/java/com/andreytim/jafar/problems/sortsearch/P76_LastZeroPosition.java) ]**  
 **7.7** Find an element in a **rotated sorted array**. (CtCI, 11.3) **[ [Java](https://github.com/andreytim/jafar/blob/master/problems/src/main/java/com/andreytim/jafar/problems/sortsearch/P77_FindInRotatedArray.java) ]**  
 **7.8** **AutoLoan**. Single Round Match 258 Round 1 - Division II, Level Two. (TopCoder) **[ [Java](https://github.com/andreytim/jafar/blob/master/problems/src/main/java/com/andreytim/jafar/problems/sortsearch/P78_AutoLoan.java) ]**  
-**7.9** **SortingGame**. Single Round Match 397 Round 1 - Division I, Level One. (TopCoder) **[ [Java](https://github.com/andreytim/jafar/blob/master/problems/src/main/java/com/andreytim/jafar/problems/sortsearch/P79_SortingGame.java) ]**
+**7.9** **SortingGame**. Single Round Match 397 Round 1 - Division I, Level One. (TopCoder) **[ [Java](https://github.com/andreytim/jafar/blob/master/problems/src/main/java/com/andreytim/jafar/problems/sortsearch/P79_SortingGame.java) ]**  
+**7.10** Find the **minimum subarray to sort** to make the entire array sorted. (CtCI, 17.6) **[ [Java](https://github.com/andreytim/jafar/blob/master/problems/src/main/java/com/andreytim/jafar/problems/sortsearch/P710_MinSubarrayToSort.java) ]**
 
 ####8. Dynamic Programming and Recursion (Combinatorial search)
 
