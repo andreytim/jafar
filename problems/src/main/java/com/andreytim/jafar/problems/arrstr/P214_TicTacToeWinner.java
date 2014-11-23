@@ -1,6 +1,8 @@
 package com.andreytim.jafar.problems.arrstr;
 
 /**
+ * Return the winner of NxN TicTacToe game board.
+ *
  * Created by shpolsky on 23.11.14.
  */
 public class P214_TicTacToeWinner {
