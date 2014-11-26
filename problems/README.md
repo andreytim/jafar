@@ -52,7 +52,8 @@ CtCI = [G. Laakmann McDowell - Cracking the Coding Interview, 5th edition](http:
 **5.4** **CentaurCompanyDiv2**. Single Round Match 570 Round 1 - Division II, Level Three. (TopCoder) **[ [Java](https://github.com/andreytim/jafar/blob/master/problems/src/main/java/com/andreytim/jafar/problems/treesgraphs/P54_CentaurCompanyDiv2.java) ]**  
 **5.5** Build **BS-Tree** with a minimum height **from a sorted array**. (CtCI, 4.3) **[ [Java](https://github.com/andreytim/jafar/blob/master/problems/src/main/java/com/andreytim/jafar/problems/treesgraphs/P55_BuildBsTreeFromSortedArr.java) ]**  
 **5.6** Find the **first common ancestor** of two nodes in a **binary tree**. (CtCI, 4.7) **[ [Java](https://github.com/andreytim/jafar/blob/master/problems/src/main/java/com/andreytim/jafar/problems/treesgraphs/P56_FirstCommonAncestor.java) ]**  
-**5.7** Find **all sub-paths of a given sum** in a **binary tree**. (CtCI, 4.9) **[ [Java](https://github.com/andreytim/jafar/blob/master/problems/src/main/java/com/andreytim/jafar/problems/treesgraphs/P57_PathsOfGivenSumInBt.java) ]**
+**5.7** Find **all sub-paths of a given sum** in a **binary tree**. (CtCI, 4.9) **[ [Java](https://github.com/andreytim/jafar/blob/master/problems/src/main/java/com/andreytim/jafar/problems/treesgraphs/P57_PathsOfGivenSumInBt.java) ]**  
+**5.8** **Search each string** from the array **in a text**. Trie example. (CtCI, 18.8) **[ [Java](https://github.com/andreytim/jafar/blob/master/problems/src/main/java/com/andreytim/jafar/problems/treesgraphs/P57_PathsOfGivenSumInBt.java) ]**
 
 ####6. Heaps and Priority Queues
 
