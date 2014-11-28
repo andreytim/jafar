@@ -95,4 +95,5 @@ CtCI = [G. Laakmann McDowell - Cracking the Coding Interview, 5th edition](http:
 
 **9.1** Find a **closest pair of equal entries** in an array of strings. (EoPI, 12.3) **[ [Java](https://github.com/andreytim/jafar/blob/master/problems/src/main/java/com/andreytim/jafar/problems/hashtables/P91_ClosestPairOfStrings.java) ]**  
 **9.2** Transform **word to another** through the words from dictionary changing 1 letter. **[ [Java](https://github.com/andreytim/jafar/blob/master/problems/src/main/java/com/andreytim/jafar/problems/hashtables/P92_WordTransform.java) ]**  
-**9.3** The longest **word made of other words** in the list. (CtCI, 18.7) **[ [Java](https://github.com/andreytim/jafar/blob/master/problems/src/main/java/com/andreytim/jafar/problems/hashtables/P93_LongestSplittableWord.java) ]**
+**9.3** The longest **word made of other words** in the list. (CtCI, 18.7) **[ [Java](https://github.com/andreytim/jafar/blob/master/problems/src/main/java/com/andreytim/jafar/problems/hashtables/P93_LongestSplittableWord.java) ]**  
+**9.4** Find the **shortest distance (number of words)** between two words in a big file. (CtCI, 18.5) **[ [Java](https://github.com/andreytim/jafar/blob/master/problems/src/main/java/com/andreytim/jafar/problems/hashtables/P94_WordsDistance.java) ]**
