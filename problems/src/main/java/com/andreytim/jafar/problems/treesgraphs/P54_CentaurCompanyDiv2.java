@@ -50,18 +50,15 @@ public class P54_CentaurCompanyDiv2 {
         long[] numST = new long[graph.size()+1];
         long[] numRootedST = new long[graph.size()+1];
         for (Integer v : getBacktrackDfsOrder(graph)) {
-            long st = 1;
-            long rootedst = 1;
+            long st = 1, rst = 1;
             for (Integer n : graph.get(v)) {
-                if (numST[n] > 0) {
-                    st = st + numST[n] + rootedst*numRootedST[n];
-                    rootedst = rootedst + rootedst*numRootedST[n];
-                }
+                st += numST[n] + rst*numRootedST[n];
+                rst += rst*numRootedST[n];
             }
             numST[v] = st;
-            numRootedST[v] = rootedst;
+            numRootedST[v] = rst;
         }
-        return numST[1] + 1;
+        return numST[1] + 1; // adding one as empty tree is also considered as a sub-tree in this case
     }
 
     public static void test(int[] a, int[] b) {
