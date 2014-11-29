@@ -75,7 +75,8 @@ CtCI = [G. Laakmann McDowell - Cracking the Coding Interview, 5th edition](http:
 **7.10** Find the **minimum subarray to sort** to make the entire array sorted. (CtCI, 17.6) **[ [Java](https://github.com/andreytim/jafar/blob/master/problems/src/main/java/com/andreytim/jafar/problems/sortsearch/P710_MinSubarrayToSort.java) ]**  
 **7.11** Find an element in a col-wise and row-wise sorted matrix MxN. (CtCI, 11.6) **[ [Java](https://github.com/andreytim/jafar/blob/master/problems/src/main/java/com/andreytim/jafar/problems/sortsearch/P711_MatrixBinarySearch.java) ]**  
 **7.12** **UnsortedSequence**. Single Round Match 531 Round 1 - Division II, Level One. (TopCoder) **[ [Java](https://github.com/andreytim/jafar/blob/master/problems/src/main/java/com/andreytim/jafar/problems/sortsearch/P712_UnsortedSequence.java) ]**  
-**7.13** **SerialNumbers**. Single Round Match 366 Round 1 - Division II, Level One. (TopCoder) **[ [Java](https://github.com/andreytim/jafar/blob/master/problems/src/main/java/com/andreytim/jafar/problems/sortsearch/P713_SerialNumbers.java) ]**
+**7.13** **SerialNumbers**. Single Round Match 366 Round 1 - Division II, Level One. (TopCoder) **[ [Java](https://github.com/andreytim/jafar/blob/master/problems/src/main/java/com/andreytim/jafar/problems/sortsearch/P713_SerialNumbers.java) ]**  
+**7.14** **UnionOfIntervals**. Single Round Match 277 Round 1 - Division II, Level Three. (TopCoder) **[ [Java](https://github.com/andreytim/jafar/blob/master/problems/src/main/java/com/andreytim/jafar/problems/sortsearch/P714_UnionOfIntervals.java) ]**
 
 ####8. Dynamic Programming and Recursion (Combinatorial search)
 
