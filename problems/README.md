@@ -57,13 +57,9 @@ CtCI = [G. Laakmann McDowell - Cracking the Coding Interview, 5th edition](http:
 **5.5** Build **BS-Tree** with a minimum height **from a sorted array**. (CtCI, 4.3) **[ [Java](https://github.com/andreytim/jafar/blob/master/problems/src/main/java/com/andreytim/jafar/problems/treesgraphs/P55_BuildBsTreeFromSortedArr.java) ]**  
 **5.6** Find the **first common ancestor** of two nodes in a **binary tree**. (CtCI, 4.7) **[ [Java](https://github.com/andreytim/jafar/blob/master/problems/src/main/java/com/andreytim/jafar/problems/treesgraphs/P56_FirstCommonAncestor.java) ]**  
 **5.7** Find **all sub-paths of a given sum** in a **binary tree**. (CtCI, 4.9) **[ [Java](https://github.com/andreytim/jafar/blob/master/problems/src/main/java/com/andreytim/jafar/problems/treesgraphs/P57_PathsOfGivenSumInBt.java) ]**  
-**5.8** **Search each string** from the array **in a text**. Trie example. (CtCI, 18.8) **[ [Java](https://github.com/andreytim/jafar/blob/master/problems/src/main/java/com/andreytim/jafar/problems/treesgraphs/P58_StringsSearch.java) ]**
+**5.8** **Search each string** from the array **in a text**. Trie example. (CtCI, 18.8) **[ [Java](https://github.com/andreytim/jafar/blob/master/problems/src/main/java/com/andreytim/jafar/problems/treesgraphs/P58_StringsSearch.java) ]**    
 
-####6. Heaps and Priority Queues
-
-**6.1** **Merge k sorted arrays** (files). (EoPI, P10.1) **[ [Java](https://github.com/andreytim/jafar/blob/master/problems/src/main/java/com/andreytim/jafar/problems/heaps/P61_MergeKSortedArrays.java) ]**  
-
-####7. Searching and Sorting
+####7. Searching, Sorting, Heaps and Priority Queues
 
 **7.1** Find the **first occurrence of K** in a sorted array. (EoPI, P11.1) **[ [Java](https://github.com/andreytim/jafar/blob/master/problems/src/main/java/com/andreytim/jafar/problems/sortsearch/P71_FirstOccurenceInSortedArray.java) ]**  
 **7.2** **GUMIAndSongsDiv2**. Single Round Match 588 Round 1 - Division II, Level Two. (TopCoder) **[ [Java](https://github.com/andreytim/jafar/blob/master/problems/src/main/java/com/andreytim/jafar/problems/sortsearch/P72_GUMIAndSongsDiv2.java) ]**  
@@ -75,10 +71,11 @@ CtCI = [G. Laakmann McDowell - Cracking the Coding Interview, 5th edition](http:
 **7.8** **AutoLoan**. Single Round Match 258 Round 1 - Division II, Level Two. (TopCoder) **[ [Java](https://github.com/andreytim/jafar/blob/master/problems/src/main/java/com/andreytim/jafar/problems/sortsearch/P78_AutoLoan.java) ]**  
 **7.9** **SortingGame**. Single Round Match 397 Round 1 - Division I, Level One. (TopCoder) **[ [Java](https://github.com/andreytim/jafar/blob/master/problems/src/main/java/com/andreytim/jafar/problems/sortsearch/P79_SortingGame.java) ]**  
 **7.10** Find the **minimum subarray to sort** to make the entire array sorted. (CtCI, 17.6) **[ [Java](https://github.com/andreytim/jafar/blob/master/problems/src/main/java/com/andreytim/jafar/problems/sortsearch/P710_MinSubarrayToSort.java) ]**  
-**7.11** Find an element in a col-wise and row-wise sorted matrix MxN. (CtCI, 11.6) **[ [Java](https://github.com/andreytim/jafar/blob/master/problems/src/main/java/com/andreytim/jafar/problems/sortsearch/P711_MatrixBinarySearch.java) ]**  
+**7.11** **Find an element** in a col-wise and row-wise **sorted matrix** MxN. (CtCI, 11.6) **[ [Java](https://github.com/andreytim/jafar/blob/master/problems/src/main/java/com/andreytim/jafar/problems/sortsearch/P711_MatrixBinarySearch.java) ]**  
 **7.12** **UnsortedSequence**. Single Round Match 531 Round 1 - Division II, Level One. (TopCoder) **[ [Java](https://github.com/andreytim/jafar/blob/master/problems/src/main/java/com/andreytim/jafar/problems/sortsearch/P712_UnsortedSequence.java) ]**  
 **7.13** **SerialNumbers**. Single Round Match 366 Round 1 - Division II, Level One. (TopCoder) **[ [Java](https://github.com/andreytim/jafar/blob/master/problems/src/main/java/com/andreytim/jafar/problems/sortsearch/P713_SerialNumbers.java) ]**  
-**7.14** **UnionOfIntervals**. Single Round Match 277 Round 1 - Division II, Level Three. (TopCoder) **[ [Java](https://github.com/andreytim/jafar/blob/master/problems/src/main/java/com/andreytim/jafar/problems/sortsearch/P714_UnionOfIntervals.java) ]**
+**7.14** **UnionOfIntervals**. Single Round Match 277 Round 1 - Division II, Level Three. (TopCoder) **[ [Java](https://github.com/andreytim/jafar/blob/master/problems/src/main/java/com/andreytim/jafar/problems/sortsearch/P714_UnionOfIntervals.java) ]**  
+**7.15** **Merge k sorted arrays** (files). (EoPI, P10.1) **[ [Java](https://github.com/andreytim/jafar/blob/master/problems/src/main/java/com/andreytim/jafar/problems/sortsearch/P715_MergeKSortedArrays.java) ]**
 
 ####8. Dynamic Programming and Recursion (Combinatorial search)
 

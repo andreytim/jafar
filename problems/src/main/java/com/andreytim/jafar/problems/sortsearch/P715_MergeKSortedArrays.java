@@ -1,4 +1,4 @@
-package com.andreytim.jafar.problems.heaps;
+package com.andreytim.jafar.problems.sortsearch;
 
 import java.util.*;
 
@@ -11,7 +11,7 @@ import java.util.*;
  *
  * Created by shpolsky on 10.11.14.
  */
-public class P61_MergeKSortedArrays {
+public class P715_MergeKSortedArrays {
 
     private static class Pair implements Comparable<Pair> {
         private final int idxOfArray;
