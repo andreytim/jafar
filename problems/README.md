@@ -34,7 +34,8 @@ CtCI = [G. Laakmann McDowell - Cracking the Coding Interview, 5th edition](http:
 **2.14** Return the **winner** of **NxN TicTacToe** game board. **[ [Java](https://github.com/andreytim/jafar/blob/master/problems/src/main/java/com/andreytim/jafar/problems/arrstr/P214_TicTacToeWinner.java) ]**  
 **2.15** **Wildcard Matching**. (LeetCode) **[ [Java](https://github.com/andreytim/jafar/blob/master/problems/src/main/java/com/andreytim/jafar/problems/arrstr/P215_WildcardMatching.java) ]**  
 **2.16** **Rotate a square matrix** by 90 degrees in-place. (CtCI, 1.6) **[ [Java](https://github.com/andreytim/jafar/blob/master/problems/src/main/java/com/andreytim/jafar/problems/arrstr/P216_MatrixRotate.java) ]**  
-**2.17** **TheEncryptionDivTwo**. Single Round Match 445 Round 1 - Division II, Level One. (TopCoder) **[ [Java](https://github.com/andreytim/jafar/blob/master/problems/src/main/java/com/andreytim/jafar/problems/arrstr/P217_TheEncryptionDivTwo.java) ]**
+**2.17** **TheEncryptionDivTwo**. Single Round Match 445 Round 1 - Division II, Level One. (TopCoder) **[ [Java](https://github.com/andreytim/jafar/blob/master/problems/src/main/java/com/andreytim/jafar/problems/arrstr/P217_TheEncryptionDivTwo.java) ]**  
+**2.18** Find the **maximum sub-square** with all **four borders filled** with black pixels. (CtCI, 18.11) **[ [Java](https://github.com/andreytim/jafar/blob/master/problems/src/main/java/com/andreytim/jafar/problems/arrstr/P218_MaxBlackSubsquare.java) ]**
 
 ####3. Linked Lists
 
