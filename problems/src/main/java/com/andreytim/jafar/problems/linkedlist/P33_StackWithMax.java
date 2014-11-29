@@ -1,4 +1,4 @@
-package com.andreytim.jafar.problems.stackqueue;
+package com.andreytim.jafar.problems.linkedlist;
 
 /**
  * Design a stack that supports a max operation,
@@ -10,7 +10,7 @@ package com.andreytim.jafar.problems.stackqueue;
  *
  * Created by shpolsky on 06.11.14.
  */
-public class P41_StackWithMax {
+public class P33_StackWithMax {
 
   public static class StackWithMax {
   

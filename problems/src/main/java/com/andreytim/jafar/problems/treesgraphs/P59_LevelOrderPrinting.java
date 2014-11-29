@@ -1,4 +1,4 @@
-package com.andreytim.jafar.problems.stackqueue;
+package com.andreytim.jafar.problems.treesgraphs;
 
 import java.util.LinkedList;
 import java.util.Queue;
@@ -10,7 +10,7 @@ import java.util.Queue;
  *
  * Created by shpolsky on 06.11.14.
  */
-public class P42_LevelOrderPrinting {
+public class P59_LevelOrderPrinting {
 
     public static class TreeNode {
         private int value;

@@ -38,15 +38,11 @@ CtCI = [G. Laakmann McDowell - Cracking the Coding Interview, 5th edition](http:
 **2.17** **TheEncryptionDivTwo**. Single Round Match 445 Round 1 - Division II, Level One. (TopCoder) **[ [Java](https://github.com/andreytim/jafar/blob/master/problems/src/main/java/com/andreytim/jafar/problems/arrstr/P217_TheEncryptionDivTwo.java) ]**  
 **2.18** Find the **maximum sub-square** with all **four borders filled** with black. (CtCI, 18.11) **[ [Java](https://github.com/andreytim/jafar/blob/master/problems/src/main/java/com/andreytim/jafar/problems/arrstr/P218_MaxBlackSubsquare.java) ]**
 
-####3. Linked Lists
+####3. Linked Lists, Stacks and Queues
 
 **3.1** **Merge two sorted** singly linked lists. (EoPI, P7.1) **[ [Java](https://github.com/andreytim/jafar/blob/master/problems/src/main/java/com/andreytim/jafar/problems/linkedlist/P31_MergeTwoSorted.java) ]**  
-**3.2** **Remove duplicates** from an unsorted linked list. (CtCI, 2.1) **[ [Java](https://github.com/andreytim/jafar/blob/master/problems/src/main/java/com/andreytim/jafar/problems/linkedlist/P32_RemoveDuplicates.java) ]**
-
-####4. Stacks and Queues
-
-**4.1** **Stack with max** operation. (EoPI, P8.1) **[ [Java](https://github.com/andreytim/jafar/blob/master/problems/src/main/java/com/andreytim/jafar/problems/stackqueue/P41_StackWithMax.java) ]**  
-**4.2** **Level-order printing** of a binary tree. (EoPI, P8.9) **[ [Java](https://github.com/andreytim/jafar/blob/master/problems/src/main/java/com/andreytim/jafar/problems/stackqueue/P42_LevelOrderPrinting.java) ]**  
+**3.2** **Remove duplicates** from an unsorted linked list. (CtCI, 2.1) **[ [Java](https://github.com/andreytim/jafar/blob/master/problems/src/main/java/com/andreytim/jafar/problems/linkedlist/P32_RemoveDuplicates.java) ]**  
+**3.3** **Stack with max** operation. (EoPI, P8.1) **[ [Java](https://github.com/andreytim/jafar/blob/master/problems/src/main/java/com/andreytim/jafar/problems/linkedlist/P33_StackWithMax.java) ]**
 
 ####5. Trees, Tries, Graphs
 
@@ -57,7 +53,8 @@ CtCI = [G. Laakmann McDowell - Cracking the Coding Interview, 5th edition](http:
 **5.5** Build **BS-Tree** with a minimum height **from a sorted array**. (CtCI, 4.3) **[ [Java](https://github.com/andreytim/jafar/blob/master/problems/src/main/java/com/andreytim/jafar/problems/treesgraphs/P55_BuildBsTreeFromSortedArr.java) ]**  
 **5.6** Find the **first common ancestor** of two nodes in a **binary tree**. (CtCI, 4.7) **[ [Java](https://github.com/andreytim/jafar/blob/master/problems/src/main/java/com/andreytim/jafar/problems/treesgraphs/P56_FirstCommonAncestor.java) ]**  
 **5.7** Find **all sub-paths of a given sum** in a **binary tree**. (CtCI, 4.9) **[ [Java](https://github.com/andreytim/jafar/blob/master/problems/src/main/java/com/andreytim/jafar/problems/treesgraphs/P57_PathsOfGivenSumInBt.java) ]**  
-**5.8** **Search each string** from the array **in a text**. Trie example. (CtCI, 18.8) **[ [Java](https://github.com/andreytim/jafar/blob/master/problems/src/main/java/com/andreytim/jafar/problems/treesgraphs/P58_StringsSearch.java) ]**    
+**5.8** **Search each string** from the array **in a text**. Trie example. (CtCI, 18.8) **[ [Java](https://github.com/andreytim/jafar/blob/master/problems/src/main/java/com/andreytim/jafar/problems/treesgraphs/P58_StringsSearch.java) ]**  
+**5.9** **Level-order printing** of a binary tree. (EoPI, P8.9) **[ [Java](https://github.com/andreytim/jafar/blob/master/problems/src/main/java/com/andreytim/jafar/problems/treesgraphs/P59_LevelOrderPrinting.java) ]**
 
 ####7. Searching, Sorting, Heaps and Priority Queues
 
