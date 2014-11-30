@@ -19,11 +19,9 @@ public class P35_KthLastInLl {
 
     public Node findKthLast(Node head, int k) {
         int count = 0;
-        Node res = head;
-        Node curr = head;
+        Node res = head, curr = head;
         while (curr != null) {
-            count++;
-            if (count > k) res = res.next;
+            if (++count > k) res = res.next;
             curr = curr.next;
         }
         return count >= k ? res : null;
