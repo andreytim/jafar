@@ -96,7 +96,8 @@ CtCI = [G. Laakmann McDowell - Cracking the Coding Interview, 5th edition](http:
 **8.8** **TheLuckyString**. Single Round Match 428 Round 1 - Division I, Level One. (TopCoder) **[ [Java](https://github.com/andreytim/jafar/blob/master/problems/src/main/java/com/andreytim/jafar/problems/dp/P88_TheLuckyString.java) ]**  
 **8.9** Return the sum of the **contiguous sequence with the largest sum**. (CtCI, 17.8) **[ [Java](https://github.com/andreytim/jafar/blob/master/problems/src/main/java/com/andreytim/jafar/problems/dp/P89_MaxSumSubarray.java) ]**  
 **8.10** Find the **sub-matrix** of a given matrix with the **largest sum**. (CtCI, 18.12) **[ [Java](https://github.com/andreytim/jafar/blob/master/problems/src/main/java/com/andreytim/jafar/problems/dp/P810_MaxSumSubmatrix.java) ]**  
-**8.11** Build **the tallest tower** of cubic boxes. (CtCI, 9.10) **[ [Java](https://github.com/andreytim/jafar/blob/master/problems/src/main/java/com/andreytim/jafar/problems/dp/P811_TallestTowerOfBoxes.java) ]**
+**8.11** Build **the tallest tower** of cubic boxes. (CtCI, 9.10) **[ [Java](https://github.com/andreytim/jafar/blob/master/problems/src/main/java/com/andreytim/jafar/problems/dp/P811_TallestTowerOfBoxes.java) ]**  
+**8.12** Number of ways of **parenthesising a boolean expression** to get the result. (CtCI, 9.11) **[ [Java](https://github.com/andreytim/jafar/blob/master/problems/src/main/java/com/andreytim/jafar/problems/dp/P812_BooleanParenthesising.java) ]**
   
 ####9. Hashtables
 
