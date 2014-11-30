@@ -60,7 +60,8 @@ CtCI = [G. Laakmann McDowell - Cracking the Coding Interview, 5th edition](http:
 **5.6** Find the **first common ancestor** of two nodes in a **binary tree**. (CtCI, 4.7) **[ [Java](https://github.com/andreytim/jafar/blob/master/problems/src/main/java/com/andreytim/jafar/problems/treesgraphs/P56_FirstCommonAncestor.java) ]**  
 **5.7** Find **all sub-paths of a given sum** in a **binary tree**. (CtCI, 4.9) **[ [Java](https://github.com/andreytim/jafar/blob/master/problems/src/main/java/com/andreytim/jafar/problems/treesgraphs/P57_PathsOfGivenSumInBt.java) ]**  
 **5.8** **Search each string** from the array **in a text**. Trie example. (CtCI, 18.8) **[ [Java](https://github.com/andreytim/jafar/blob/master/problems/src/main/java/com/andreytim/jafar/problems/treesgraphs/P58_StringsSearch.java) ]**  
-**5.9** **Level-order printing** of a binary tree. (EoPI, P8.9) **[ [Java](https://github.com/andreytim/jafar/blob/master/problems/src/main/java/com/andreytim/jafar/problems/treesgraphs/P59_LevelOrderPrinting.java) ]**
+**5.9** **Level-order printing** of a binary tree. (EoPI, P8.9) **[ [Java](https://github.com/andreytim/jafar/blob/master/problems/src/main/java/com/andreytim/jafar/problems/treesgraphs/P59_LevelOrderPrinting.java) ]**  
+**5.10** **Check** if a binary tree **is a sub-tree** of another big binary tree. (CtCI, 4.8) **[ [Java](https://github.com/andreytim/jafar/blob/master/problems/src/main/java/com/andreytim/jafar/problems/treesgraphs/P510_CheckIfSubtree.java) ]**
 
 ####7. Searching, Sorting, Heaps and Priority Queues
 
