@@ -16,7 +16,8 @@ CtCI = [G. Laakmann McDowell - Cracking the Coding Interview, 5th edition](http:
 **1.7** **Binary representation of a real number** within (0,1). (CtCI, 5.2) **[ [Java](https://github.com/andreytim/jafar/blob/master/problems/src/main/java/com/andreytim/jafar/problems/numeric/P17_BinaryOfAFloat.java) ]**  
 **1.8** Convert the **number in a base A to** the number in a **base B**. (EoPI, 5.7) **[ [Java](https://github.com/andreytim/jafar/blob/master/problems/src/main/java/com/andreytim/jafar/problems/numeric/P18_BaseConversion.java) ]**  
 **1.9** Number of **trailing zeroes in n\!**. (CtCI, 17.3) **[ [Java](https://github.com/andreytim/jafar/blob/master/problems/src/main/java/com/andreytim/jafar/problems/numeric/P19_TrailingZeroesInFact.java) ]**  
-**1.10** **FactorialGCD**. Single Round Match 283 Round 1 - Division II, Level Three. (TopCoder) **[ [Java](https://github.com/andreytim/jafar/blob/master/problems/src/main/java/com/andreytim/jafar/problems/numeric/P110_FactorialGCD.java) ]**
+**1.10** **FactorialGCD**. Single Round Match 283 Round 1 - Division II, Level Three. (TopCoder) **[ [Java](https://github.com/andreytim/jafar/blob/master/problems/src/main/java/com/andreytim/jafar/problems/numeric/P110_FactorialGCD.java) ]**  
+**1.11** **Swap consecutive bits** in a number. (CtCI, 5.6) **[ [Java](https://github.com/andreytim/jafar/blob/master/problems/src/main/java/com/andreytim/jafar/problems/numeric/P111_SwapConsecutive.java) ]**
 
 ####2. Arrays, Matrices and Strings
 
