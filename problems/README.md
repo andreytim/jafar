@@ -9,7 +9,7 @@ CtCI = [G. Laakmann McDowell - Cracking the Coding Interview, 5th edition](http:
 
 **1.1** Implement **power function** efficiently. **[ [Java](https://github.com/andreytim/jafar/blob/master/problems/src/main/java/com/andreytim/jafar/problems/numeric/P11_FastPower.java) ]**  
 **1.2** Implement **square root** function. **[ [Java](https://github.com/andreytim/jafar/blob/master/problems/src/main/java/com/andreytim/jafar/problems/numeric/P12_Sqrt.java) ]**  
-**1.3** Compute the **parity** of a very large number of nonnegative 64-bit integers. (EoPI, P5.1) **[ [Java](https://github.com/andreytim/jafar/blob/master/problems/src/main/java/com/andreytim/jafar/problems/numeric/P13_Parity.java) ]**  
+**1.3** Compute the **parity** of a very large number of nonnegative 64-bit integers. (EoPI, 5.1) **[ [Java](https://github.com/andreytim/jafar/blob/master/problems/src/main/java/com/andreytim/jafar/problems/numeric/P13_Parity.java) ]**  
 **1.4** **Refactoring**. Single Round Match 216 Round 1 - Division I, Level Two. (TopCoder) **[ [Java](https://github.com/andreytim/jafar/blob/master/problems/src/main/java/com/andreytim/jafar/problems/numeric/P14_Refactoring.java) ]**  
 **1.5** **RugSizes**. Single Round Match 304 Round 1 - Division II, Level One. (TopCoder) **[ [Java](https://github.com/andreytim/jafar/blob/master/problems/src/main/java/com/andreytim/jafar/problems/numeric/P15_RugSizes.java) ]**  
 **1.6** Find the **kth number** such that its' only prime factors are **3, 5, and 7**. (CtCI, 7.7) **[ [Java](https://github.com/andreytim/jafar/blob/master/problems/src/main/java/com/andreytim/jafar/problems/numeric/P16_MultiplesOf357.java) ]**  
@@ -22,8 +22,8 @@ CtCI = [G. Laakmann McDowell - Cracking the Coding Interview, 5th edition](http:
 ####2. Arrays, Matrices and Strings
 
 **2.1** **Influencer** problem. (LinkedIn) **[ [Java](https://github.com/andreytim/jafar/blob/master/problems/src/main/java/com/andreytim/jafar/problems/arrstr/P21_Influencer.java) ]**  
-**2.2** **Dutch-flag** array partitioning. (EoPI, P6.1) **[ [Java](https://github.com/andreytim/jafar/blob/master/problems/src/main/java/com/andreytim/jafar/problems/arrstr/P22_DutchFlagPartitioning.java) ]**  
-**2.3** **Run-length encoding** (RLE) of a string. (EoPI, P6.18) **[ [Java](https://github.com/andreytim/jafar/blob/master/problems/src/main/java/com/andreytim/jafar/problems/arrstr/P23_RleEncoding.java) ]**   
+**2.2** **Dutch-flag** array partitioning. (EoPI, 6.1) **[ [Java](https://github.com/andreytim/jafar/blob/master/problems/src/main/java/com/andreytim/jafar/problems/arrstr/P22_DutchFlagPartitioning.java) ]**  
+**2.3** **Run-length encoding** (RLE) of a string. (EoPI, 6.18) **[ [Java](https://github.com/andreytim/jafar/blob/master/problems/src/main/java/com/andreytim/jafar/problems/arrstr/P23_RleEncoding.java) ]**   
 **2.4** Check if string is a **valid float number**. **[ [Java](https://github.com/andreytim/jafar/blob/master/problems/src/main/java/com/andreytim/jafar/problems/arrstr/P24_ValidNumber.java) ]**  
 **2.5** **WolfDelaymaster**. Single Round Match 593 Round 1 - Division II, Level Two. (TopCoder) **[ [Java](https://github.com/andreytim/jafar/blob/master/problems/src/main/java/com/andreytim/jafar/problems/arrstr/P25_WolfDelaymaster.java) ]**  
 **2.6** **TemplateMatching**. Single Round Match 417 Round 1 - Division I, Level One. (TopCoder) **[ [Java](https://github.com/andreytim/jafar/blob/master/problems/src/main/java/com/andreytim/jafar/problems/arrstr/P26_TemplateMatching.java) ]**  
@@ -34,7 +34,7 @@ CtCI = [G. Laakmann McDowell - Cracking the Coding Interview, 5th edition](http:
 **2.11** All **pairs** of integers within an array which **sum to a specified value**. (CtCI, 17.12) **[ [Java](https://github.com/andreytim/jafar/blob/master/problems/src/main/java/com/andreytim/jafar/problems/arrstr/P211_AllPairsSumToValue.java) ]**  
 **2.12** **ContestWinner**. Single Round Match 546 Round 1 - Division II, Level One. (TopCoder) **[ [Java](https://github.com/andreytim/jafar/blob/master/problems/src/main/java/com/andreytim/jafar/problems/arrstr/P212_ContestWinner.java) ]**  
 **2.13** **RevealTriangle**. Single Round Match 404 Round 1 - Division I, Level One. (TopCoder) **[ [Java](https://github.com/andreytim/jafar/blob/master/problems/src/main/java/com/andreytim/jafar/problems/arrstr/P213_RevealTriangle.java) ]**  
-**2.14** Return the **winner** of **NxN TicTacToe** game board. **[ [Java](https://github.com/andreytim/jafar/blob/master/problems/src/main/java/com/andreytim/jafar/problems/arrstr/P214_TicTacToeWinner.java) ]**  
+**2.14** Return the **winner** of **NxN TicTacToe** game board. (CtCI, 17.2) **[ [Java](https://github.com/andreytim/jafar/blob/master/problems/src/main/java/com/andreytim/jafar/problems/arrstr/P214_TicTacToeWinner.java) ]**  
 **2.15** **Wildcard Matching**. (LeetCode) **[ [Java](https://github.com/andreytim/jafar/blob/master/problems/src/main/java/com/andreytim/jafar/problems/arrstr/P215_WildcardMatching.java) ]**  
 **2.16** **Rotate a square matrix** by 90 degrees in-place. (CtCI, 1.6) **[ [Java](https://github.com/andreytim/jafar/blob/master/problems/src/main/java/com/andreytim/jafar/problems/arrstr/P216_MatrixRotate.java) ]**  
 **2.17** **TheEncryptionDivTwo**. Single Round Match 445 Round 1 - Division II, Level One. (TopCoder) **[ [Java](https://github.com/andreytim/jafar/blob/master/problems/src/main/java/com/andreytim/jafar/problems/arrstr/P217_TheEncryptionDivTwo.java) ]**  
@@ -43,7 +43,7 @@ CtCI = [G. Laakmann McDowell - Cracking the Coding Interview, 5th edition](http:
 
 ####3. Linked Lists, Stacks and Queues
 
-**3.1** **Merge two sorted** singly linked lists. (EoPI, P7.1) **[ [Java](https://github.com/andreytim/jafar/blob/master/problems/src/main/java/com/andreytim/jafar/problems/linkedlist/P31_MergeTwoSorted.java) ]**  
+**3.1** **Merge two sorted** singly linked lists. (EoPI, 7.1) **[ [Java](https://github.com/andreytim/jafar/blob/master/problems/src/main/java/com/andreytim/jafar/problems/linkedlist/P31_MergeTwoSorted.java) ]**  
 **3.2** **Remove duplicates** from an unsorted linked list. (CtCI, 2.1) **[ [Java](https://github.com/andreytim/jafar/blob/master/problems/src/main/java/com/andreytim/jafar/problems/linkedlist/P32_RemoveDuplicates.java) ]**  
 **3.3** **Stack with max** operation. (EoPI, P8.1) **[ [Java](https://github.com/andreytim/jafar/blob/master/problems/src/main/java/com/andreytim/jafar/problems/linkedlist/P33_StackWithMax.java) ]**  
 **3.4** Convert **BS-Tree on BiNodes to Doubly-Linked List** on BiNodes. (CtCI, 17.13) **[ [Java](https://github.com/andreytim/jafar/blob/master/problems/src/main/java/com/andreytim/jafar/problems/linkedlist/P34_BiNodeBsTreeToDll.java) ]**  
@@ -53,7 +53,7 @@ CtCI = [G. Laakmann McDowell - Cracking the Coding Interview, 5th edition](http:
 
 ####5. Trees, Tries, Graphs
 
-**5.1** Check if a **binary tree is balanced**. (EoPI, P9.1) **[ [Java](https://github.com/andreytim/jafar/blob/master/problems/src/main/java/com/andreytim/jafar/problems/treesgraphs/P51_CheckIfBtIsBalanced.java) ]**  
+**5.1** Check if a **binary tree is balanced**. (EoPI, 9.1) **[ [Java](https://github.com/andreytim/jafar/blob/master/problems/src/main/java/com/andreytim/jafar/problems/treesgraphs/P51_CheckIfBtIsBalanced.java) ]**  
 **5.2** **PermissionTree**. Single Round Match 218 Round 1 - Division II, Level Three. (TopCoder) **[ [Java](https://github.com/andreytim/jafar/blob/master/problems/src/main/java/com/andreytim/jafar/problems/treesgraphs/P52_PermissionTree.java) ]**  
 **5.3** Check existence of the **path on 2D grid** with obstacles. (simple DFS solution, not A-star) **[ [Java](https://github.com/andreytim/jafar/blob/master/problems/src/main/java/com/andreytim/jafar/problems/treesgraphs/P53_CheckPath2DGrid.java) ]**  
 **5.4** **CentaurCompanyDiv2**. Single Round Match 570 Round 1 - Division II, Level Three. (TopCoder) **[ [Java](https://github.com/andreytim/jafar/blob/master/problems/src/main/java/com/andreytim/jafar/problems/treesgraphs/P54_CentaurCompanyDiv2.java) ]**  
@@ -61,12 +61,12 @@ CtCI = [G. Laakmann McDowell - Cracking the Coding Interview, 5th edition](http:
 **5.6** Find the **first common ancestor** of two nodes in a **binary tree**. (CtCI, 4.7) **[ [Java](https://github.com/andreytim/jafar/blob/master/problems/src/main/java/com/andreytim/jafar/problems/treesgraphs/P56_FirstCommonAncestor.java) ]**  
 **5.7** Find **all sub-paths of a given sum** in a **binary tree**. (CtCI, 4.9) **[ [Java](https://github.com/andreytim/jafar/blob/master/problems/src/main/java/com/andreytim/jafar/problems/treesgraphs/P57_PathsOfGivenSumInBt.java) ]**  
 **5.8** **Search each string** from the array **in a text**. Trie example. (CtCI, 18.8) **[ [Java](https://github.com/andreytim/jafar/blob/master/problems/src/main/java/com/andreytim/jafar/problems/treesgraphs/P58_StringsSearch.java) ]**  
-**5.9** **Level-order printing** of a binary tree. (EoPI, P8.9) **[ [Java](https://github.com/andreytim/jafar/blob/master/problems/src/main/java/com/andreytim/jafar/problems/treesgraphs/P59_LevelOrderPrinting.java) ]**  
+**5.9** **Level-order printing** of a binary tree. (EoPI, 8.9) **[ [Java](https://github.com/andreytim/jafar/blob/master/problems/src/main/java/com/andreytim/jafar/problems/treesgraphs/P59_LevelOrderPrinting.java) ]**  
 **5.10** **Check** if a binary tree **is a sub-tree** of another big binary tree. (CtCI, 4.8) **[ [Java](https://github.com/andreytim/jafar/blob/master/problems/src/main/java/com/andreytim/jafar/problems/treesgraphs/P510_CheckIfSubtree.java) ]**
 
 ####7. Searching, Sorting, Heaps and Priority Queues
 
-**7.1** Find the **first occurrence of K** in a sorted array. (EoPI, P11.1) **[ [Java](https://github.com/andreytim/jafar/blob/master/problems/src/main/java/com/andreytim/jafar/problems/sortsearch/P71_FirstOccurenceInSortedArray.java) ]**  
+**7.1** Find the **first occurrence of K** in a sorted array. (EoPI, 11.1) **[ [Java](https://github.com/andreytim/jafar/blob/master/problems/src/main/java/com/andreytim/jafar/problems/sortsearch/P71_FirstOccurenceInSortedArray.java) ]**  
 **7.2** **GUMIAndSongsDiv2**. Single Round Match 588 Round 1 - Division II, Level Two. (TopCoder) **[ [Java](https://github.com/andreytim/jafar/blob/master/problems/src/main/java/com/andreytim/jafar/problems/sortsearch/P72_GUMIAndSongsDiv2.java) ]**  
 **7.3** **FoxAndMp3Easy**. Single Round Match 571 Round 1 - Division II, Level Two. (TopCoder) **[ [Java](https://github.com/andreytim/jafar/blob/master/problems/src/main/java/com/andreytim/jafar/problems/sortsearch/P73_FoxAndMp3Easy.java) ]**  
 **7.4** **Merge to sorted arrays**, when one has available buffer at the end. (CtCI, 11.1) **[ [Java](https://github.com/andreytim/jafar/blob/master/problems/src/main/java/com/andreytim/jafar/problems/sortsearch/P74_MergeTwoSortedInPlace.java) ]**  
@@ -80,7 +80,8 @@ CtCI = [G. Laakmann McDowell - Cracking the Coding Interview, 5th edition](http:
 **7.12** **UnsortedSequence**. Single Round Match 531 Round 1 - Division II, Level One. (TopCoder) **[ [Java](https://github.com/andreytim/jafar/blob/master/problems/src/main/java/com/andreytim/jafar/problems/sortsearch/P712_UnsortedSequence.java) ]**  
 **7.13** **SerialNumbers**. Single Round Match 366 Round 1 - Division II, Level One. (TopCoder) **[ [Java](https://github.com/andreytim/jafar/blob/master/problems/src/main/java/com/andreytim/jafar/problems/sortsearch/P713_SerialNumbers.java) ]**  
 **7.14** **UnionOfIntervals**. Single Round Match 277 Round 1 - Division II, Level Three. (TopCoder) **[ [Java](https://github.com/andreytim/jafar/blob/master/problems/src/main/java/com/andreytim/jafar/problems/sortsearch/P714_UnionOfIntervals.java) ]**  
-**7.15** **Merge k sorted arrays** (files). (EoPI, P10.1) **[ [Java](https://github.com/andreytim/jafar/blob/master/problems/src/main/java/com/andreytim/jafar/problems/sortsearch/P715_MergeKSortedArrays.java) ]**
+**7.15** **Merge k sorted arrays** (files). (EoPI, 10.1) **[ [Java](https://github.com/andreytim/jafar/blob/master/problems/src/main/java/com/andreytim/jafar/problems/sortsearch/P715_MergeKSortedArrays.java) ]**  
+**7.16** Find a **magic index** (A\[i\] = i) in a sorted array. (CtCI, 9.3) **[ [Java](https://github.com/andreytim/jafar/blob/master/problems/src/main/java/com/andreytim/jafar/problems/sortsearch/P716_MagicIndex.java) ]**
 
 ####8. Dynamic Programming and Recursion (Combinatorial search)
 
