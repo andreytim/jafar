@@ -45,7 +45,8 @@ CtCI = [G. Laakmann McDowell - Cracking the Coding Interview, 5th edition](http:
 **3.1** **Merge two sorted** singly linked lists. (EoPI, P7.1) **[ [Java](https://github.com/andreytim/jafar/blob/master/problems/src/main/java/com/andreytim/jafar/problems/linkedlist/P31_MergeTwoSorted.java) ]**  
 **3.2** **Remove duplicates** from an unsorted linked list. (CtCI, 2.1) **[ [Java](https://github.com/andreytim/jafar/blob/master/problems/src/main/java/com/andreytim/jafar/problems/linkedlist/P32_RemoveDuplicates.java) ]**  
 **3.3** **Stack with max** operation. (EoPI, P8.1) **[ [Java](https://github.com/andreytim/jafar/blob/master/problems/src/main/java/com/andreytim/jafar/problems/linkedlist/P33_StackWithMax.java) ]**  
-**3.4** Convert **BS-Tree on BiNodes to Doubly-Linked List** on BiNodes. (CtCI, 17.13) **[ [Java](https://github.com/andreytim/jafar/blob/master/problems/src/main/java/com/andreytim/jafar/problems/linkedlist/P34_BiNodeBsTreeToDll.java) ]**
+**3.4** Convert **BS-Tree on BiNodes to Doubly-Linked List** on BiNodes. (CtCI, 17.13) **[ [Java](https://github.com/andreytim/jafar/blob/master/problems/src/main/java/com/andreytim/jafar/problems/linkedlist/P34_BiNodeBsTreeToDll.java) ]**  
+**3.5** Find the **kth to last element** of a singly linked list. (CtCI, 2.2) **[ [Java](https://github.com/andreytim/jafar/blob/master/problems/src/main/java/com/andreytim/jafar/problems/linkedlist/P35_KthLastInLl.java) ]**
 
 ####5. Trees, Tries, Graphs
 
