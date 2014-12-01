@@ -39,7 +39,8 @@ CtCI = [G. Laakmann McDowell - Cracking the Coding Interview, 5th edition](http:
 **2.16** **Rotate a square matrix** by 90 degrees in-place. (CtCI, 1.6) **[ [Java](https://github.com/andreytim/jafar/blob/master/problems/src/main/java/com/andreytim/jafar/problems/arrstr/P216_MatrixRotate.java) ]**  
 **2.17** **TheEncryptionDivTwo**. Single Round Match 445 Round 1 - Division II, Level One. (TopCoder) **[ [Java](https://github.com/andreytim/jafar/blob/master/problems/src/main/java/com/andreytim/jafar/problems/arrstr/P217_TheEncryptionDivTwo.java) ]**  
 **2.18** Find the **maximum sub-square** with all **four borders filled** with black. (CtCI, 18.11) **[ [Java](https://github.com/andreytim/jafar/blob/master/problems/src/main/java/com/andreytim/jafar/problems/arrstr/P218_MaxBlackSubsquare.java) ]**  
-**2.19** **Replace** all **spaces** in a string **with '%20'** in-place. (CtCI, 1.4) **[ [Java](https://github.com/andreytim/jafar/blob/master/problems/src/main/java/com/andreytim/jafar/problems/arrstr/P219_ReplaceSpaces.java) ]**
+**2.19** **Replace** all **spaces** in a string **with '%20'** in-place. (CtCI, 1.4) **[ [Java](https://github.com/andreytim/jafar/blob/master/problems/src/main/java/com/andreytim/jafar/problems/arrstr/P219_ReplaceSpaces.java) ]**  
+**2.20** Print ways to place **8 queens** non-beating each other on a **chess-board**. (CtCI, 9.9) **[ [Java](https://github.com/andreytim/jafar/blob/master/problems/src/main/java/com/andreytim/jafar/problems/arrstr/P220_ReplaceSpaces.java) ]**
 
 ####3. Linked Lists, Stacks and Queues
 
