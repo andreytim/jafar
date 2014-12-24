@@ -1,5 +1,3 @@
-package com.andreytim.jafar.problems.codeforces.R282Div2;
-
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.util.HashSet;

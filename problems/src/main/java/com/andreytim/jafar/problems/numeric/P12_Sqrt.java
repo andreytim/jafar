@@ -45,12 +45,25 @@ public class P12_Sqrt {
         return y;
     }
 
+    public static int sqrt(int x) {
+        if (x == 0 || x == 1) return x;
+        double res = 2.0;
+        while (Math.abs(x - res*res) > EPSILON) {
+            res = (x/res + res)/2;
+        }
+        return (int) res;
+    }
+
+    public static void test(int n) {
+        System.out.printf("Input: %d, Output: %d\n", n, sqrt(n));
+    }
+
     public static void main(String[] args) {
-        System.out.printf("Sqrt of %.2f: bs = %.4f, bab = %.4f\n", 4D, sqrt(4, EPSILON), sqrtBab(4, EPSILON));
-        System.out.printf("Sqrt of %.2f: bs = %.4f, bab = %.4f\n", 1024D, sqrt(1024, EPSILON), sqrtBab(1024, EPSILON));
-        System.out.printf("Sqrt of %.2f: bs = %.4f, bab = %.4f\n", 25D, sqrt(25, EPSILON), sqrtBab(25, EPSILON));
-        System.out.printf("Sqrt of %.2f: bs = %.4f, bab = %.4f\n", 144D, sqrt(144, EPSILON), sqrtBab(144, EPSILON));
-        System.out.printf("Sqrt of %.2f: bs = %.4f, bab = %.4f\n", 1D, sqrt(1, EPSILON), sqrtBab(1, EPSILON));
-        System.out.printf("Sqrt of %.2f: bs = %.4f, bab = %.4f\n", 0D, sqrt(0, EPSILON), sqrtBab(0, EPSILON));
+        test(4);
+        test(2);
+        test(9);
+        test(16);
+        test(2147395599);
+        test(3);
     }
 }
