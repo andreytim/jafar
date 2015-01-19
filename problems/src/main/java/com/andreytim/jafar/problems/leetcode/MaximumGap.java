@@ -1,4 +1,4 @@
-package com.andreytim.jafar.problems.arrstr;
+package com.andreytim.jafar.problems.leetcode;
 
 import java.util.*;
 
@@ -7,7 +7,7 @@ import java.util.*;
  *
  * Created by shpolsky on 05.01.15.
  */
-public class P222_MaximumGapLeetcode {
+public class MaximumGap {
 
     private List<Integer> radixSort(int[] arr) {
         List<List<Integer>> radix = new ArrayList<>();
@@ -41,7 +41,7 @@ public class P222_MaximumGapLeetcode {
 
     public static void test(int[] arr) {
         System.out.printf("Input: %s; Result: %d;\n",
-                Arrays.toString(arr), new P222_MaximumGapLeetcode().maximumGap(arr));
+                Arrays.toString(arr), new MaximumGap().maximumGap(arr));
     }
 
     public static void main(String[] arr) {
