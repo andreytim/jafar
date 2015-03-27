@@ -3,7 +3,7 @@ package com.andreytim.jafar.problems.topcoder.SRM641Div2;
 /**
  * Created by shpolsky on 11.12.14.
  */
-public class ByingTshirts {
+public class ByingTShirts {
 
     public int meet(int T, int[] Q, int[] P)
     {
